@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
+import ImportBsJS from "./components/ImportBs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <ImportBsJS/>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
