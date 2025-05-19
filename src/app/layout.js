@@ -1,17 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
 import ImportBsJS from "./components/ImportBs";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const inter = Inter({
+  variable: "--font-inter-sans",
+  weight: ['800','300','400','500', '700'],
+  subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -21,8 +20,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
+      <body>
+        <style>{`
+          h1, h2, h3, h4, h5, button , a, input , p {
+            font-family: ${inter.style.fontFamily};
+          }
+        
+        `}
+      </style>
       <ImportBsJS/>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>

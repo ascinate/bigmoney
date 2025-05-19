@@ -29,10 +29,6 @@ export default function Home() {
                         type="button" role="tab"> Booking Form </button>
                       </li>
                       <li className="nav-item" role="presentation">
-                        <button className="nav-link" data-bs-toggle="tab" data-bs-target="#booking" 
-                        type="button" role="tab"> Booking Form </button>
-                      </li>
-                      <li className="nav-item" role="presentation">
                         <button className="nav-link" data-bs-toggle="tab" data-bs-target="#payments" 
                         type="button" role="tab"> Payments </button>
                       </li>
@@ -56,7 +52,6 @@ export default function Home() {
                       <div className="tab-pane fade" id="schedule" role="tabpanel">schedule</div>
                       <div className="tab-pane fade" id="tax" role="tabpanel">tax</div>
                       <div className="tab-pane fade" id="contact" role="tabpanel">contact</div>
-                      <div className="tab-pane fade" id="booking" role="tabpanel">booking</div>
                       <div className="tab-pane fade" id="payments" role="tabpanel">payments</div>
                       <div className="tab-pane fade" id="notifications" role="tabpanel">notifications</div>
                       <div className="tab-pane fade" id="roles" role="tabpanel">roles</div>
