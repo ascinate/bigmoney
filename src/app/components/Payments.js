@@ -198,7 +198,7 @@ function Payments() {
                                                                 <option value="szl">Swazi Lilangeni</option>
                                                                 <option value="thb">Thai Baht</option>
                                                                 <option value="tjs">Tajikistani Somoni</option>
-                                                                <option value="top">Tongan Paʻanga</option>
+                                                                <option value="top">Tongan Paanga</option>
                                                                 <option value="try">Turkish Lira</option>
                                                                 <option value="ttd">Trinidad and Tobago Dollar</option>
                                                                 <option value="twd">New Taiwan Dollar</option>
@@ -277,7 +277,7 @@ function Payments() {
                                             </div>
                                             <div>
                                               <p className='mt-0 mb-0'>Allow Paying Locally</p>
-                                              <p className='mt-2'>Show "Pay Later" payment option</p>
+                                              <p className='mt-2'>Show Pay Later payment option</p>
                                             </div>
                                         </div>
                                         
