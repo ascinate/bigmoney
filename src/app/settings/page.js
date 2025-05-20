@@ -1,6 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
+import Payments from "../components/Payments";
 
 export default function Home() {
   return (
@@ -48,13 +49,13 @@ export default function Home() {
                     </ul>
                     <div className="tab-content" id="myTabContent">
                       <div className="tab-pane fade show active" id="general" role="tabpanel">
-                          
+                          <Payments/>
                       </div>
                       <div className="tab-pane fade" id="schedule" role="tabpanel">schedule</div>
                       <div className="tab-pane fade" id="tax" role="tabpanel">tax</div>
                       <div className="tab-pane fade" id="contact" role="tabpanel">contact</div>
                       <div className="tab-pane fade" id="payments" role="tabpanel">
-                         
+                         <Payments/>
                       </div>
                       <div className="tab-pane fade" id="notifications" role="tabpanel">notifications</div>
                       <div className="tab-pane fade" id="roles" role="tabpanel">roles</div>
