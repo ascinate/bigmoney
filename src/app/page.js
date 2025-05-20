@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <div className="full-body-parts login-page015 position-relative">
       <main className="d-block ms-lg-auto content-parts">
-        <Link href="/" className="logo-login">
+        <Link href="/settings" className="logo-login">
            <Image src="/logo.png" width={173} height={37} alt="logo"/>
         </Link>
         <figure>
            <Image src='/auth-login-illustration-light-2.png' width={886} height={857} alt="l"/>
         </figure>
            <div className="form-div015-logins bg-white">
-                <h2> Welcome to Materialize! 👋 </h2>
+                <h2> Welcome to LatePoint! 👋 </h2>
                 <p> Please sign-in to your account and start the adventure </p>
                 <div className="form-sections01 mt-4">
                  

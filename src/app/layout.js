@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         
         `}
       </style>
-      <ImportBsJS/>
+        <ImportBsJS/>
         {children}
       </body>
     </html>
