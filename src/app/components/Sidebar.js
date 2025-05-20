@@ -26,7 +26,7 @@ function Sidebar() {
          <aside className="slider-bars float-start position-fixed">
              <Link href='/settings' className='d-flex align-items-center'>
                 <Image src='/logo-fav.png' className='lv' width={53} height={37} alt="logon"/> 
-                <Image src='/logo-text.png' className='textv' width={120} height={37} alt="logom"/> 
+                <Image src='/logo-text.png' className='textv' width={136} height={16} alt="logom"/> 
              </Link>
             
             <div className='menu-list mt-3'>

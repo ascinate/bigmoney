@@ -13,7 +13,7 @@ export default function Home() {
            <Image src='/auth-login-illustration-light-2.png' width={886} height={857} alt="l"/>
         </figure>
            <div className="form-div015-logins bg-white">
-                <h2> Welcome to LatePoint! 👋 </h2>
+                <h2> Welcome to Big Money Booking! 👋 </h2>
                 <p> Please sign-in to your account and start the adventure </p>
                 <div className="form-sections01 mt-4">
                  
@@ -36,7 +36,7 @@ export default function Home() {
                       <Link href='/'>Forgot Password?</Link>
                    </div>
 
-                   <button type="button" className="btn btn-signup comon-btn mt-4 text-center w-100 d-block"> Sign in </button>
+                   <Link href='/settings' className="btn btn-signup comon-btn mt-4 text-center w-100 d-block"> Sign in </Link>
 
                    <p className="text-center platform-text mt-4"> New on our platform?
                     <Link href="/"> Create an account </Link> </p>
