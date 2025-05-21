@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Payments from "../components/Payments";
+import GeneralSettings from "../components/GeneralSettings";
 
 export default function Home() {
   return (
@@ -49,7 +50,7 @@ export default function Home() {
                     </ul>
                     <div className="tab-content" id="myTabContent">
                       <div className="tab-pane fade show active" id="general" role="tabpanel">
-                          <Payments/>
+                          <GeneralSettings/>
                       </div>
                       <div className="tab-pane fade" id="schedule" role="tabpanel">schedule</div>
                       <div className="tab-pane fade" id="tax" role="tabpanel">tax</div>

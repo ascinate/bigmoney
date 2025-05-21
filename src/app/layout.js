@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       
       <body>
         <style>{`
-          h1, h2, h3, h4, h5, button , a, input , p {
+          h1, h2, h3, h4, h5, button , a, input , p, body {
             font-family: ${inter.style.fontFamily};
           }
         
