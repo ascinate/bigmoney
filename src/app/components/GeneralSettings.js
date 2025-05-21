@@ -209,7 +209,7 @@ function GeneralSettings() {
                         <div className='right-offections'>
                             <div className='row gy-4 mt-0'>
                                  <div className='col-lg-12'>
-                                     <p className='bg-retricstions01'> You can set restrictions on earliest/latest dates in the future when your customer can place an appointment. You can either use a relative values like for example "+1 month", "+2 weeks", "+5 days", "+3 hours", "+30 minutes" (entered without quotes), or you can use
+                                     <p className='bg-retricstions01'> You can set restrictions on earliest/latest dates in the future when your customer can place an appointment. You can either use a relative values like for example &quot;+1 month&quot;, &quot;+2 weeks&quot;, &quot;+5 days&quot;, &quot;+3 hours&quot;, &quot;+30 minutes&quot; (entered without quotes), or you can use
                                          a fixed date in format YYYY-MM-DD. Leave blank to remove any limitations. </p>
                                  </div>
                                 <div className='col-lg-6'>
