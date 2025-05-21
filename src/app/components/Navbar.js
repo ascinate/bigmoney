@@ -1,9 +1,11 @@
 import Image from "next/image";
-import { FiSearch } from "react-icons/fi";
+import { FiSearch ,FiClock , FiInbox , FiUser } from "react-icons/fi";
 import Link from "next/link";
 import { IoChatbubbleOutline } from "react-icons/io5";
-import { FiClock , FiInbox } from "react-icons/fi";
-import { MdOutlineChatBubbleOutline } from "react-icons/md";
+import { MdOutlineChatBubbleOutline , MdLogout } from "react-icons/md";
+import { LuSettings , LuCircleDollarSign } from "react-icons/lu";
+import { FaRegFileLines } from "react-icons/fa6";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
 
 function Navbar() {
     return(
@@ -20,7 +22,64 @@ function Navbar() {
                       <Link href="/"> <MdOutlineChatBubbleOutline /> </Link>
                       <Link href="/"> <FiClock /> </Link>
                       <Link href="/"> <FiInbox /> </Link>
-                      <Link href="/" className="btn cm-btnop"> + New Booking </Link>
+
+                      <div class="dropdown position-relative">
+                        <button class="btn userpic p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                           <Image src="/1.png" width={200} height={200} alt="sm"/>
+                        </button>
+                        <ul class="dropdown-menu drops-menus01" aria-labelledby="dropdownMenuButton1">
+                            <li className="d-flex align-items-center">
+                               <Link href='/' className="d-flex align-items-center">
+                                   <figure className="m-0">
+                                        <Image src="/1.png" width={200} height={200} alt="sm"/>
+                                   </figure>
+                                   <div className="user-textr">
+                                        <h5> John Doe 
+                                            <span className="d-block"> Admin </span>
+                                        </h5>
+                                   </div>
+                               </Link>
+                            </li>
+                            <li className="crm-lisk01">
+                                <Link className="dropdown-item" href="#">
+                                  <FiUser/> My Profile   
+                               </Link></li>
+
+                            <li className="crm-lisk01">
+                                <Link className="dropdown-item" href="#">
+                                  <LuSettings /> Settings  
+                               </Link>
+                               
+                            </li>
+                            <li className="crm-lisk01 position-relative">
+                                <Link className="dropdown-item" href="#">
+                                  <FaRegFileLines /> Billing Plan  
+                                  <span className="no-plas">10</span>
+                               </Link>
+                               
+                            </li>
+                            <li>
+                                <hr/>
+                            </li>
+                            <li className="crm-lisk01">
+                                <Link className="dropdown-item" href="#">
+                                  <LuCircleDollarSign /> Pricing  
+                               </Link>
+                               
+                            </li>
+                            <li className="crm-lisk01">
+                                <Link className="dropdown-item" href="#">
+                                  <AiOutlineQuestionCircle /> FAQ 
+                               </Link>
+                               
+                            </li>
+                            <li>
+                                <button type="button" className="btn btn-logout mx-auto"> Logout <MdLogout/> </button>
+                            </li>
+                            
+                        </ul>
+                       </div>
+                     
                  </div>
               </div>
           </div>
