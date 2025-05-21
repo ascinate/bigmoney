@@ -40,6 +40,14 @@ function GeneralSettings() {
         { value: 'yyyyddmm', label: 'YYYY/DD/MM' }
     ]
 
+    const countryl = [
+        { value: 'australia', label: 'Australia' },
+        { value: 'austria', label: 'Austria' },
+        { value: 'brazil', label: 'Brazil' },
+    ]
+
+    
+
     const [selectedImage, setSelectedImage] = useState(null);
     const [previewImage, setPreviewImage] = useState('/clients-logo.png'); 
 
@@ -655,6 +663,44 @@ function GeneralSettings() {
                            </div>
                      </div>
                    </div>
+                   <div className='row align-items-start'>
+                     <div className='col-3'>
+                          <p> Google Places API </p>
+                     </div>
+                     <div className='col-9 mt-0'>
+                           <div className='right-offections'>
+                              <div className='col-lg-12'>
+                                  <p class="bg-retricstions01"> 
+                                    In order for address autocomplete to work, you need an API key. To learn how to create an API key for Google Places API 
+                                    <Link class="btn ps-lg-0 linkj" href="/"> 
+                                      click here
+                                    </Link></p>
+                              </div>
+                              <div className='col-lg-12'>
+                                  <div className='row row-cols-1 row-cols-lg-2'>
+                                      <div className='col'>
+                                           <div className='form-group'>
+                                                <label className='form-label'> Google Places API key </label>
+                                                <input type='text' className='form-control' placeholder='Google Places API key'/>
+                                            </div>
+                                      </div>
+                                      <div className='col'>
+                                           <div className='form-group'>
+                                                <label className='form-label'> Country Restriction </label>
+                                                <Select options={countryl}
+                                                    name="numbersd"
+                                                className="basic-multi-select" />
+                                            </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                             
+                            
+                           </div>
+                      </div>
+                   </div>
+
 
              </div>
           </div> 
