@@ -563,36 +563,7 @@ function GeneralSettings() {
                                     <div className='row '>
                                         <div className='col-lg-5'>
                                             <div className='bg-white oder-div01'>
-                                                 <ul>
-                                                    <li className='d-flex align-items-center'>
-                                                      <span> Order ID#: </span>
-                                                      <Link href='/'>  <code>{'{{location_ids}}'}</code> </Link>
-                                                    </li>
-                                                    <li className='d-flex align-items-center'>
-                                                      <span> Customer ID#: </span>
-                                                      <Link href='/'> <code>{'{{customer_id}}'}</code>  </Link>
-                                                    </li>
-                                                    <li className='d-flex align-items-center'>
-                                                      <span> Order Total: </span>
-                                                      <Link href='/'>  <code>{'{{order_total}}'}</code> </Link>
-                                                    </li>
-                                                    <li className='d-flex align-items-center'>
-                                                      <span> Service IDs#: </span>
-                                                      <Link href='/'>  <code>{'{{service_ids}}'}</code> </Link>
-                                                    </li>
-                                                    <li className='d-flex align-items-center'>
-                                                      <span> Agent IDs#: </span>
-                                                      <Link href='/'> <code>{'{{agent_ids}}'}</code>  </Link>
-                                                    </li>
-                                                    <li className='d-flex align-items-center'>
-                                                      <span> Bundle IDs#: </span>
-                                                      <Link href='/'> <code>{'{{bundle_ids}}'}</code> </Link>
-                                                    </li>
-                                                    <li className='d-flex align-items-center'>
-                                                      <span> Location IDs#: </span>
-                                                      <Link href='/'>  <code>{'{{blocation_ids}}'}</code> </Link>
-                                                    </li>
-                                                 </ul>
+                                               
                                             </div>
                                         </div>
                                         <div className='col-lg-7'>
