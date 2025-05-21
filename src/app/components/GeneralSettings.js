@@ -518,10 +518,10 @@ function GeneralSettings() {
                                 </div>
                                 <div class="col-lg-12">
                                     <p class="bg-retricstions01"> You can use variables in your booking template, they will be replaced with a value for the booking.  
-                                        <a class="btn ps-lg-0 linkj" href="/"> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <Link class="btn ps-lg-0 linkj" href="/"> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                          <path d="M256 90c44.3 0 86 17.3 117.4 48.6C404.7 170 422 211.7 422 256s-17.3 86-48.6 117.4C342 404.7 300.3 422 256 422s-86-17.3-117.4-48.6C107.3 342 90 300.3 90 256s17.3-86 48.6-117.4C170 107.3 211.7 90 256 90m0-42C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48z"></path><path d="M277 360h-42V235h42v125zm0-166h-42v-42h42v42z"></path></svg> 
                                             Show Available Variables
-                                         </a> 
+                                         </Link> 
                                     </p>
                                 </div>
                                 <div class="col-lg-12">
@@ -563,7 +563,36 @@ function GeneralSettings() {
                                     <div className='row '>
                                         <div className='col-lg-5'>
                                             <div className='bg-white oder-div01'>
-                                               
+                                                 <ul>
+                                                    <li className='d-flex align-items-center'>
+                                                      <span> Order ID#: </span>
+                                                      <Link href='/'>  <code>{'{{location_ids}}'}</code> </Link>
+                                                    </li>
+                                                    <li className='d-flex align-items-center'>
+                                                      <span> Customer ID#: </span>
+                                                      <Link href='/'> <code>{'{{customer_id}}'}</code>  </Link>
+                                                    </li>
+                                                    <li className='d-flex align-items-center'>
+                                                      <span> Order Total: </span>
+                                                      <Link href='/'>  <code>{'{{order_total}}'}</code> </Link>
+                                                    </li>
+                                                    <li className='d-flex align-items-center'>
+                                                      <span> Service IDs#: </span>
+                                                      <Link href='/'>  <code>{'{{service_ids}}'}</code> </Link>
+                                                    </li>
+                                                    <li className='d-flex align-items-center'>
+                                                      <span> Agent IDs#: </span>
+                                                      <Link href='/'> <code>{'{{agent_ids}}'}</code>  </Link>
+                                                    </li>
+                                                    <li className='d-flex align-items-center'>
+                                                      <span> Bundle IDs#: </span>
+                                                      <Link href='/'> <code>{'{{bundle_ids}}'}</code> </Link>
+                                                    </li>
+                                                    <li className='d-flex align-items-center'>
+                                                      <span> Location IDs#: </span>
+                                                      <Link href='/'>  <code>{'{{blocation_ids}}'}</code> </Link>
+                                                    </li>
+                                                 </ul>
                                             </div>
                                         </div>
                                         <div className='col-lg-7'>
