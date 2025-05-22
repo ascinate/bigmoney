@@ -12,7 +12,7 @@ function Schedule() {
             <section className='general-week-section'>
                 <div className='wrapper'>
                     <div className='general-week-container'>
-                        <div className='' id='general-weekly-schedule'>General Weekly Schedule</div>
+                        <h2 className='cm-head'>General Weekly Schedule</h2>
                         <div className='general-weekly-schedule-bottom'>
                             <div id='week-days'>
                                 <div className='day-name-time'>
@@ -23,7 +23,7 @@ function Schedule() {
                                     <p id='day'>Monday</p>
                                 </div>
                                 <div className='day-name-time'>
-                                    <p className='day-time'>08:00am-05:00pm</p>
+                                    
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
@@ -36,7 +36,7 @@ function Schedule() {
                                     <p id='day'>Tuesday</p>
                                 </div>
                                 <div className='day-name-time'>
-                                    <p className='day-time'>08:00am-05:00pm</p>
+                                    
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ function Schedule() {
                                     <p id='day'>Wednesday</p>
                                 </div>
                                 <div className='day-name-time'>
-                                    <p className='day-time'>08:00am-05:00pm</p>
+                                    
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
@@ -63,7 +63,7 @@ function Schedule() {
                                     <p id='day'>Thursday</p>
                                 </div>
                                 <div className='day-name-time'>
-                                    <p className='day-time'>08:00am-05:00pm</p>
+                                    
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ function Schedule() {
                                     <p id='day'>Friday</p>
                                 </div>
                                 <div className='day-name-time'>
-                                    <p className='day-time'>08:00am-05:00pm</p>
+                                    
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
@@ -89,7 +89,7 @@ function Schedule() {
                                     <p id='day'>Saturday</p>
                                 </div>
                                 <div className='day-name-time'>
-                                    <p className='day-time'>08:00am-05:00pm</p>
+                                    
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
@@ -102,7 +102,7 @@ function Schedule() {
                                     <p id='day'>Sunday</p>
                                 </div>
                                 <div className='day-name-time'>
-                                    <p className='day-time'>08:00am-05:00pm</p>
+                                    
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
@@ -129,7 +129,7 @@ function Schedule() {
                                     </button>
                                 </div>
                                 <div>
-                                    <button id='addDay-btn' onClick={handleAddDay}>
+                                    <button id='addDay-btn'>
                                         <FaPlusCircle id='addDay-btn-icon' />
                                         Add Day
                                     </button>
@@ -139,7 +139,7 @@ function Schedule() {
 
 
 
-                            <div className={` ${viewModal ? 'show' : 'modal'}`}>
+                            <div className=''>
 
 
                                 <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -147,7 +147,7 @@ function Schedule() {
                                     <div className="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
 
                                     <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                                        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                                        <div className="flex min-h-full items-end justify-center p-4 text-center">
                                             <section className='calender'>
                                                 <article className='Custom-schedule-row-one art'>
                                                     <div className=''>
@@ -230,7 +230,7 @@ function Schedule() {
                                     </button>
                                 </div>
                                 <div>
-                                    <button id='addDay-btn' onClick={handleAddDay}>
+                                    <button id='addDay-btn'>
                                         <FaPlusCircle id='addDay-btn-icon' />
                                         Add Day
                                     </button>
@@ -240,7 +240,7 @@ function Schedule() {
 
 
 
-                            <div className={` ${viewModal ? 'show' : 'modal'}`}>
+                            <div className=''>
 
 
                                 <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -248,7 +248,7 @@ function Schedule() {
                                     <div className="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
 
                                     <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                                        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                                        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center">
                                             <section className='calender'>
                                                 <article className='Custom-schedule-row-one art'>
                                                     <div className=''>
