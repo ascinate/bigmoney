@@ -1,6 +1,4 @@
 "use client"
-
-import React, { useState } from 'react'
 import { TbPencilMinus } from "react-icons/tb";
 import { FaPlusCircle } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
