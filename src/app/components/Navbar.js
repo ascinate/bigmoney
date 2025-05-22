@@ -6,7 +6,6 @@ import { MdOutlineChatBubbleOutline , MdLogout } from "react-icons/md";
 import { LuSettings , LuCircleDollarSign } from "react-icons/lu";
 import { FaRegFileLines } from "react-icons/fa6";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
-import ActiveLink from "./ActiveLink";
 
 function Navbar() {
 
