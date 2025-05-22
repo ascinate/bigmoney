@@ -70,7 +70,6 @@ function PremiumFeatures() {
 
             <section className='premium-features-section-features'>
                 <div className='wrapper'>
-                    {/* row */}
                     <div className='premium-bottom-section'>
                         <div className='premium-bottom-row' onClick={hanldeFeatures} >
                             <div className='premium-features-flex'>
@@ -94,7 +93,6 @@ function PremiumFeatures() {
                             )}
                         </div>
                     </div>
-                    {/* row */}
                     <div className='premium-bottom-section'>
                         <div className='premium-bottom-row' onClick={hanldeSystemInfo} >
                             <div className='premium-features-flex'>
@@ -118,7 +116,6 @@ function PremiumFeatures() {
                             )}
                         </div>
                     </div>
-                    {/* row */}
                     <div className='premium-bottom-section'>
                         <div className='premium-bottom-row' onClick={handleInstallAddons} >
                             <div className='premium-features-flex'>
@@ -133,7 +130,6 @@ function PremiumFeatures() {
                         <div>
                             {installAddons && (
                                 <div className='install-dropdown'>
-                                    {/* row */}
                                     <div className='install-col-one'>
                                         <p>Pro Features</p>
                                         <div className='install-col-one-text install-col-one-text-bottom'>
@@ -146,7 +142,6 @@ function PremiumFeatures() {
                                         </div>
 
                                     </div>
-                                    {/* row */}
                                     <div className='install-col-one'>
                                         <p>Pro Features</p>
                                         <div className='install-col-one-text install-col-one-text-bottom'>
@@ -159,7 +154,6 @@ function PremiumFeatures() {
                                         </div>
 
                                     </div>
-                                    {/* row */}
                                     <div className='install-col-one'>
                                         <p>Pro Features</p>
                                         <div className='install-col-one-text install-col-one-text-bottom'>

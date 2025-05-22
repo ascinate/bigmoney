@@ -32,7 +32,7 @@ function Taxs() {
         <>
             <section className='tax-section'>
                 <div className='wrapper'>
-                    <article>
+                    <article> 
                         <div className='tax-section-header'>
                             <h2 className='cm-head'> Payment Process </h2>
                         </div>

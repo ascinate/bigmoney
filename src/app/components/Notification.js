@@ -11,9 +11,7 @@ function Notification() {
         <>
            <section className='roles-section'>
                 <div className='wrapper'>
-                {/* row */}
                 <artical className='roles-bottom-section'>
-                    {/* head */}
                     <div className='roles-section-header'>
                     <h3 className='defaul-heading'>EMAIL PROCESSOR</h3>
                     </div>
@@ -28,14 +26,11 @@ function Notification() {
                     </div>
                     <div id='stripe-connect'>
 
-                        {/* <h4>Stripe Connect</h4> */}
                     </div>
                     </div>
                 </artical>
 
-                {/* row */}
                 <artical className='roles-bottom-section'>
-                    {/* head */}
                     <div className='roles-section-header'>
                     <h3 className='defaul-heading'>SMS PROCESSORS</h3>
                     </div>
@@ -55,9 +50,7 @@ function Notification() {
                     </div>
                 </artical>
 
-                {/* row */}
                 <artical className='roles-bottom-section'>
-                    {/* head */}
                     <div className='roles-section-header'>
                     <h3 className='defaul-heading'>SMS PROCESSORS</h3>
                     </div>
@@ -78,7 +71,6 @@ function Notification() {
                 </artical>
 
                 <artical className='other-bottom-section'>
-                    {/* head */}
                     <div className='roles-section-header'>
                     <h3 className='defaul-heading'>OTHER SETTINGS</h3>
                     </div>
@@ -90,7 +82,6 @@ function Notification() {
                     </div>
                     <div id='stripe-connect'>
 
-                        {/* <h4>Stripe Connect</h4> */}
                     </div>
                     </div>
                 </artical>
