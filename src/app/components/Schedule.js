@@ -1,113 +1,151 @@
 "use client"
+
+import { useState } from 'react';
 import { TbPencilMinus } from "react-icons/tb";
 import { FaPlusCircle } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import CalendarWithDropdown from './CalendarWithDropdown';
+import { FiEdit3 } from "react-icons/fi";
 
 function Schedule() {
+  const [isChecked, setIsChecked] = useState(true);
 
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  };
 
     return(
         <>
             <section className='general-week-section'>
+                <h2 className='cm-head'>General Weekly Schedule</h2>
                 <div className='wrapper'>
                     <div className='general-week-container'>
-                        <h2 className='cm-head'>General Weekly Schedule</h2>
-                        <div className='general-weekly-schedule-bottom'>
+                        
+                        <div className='general-weekly-schedule-bottom crm-weeks'>
                             <div id='week-days'>
-                                <div className='day-name-time'>
-                                    <label className="switch">
-                                        <input type="checkbox" />
-                                        <span className="slider"></span>
-                                    </label>
-                                    <p id='day'>Monday</p>
+                                <div className='day-name-time d-flex align-items-center'>
+                       
+                                    <div className="form-check form-switch">
+                                        <input className="form-check-input" type="checkbox"  
+                                        checked={isChecked}
+                                        onChange={handleChange}/>
+                                        
+                                    </div>
+                                    <button className='btn btn-mondays'> Monday </button>
                                 </div>
-                                <div className='day-name-time'>
-                                    
-                                    <TbPencilMinus className='day-name-time-icon' />
-                                </div>
+                                <button type='button' className='btn btn-edits'>
+                                    <span> 08:00am-05:00pm </span>
+                                    <FiEdit3/>
+                                </button>
                             </div>
                             <div id='week-days'>
-                                <div className='day-name-time'>
-                                    <label className="switch">
-                                        <input type="checkbox" />
-                                        <span className="slider"></span>
-                                    </label>
-                                    <p id='day'>Tuesday</p>
+                                <div className='day-name-time d-flex align-items-center'>
+                       
+                                    <div className="form-check form-switch">
+                                        <input className="form-check-input" type="checkbox"  
+                                        checked={isChecked}
+                                        onChange={handleChange}/>
+                                        
+                                    </div>
+                                    <button className='btn btn-mondays'> Tuesday </button>
                                 </div>
-                                <div className='day-name-time'>
-                                    
-                                    <TbPencilMinus className='day-name-time-icon' />
-                                </div>
+                                <button type='button' className='btn btn-edits'>
+                                    <span> 08:00am-05:00pm </span>
+                                    <FiEdit3/>
+                                </button>
                             </div>
 
                             <div id='week-days'>
-                                <div className='day-name-time'>
-                                    <label className="switch">
-                                        <input type="checkbox" />
-                                        <span className="slider"></span>
-                                    </label>
-                                    <p id='day'>Wednesday</p>
+                                <div className='day-name-time d-flex align-items-center'>
+                       
+                                    <div className="form-check form-switch">
+                                        <input className="form-check-input" type="checkbox"  
+                                        checked={isChecked}
+                                        onChange={handleChange}/>
+                                        
+                                    </div>
+                                    <button className='btn btn-mondays'> Wednesday </button>
                                 </div>
-                                <div className='day-name-time'>
-                                    
-                                    <TbPencilMinus className='day-name-time-icon' />
-                                </div>
+                                <button type='button' className='btn btn-edits'>
+                                    <span> 08:00am-05:00pm </span>
+                                    <FiEdit3/>
+                                </button>
                             </div>
+
                             <div id='week-days'>
-                                <div className='day-name-time'>
-                                    <label className="switch">
-                                        <input type="checkbox" />
-                                        <span className="slider"></span>
-                                    </label>
-                                    <p id='day'>Thursday</p>
+                                <div className='day-name-time d-flex align-items-center'>
+                       
+                                    <div className="form-check form-switch">
+                                        <input className="form-check-input" type="checkbox"  
+                                        checked={isChecked}
+                                        onChange={handleChange}/>
+                                        
+                                    </div>
+                                    <button className='btn btn-mondays'> Thursday </button>
                                 </div>
-                                <div className='day-name-time'>
-                                    
-                                    <TbPencilMinus className='day-name-time-icon' />
-                                </div>
+                                <button type='button' className='btn btn-edits'>
+                                    <span> 08:00am-05:00pm </span>
+                                    <FiEdit3/>
+                                </button>
                             </div>
+
+
+                             <div id='week-days'>
+                                <div className='day-name-time d-flex align-items-center'>
+                       
+                                    <div className="form-check form-switch">
+                                        <input className="form-check-input" type="checkbox"  
+                                        checked={isChecked}
+                                        onChange={handleChange}/>
+                                        
+                                    </div>
+                                    <button className='btn btn-mondays'> Friday </button>
+                                </div>
+                                <button type='button' className='btn btn-edits'>
+                                    <span> 08:00am-05:00pm </span>
+                                    <FiEdit3/>
+                                </button>
+                            </div>
+
+
                             <div id='week-days'>
-                                <div className='day-name-time'>
-                                    <label className="switch">
-                                        <input type="checkbox" />
-                                        <span className="slider"></span>
-                                    </label>
-                                    <p id='day'>Friday</p>
+                                <div className='day-name-time d-flex align-items-center'>
+                       
+                                    <div className="form-check form-switch">
+                                        <input className="form-check-input" type="checkbox"  
+                                        checked={isChecked}
+                                        onChange={handleChange}/>
+                                        
+                                    </div>
+                                    <button className='btn btn-mondays'> Saturday </button>
                                 </div>
-                                <div className='day-name-time'>
-                                    
-                                    <TbPencilMinus className='day-name-time-icon' />
-                                </div>
+                                <button type='button' className='btn btn-edits'>
+                                    <span> 08:00am-05:00pm </span>
+                                    <FiEdit3/>
+                                </button>
                             </div>
-                            <div id='week-days'>
-                                <div className='day-name-time'>
-                                    <label className="switch">
-                                        <input type="checkbox" />
-                                        <span className="slider"></span>
-                                    </label>
-                                    <p id='day'>Saturday</p>
-                                </div>
-                                <div className='day-name-time'>
-                                    
-                                    <TbPencilMinus className='day-name-time-icon' />
-                                </div>
-                            </div>
+
+
                             <div id='week-days-sunday'>
-                                <div className='day-name-time'>
-                                    <label className="switch">
-                                        <input type="checkbox" />
-                                        <span className="slider"></span>
-                                    </label>
-                                    <p id='day'>Sunday</p>
+                                <div className='day-name-time d-flex align-items-center'>
+                       
+                                    <div className="form-check form-switch">
+                                        <input className="form-check-input" type="checkbox"  
+                                        checked={isChecked}
+                                        onChange={handleChange}/>
+                                        
+                                    </div>
+                                    <button className='btn btn-mondays'> Sunday </button>
                                 </div>
-                                <div className='day-name-time'>
-                                    
-                                    <TbPencilMinus className='day-name-time-icon' />
-                                </div>
+                                <button type='button' className='btn btn-edits'>
+                                    <span> 08:00am-05:00pm </span>
+                                    <FiEdit3/>
+                                </button>
                             </div>
-                            <div className='schedule-save-btn-container'>
-                                <button id='schedule-save'>
+
+                          
+                            <div className='schedule-save-btn-container mb-5 me-3 mt-4'>
+                                <button type='button' className='btn cm-btn'>
                                     Save Weekly Schedule
                                 </button>
                             </div>
@@ -115,92 +153,19 @@ function Schedule() {
                     </div>
                 </div>
             </section>
-            <section className='general-week-section'>
+            <section className='general-week-section mt-5'>
+                <h2 className='cm-head'>Days With Custom Schedules</h2>
                 <div className='wrapper'>
-                    <div className='general-week-container'>
-                        <div className='' id='general-weekly-schedule'>Days With Custom Schedules</div>
+                    <div className='general-week-container new-padings'>
+                        <h5 className='mb-3'>Days With Custom Schedules</h5>
                         <div className='general-weekly-schedule-bottom'>
                             <div className='days-with-custom-schedules'>
-                                <div className='july'>
-                                    <button className='july-btn'>
-                                        <span className='july-btn-date'>03</span>
-                                        <br />
-                                        <span>July</span>
-                                    </button>
-                                </div>
+                                
                                 <div>
-                                    <button id='addDay-btn'>
+                                    <button type='button' id='addDay-btn' data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <FaPlusCircle id='addDay-btn-icon' />
                                         Add Day
                                     </button>
-                                </div>
-                            </div>
-
-
-
-
-                            <div className=''>
-
-
-                                <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-
-                                    <div className="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
-
-                                    <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                                        <div className="flex min-h-full items-end justify-center p-4 text-center">
-                                            <section className='calender'>
-                                                <article className='Custom-schedule-row-one art'>
-                                                    <div className=''>
-                                                        <h2 className='calender-heading'>Custom schedule</h2>
-                                                    </div>
-                                                    <div>
-                                                        <IoMdClose />
-                                                    </div>
-                                                </article>
-
-                                                <article className='Custom-schedule-row-two art'>
-                                                    <div className='Custom-schedule-row-two-select'>
-                                                        <select name="" className="Custom-schedule-select">
-                                                            <option value="singleday">Single Day</option>
-                                                            <option value="datarange">Data Range</option>
-
-                                                        </select>
-                                                    </div>
-                                                </article>
-
-                                                <article className='Custom-schedule-row-three'>
-                                                    <div className='pick-date'>
-                                                        <p className='pick-text'>Pick a Date</p>
-                                                    </div>
-                                                    <div className='Custom-schedule-month-year'>
-                                                        <div className='Custom-schedule-year'>
-                                                            <select name="none" className="Custom-schedule-select-year">
-                                                                <option value="2025">2025</option>
-                                                                <option value="2026">2026</option>
-                                                            </select>
-                                                        </div>
-                                                        <div className='Custom-schedule-month'>
-                                                            <select name="" className="Custom-schedule-select">
-                                                                <option value="1">January</option>
-                                                                <option value="2">February</option>
-                                                                <option value="3">March</option>
-                                                                <option value="4">April</option>
-                                                                <option value="5">May</option>
-                                                                <option value="6" selected="">June</option>
-                                                                <option value="7">July</option>
-                                                                <option value="8">August</option>
-                                                                <option value="9">September</option>
-                                                                <option value="10">October</option>
-                                                                <option value="11">November</option>
-                                                                <option value="12">December</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                <CalendarWithDropdown/>
-                                            </section>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
@@ -209,101 +174,19 @@ function Schedule() {
                     </div>
                 </div>
             </section>
-            <section className='general-week-section'>
+
+            <section className='general-week-section mt-5'>
                 <div className='wrapper'>
-                    <div className='general-week-container'>
-                        <div className='' id='general-weekly-schedule'>Holidays & Days Off</div>
+                    <div className='general-week-container new-padings'>
+                        <h5 className='mb-3'>Holidays & Days Off</h5>
                         <div className='general-weekly-schedule-bottom'>
                             <div className='days-with-custom-schedules'>
-                                <div className='july'>
-                                    <button className='july-btn'>
-                                        <span className='july-btn-date'>03</span>
-                                        <br />
-                                        <span>July</span>
-                                    </button>
-                                </div>
-                                <div className='july'>
-                                    <button className='july-btn'>
-                                        <span className='july-btn-date'>03</span>
-                                        <br />
-                                        <span>July</span>
-                                    </button>
-                                </div>
+                                
                                 <div>
-                                    <button id='addDay-btn'>
+                                    <button type='button' id='addDay-btn' data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <FaPlusCircle id='addDay-btn-icon' />
                                         Add Day
                                     </button>
-                                </div>
-                            </div>
-
-
-
-
-                            <div className=''>
-
-
-                                <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-
-                                    <div className="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
-
-                                    <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                                        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center">
-                                            <section className='calender'>
-                                                <article className='Custom-schedule-row-one art'>
-                                                    <div className=''>
-                                                        <h2 className='calender-heading'>Custom schedule</h2>
-                                                    </div>
-                                                    <div>
-                                                        <IoMdClose />
-                                                    </div>
-                                                </article>
-
-                                                <article className='Custom-schedule-row-two art'>
-                                                    <div className='Custom-schedule-row-two-select'>
-                                                        <select name="" className="Custom-schedule-select">
-                                                            <option value="singleday">Single Day</option>
-                                                            <option value="datarange">Data Range</option>
-
-                                                        </select>
-                                                    </div>
-                                                </article>
-
-                                                <article className='Custom-schedule-row-three'>
-                                                    <div className='pick-date'>
-                                                        <p className='pick-text'>Pick a Date</p>
-                                                    </div>
-                                                    <div className='Custom-schedule-month-year'>
-                                                        <div className='Custom-schedule-year'>
-                                                            <select name="none" className="Custom-schedule-select-year">
-                                                                <option value="2025">2025</option>
-                                                                <option value="2026">2026</option>
-                                                            </select>
-                                                        </div>
-                                                        <div className='Custom-schedule-month'>
-                                                            <select name="" className="Custom-schedule-select">
-                                                                <option value="1">January</option>
-                                                                <option value="2">February</option>
-                                                                <option value="3">March</option>
-                                                                <option value="4">April</option>
-                                                                <option value="5">May</option>
-                                                                <option value="6" selected="">June</option>
-                                                                <option value="7">July</option>
-                                                                <option value="8">August</option>
-                                                                <option value="9">September</option>
-                                                                <option value="10">October</option>
-                                                                <option value="11">November</option>
-                                                                <option value="12">December</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                                
-                                                <CalendarWithDropdown/>
-                                                   
-                                            </section>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
@@ -312,6 +195,20 @@ function Schedule() {
                     </div>
                 </div>
             </section>
+              <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                    <div className="modal-header">
+                                        <h5 className="modal-title" id="exampleModalLabel">Custom schedule</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div className="modal-body">
+                                        <CalendarWithDropdown/>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+              </div>
         </>
     );
 }

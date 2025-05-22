@@ -34,7 +34,13 @@ body {
   padding: 0;
   margin: 0;
 }
-
+.cm-btn{
+  background: var(--btncolor);
+  color: #fff !important;
+  border-radius: 8px;
+  font-size: 15px;
+  padding: 10px 25px;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -51,7 +57,10 @@ img{
   }
 }
 .content-parts{
-  width:calc(100% - 305px);
+  width:calc(100% - 292px);
+}
+.home-settings {
+  padding-right: 20px;
 }
 .slider-bars{
   width: 265px;
@@ -1016,20 +1025,13 @@ input:checked+.slider:before {
 }
 
 .general-week-container {
-  border: 1px solid lightgray;
-  border-radius: 5px;
+  border: 1px solid #e4e5e7;
+  border-radius: 8px;
 }
 
-#general-weekly-schedule {
-  padding: 20px 30px;
-  font-weight: 400;
-  color: #1f222b;
-  font-size: 18px;
-  border-bottom: 1px solid lightgray;
-}
 
 .general-weekly-schedule-bottom {
-  padding: 30px;
+  
 }
 .july{
     border: 3px dotted rgba(0, 0, 0, 0.1);
@@ -1045,25 +1047,29 @@ input:checked+.slider:before {
   display: flex;
   gap: 20px;
 }
-
+.form-check-input:focus{
+  box-shadow: none !important;
+}
 
 #week-days {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid lightgray;
-  padding: 15px 0;
+  border-bottom: 1px solid #e4e5e7;
+  padding: 30px;
 }
-
+.btn-mondays{
+  text-decoration: underline;
+}
 #week-days-sunday {
   display: flex;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 15px 30px;
+}
+.btn-edits{
+  color: var(--btncolor);
 }
 
 .day-name-time {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 #day {
@@ -1075,7 +1081,6 @@ input:checked+.slider:before {
 }
 
 .day-name-time {
-  font-size: 12px;
 }
 
 .day-time:hover,
@@ -1800,4 +1805,17 @@ padding-block: 8px;
 .slider-bars:focus,
 .slider-bars:active{
   outline: none !important;
+}
+
+.crm-weeks .form-check-input{
+  height: 1.1rem;
+}
+.new-padings{
+  padding: 30px;
+}
+
+.crm-weeks span{
+  color: #788291;
+  font-size: 12px;
+  margin-right: 5px;
 }
