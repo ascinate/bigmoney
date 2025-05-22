@@ -1403,7 +1403,7 @@ h2.calender-heading {
 .footer-divs01{
   width: calc(100% - 285px);
   margin-left: auto;
-  display: block;
+  display: table;
   margin-bottom: 20px;
   position: relative;
   top: 16px;
