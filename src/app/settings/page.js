@@ -5,7 +5,11 @@ import Payments from "../components/Payments";
 import GeneralSettings from "../components/GeneralSettings";
 import Footer from "../components/Footer";
 import Schedule from "../components/Schedule";
-import CalendarWithDropdown from "../components/CalendarWithDropdown";
+import BookingTba from "../components/BookingTba";
+import Notification from "../components/Notification";
+import PremiumFeatures from "../components/PremiumFeatures";
+import Taxs from "../components/Taxs";
+import Roles from "../components/Roles";
 
 
 export default function Home() {
@@ -60,15 +64,23 @@ export default function Home() {
                          <Schedule/>
                       </div>
                       <div className="tab-pane fade" id="tax" role="tabpanel">
-                         <CalendarWithDropdown/>
+                         <Taxs/>
                       </div>
-                      <div className="tab-pane fade" id="contact" role="tabpanel">contact</div>
+                      <div className="tab-pane fade" id="contact" role="tabpanel">
+                          <BookingTba/>
+                      </div>
                       <div className="tab-pane fade" id="payments" role="tabpanel">
                          <Payments/>
                       </div>
-                      <div className="tab-pane fade" id="notifications" role="tabpanel">notifications</div>
-                      <div className="tab-pane fade" id="roles" role="tabpanel">roles</div>
-                      <div className="tab-pane fade" id="premium" role="tabpanel">premium</div>
+                      <div className="tab-pane fade" id="notifications" role="tabpanel">
+                         <Notification/>
+                      </div>
+                      <div className="tab-pane fade" id="roles" role="tabpanel">
+                           <Roles/>
+                      </div>
+                      <div className="tab-pane fade" id="premium" role="tabpanel">
+                         <PremiumFeatures/>
+                      </div>
                     </div>
                 </div>
             </div>

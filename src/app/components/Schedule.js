@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { TbPencilMinus } from "react-icons/tb";
 import { FaPlusCircle } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-import Calender from './Calender';
+import CalendarWithDropdown from './CalendarWithDropdown';
 
 function Schedule() {
     const [viewModal, setViewModal] = useState(false)
@@ -151,7 +151,7 @@ function Schedule() {
                                     </button>
                                 </div>
                                 <div>
-                                    <button id='addDay-btn' >
+                                    <button id='addDay-btn' onClick={handleAddDay}>
                                         <FaPlusCircle id='addDay-btn-icon' />
                                         Add Day
                                     </button>
@@ -173,17 +173,17 @@ function Schedule() {
                                         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                                             <section className='calender'>
                                                 {/* row-1 */}
-                                                <artical className='Custom-schedule-row-one art'>
+                                                <article className='Custom-schedule-row-one art'>
                                                     <div className=''>
                                                         <h2 className='calender-heading'>Custom schedule</h2>
                                                     </div>
                                                     <div>
                                                         <IoMdClose />
                                                     </div>
-                                                </artical>
+                                                </article>
 
                                                 {/* row-2 */}
-                                                <artical className='Custom-schedule-row-two art'>
+                                                <article className='Custom-schedule-row-two art'>
                                                     <div className='Custom-schedule-row-two-select'>
                                                         <select name="" className="Custom-schedule-select">
                                                             <option value="singleday">Single Day</option>
@@ -191,10 +191,10 @@ function Schedule() {
 
                                                         </select>
                                                     </div>
-                                                </artical>
+                                                </article>
 
                                                 {/* row-3 */}
-                                                <artical className='Custom-schedule-row-three'>
+                                                <article className='Custom-schedule-row-three'>
                                                     <div className='pick-date'>
                                                         <p className='pick-text'>Pick a Date</p>
                                                     </div>
@@ -222,13 +222,9 @@ function Schedule() {
                                                             </select>
                                                         </div>
                                                     </div>
-                                                </artical>
+                                                </article>
                                                 {/* row-4 */}
-                                                <artical className='Custom-schedule-row-four art'>
-                                                    <figure>
-                                                        <Calender/>
-                                                    </figure>
-                                                </artical>
+                                                <CalendarWithDropdown/>
                                             </section>
                                         </div>
                                     </div>
@@ -287,17 +283,17 @@ function Schedule() {
                                         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                                             <section className='calender'>
                                                 {/* row-1 */}
-                                                <artical className='Custom-schedule-row-one art'>
+                                                <article className='Custom-schedule-row-one art'>
                                                     <div className=''>
                                                         <h2 className='calender-heading'>Custom schedule</h2>
                                                     </div>
                                                     <div>
                                                         <IoMdClose />
                                                     </div>
-                                                </artical>
+                                                </article>
 
                                                 {/* row-2 */}
-                                                <artical className='Custom-schedule-row-two art'>
+                                                <article className='Custom-schedule-row-two art'>
                                                     <div className='Custom-schedule-row-two-select'>
                                                         <select name="" className="Custom-schedule-select">
                                                             <option value="singleday">Single Day</option>
@@ -305,10 +301,10 @@ function Schedule() {
 
                                                         </select>
                                                     </div>
-                                                </artical>
+                                                </article>
 
                                                 {/* row-3 */}
-                                                <artical className='Custom-schedule-row-three'>
+                                                <article className='Custom-schedule-row-three'>
                                                     <div className='pick-date'>
                                                         <p className='pick-text'>Pick a Date</p>
                                                     </div>
@@ -336,13 +332,11 @@ function Schedule() {
                                                             </select>
                                                         </div>
                                                     </div>
-                                                </artical>
+                                                </article>
                                                 {/* row-4 */}
-                                                <artical className='Custom-schedule-row-four art'>
-                                                    <figure>
-                                                        <Calender/>
-                                                    </figure>
-                                                </artical>
+                                                
+                                                        <CalendarWithDropdown/>
+                                                   
                                             </section>
                                         </div>
                                     </div>
