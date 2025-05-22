@@ -19,17 +19,17 @@ export default function Home() {
                  
                     <div className="form-floating mb-3">
                         <input type="email" className="form-control" id="floatingInput" placeholder="Email or username"/>
-                      <label for="floatingInput">Email address</label>
+                      <label htmlFor="floatingInput">Email address</label>
                     </div>
                     <div className="form-floating">
                         <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-                      <label for="floatingPassword">Password</label>
+                      <label htmlFor="floatingPassword">Password</label>
                     </div>
                  
                    <div className="form-group remooter d-flex align-items-center justify-content-between w-100 mt-4">
                       <div className="form-check">
                         <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                        <label className="form-check-label" for="flexCheckDefault">
+                        <label className="form-check-label" htmlFor="flexCheckDefault">
                           Remember Me
                         </label>
                       </div>

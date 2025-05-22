@@ -79,7 +79,7 @@ img{
   height: 20px;
 }
 .search-sections01{
-  padding: 15px 20px 15px 0;
+  padding: 9px 20px 15px 0;
 }
 .cm-btnop{
   background: var(--btncolor) !important;
@@ -918,6 +918,11 @@ input:checked+.slider:before {
 .drops-menus01 li.crm-lisk01 a{
    font-size: 15px;
    padding: 7px 15px 7px 20px;
+   display: flex;
+   align-items: center;
+}
+.drops-menus01 li.crm-lisk01 a svg{
+  margin-right: 10px;
 }
 .drops-menus01 li.crm-lisk01 a:active{
   color: #1e7bff !important;
@@ -985,4 +990,439 @@ input:checked+.slider:before {
     line-height: 24px;
     position: absolute;
     top: 3px;
+}
+
+.genrations01{
+
+}
+
+
+
+
+
+
+
+/*:::::::::::::::schedule page start::::::::::::::::::*/
+
+/* ------week section start ------*/
+.general-week-section {
+  margin-block: 20px;
+}
+
+.general-week-container {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+#general-weekly-schedule {
+  padding: 20px 30px;
+  font-weight: 400;
+  color: #1f222b;
+  font-size: 18px;
+  border-bottom: 1px solid lightgray;
+}
+
+.general-weekly-schedule-bottom {
+  padding: 30px;
+}
+.july{
+    border: 3px dotted rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding-block: 20px;
+  padding-inline: 35px;
+}
+.july-btn-date {
+  color: #2196F3;
+}
+
+.days-with-custom-schedules{
+  display: flex;
+  gap: 20px;
+}
+
+
+#week-days {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding: 15px 0;
+}
+
+#week-days-sunday {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.day-name-time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#day {
+  font-size: 16px;
+}
+
+.day-time {
+  color: gray;
+}
+
+.day-name-time {
+  font-size: 12px;
+}
+
+.day-time:hover,
+.day-name-time-icon {
+  color: #2196F3;
+}
+
+
+
+
+/* toggle button start*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+  transform: translateX(25px);
+}
+
+/* toggle button end */
+
+.schedule-save-btn-container {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
+#schedule-save {
+  margin-top: 20px;
+  padding: 8px 12px;
+  background-color: #1e7bff;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#schedule-save:hover {
+  background-color: rgb(73, 73, 211);
+}
+
+/*------ week section end ------*/
+
+/* ------ day section start -------*/
+#addDay-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 3px dotted rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding : 20px;
+}
+
+
+
+#addDay-btn-icon {
+  height: 24px;
+  width: 24px;
+  color: #2196F3;
+}
+
+#addDay-btn:hover #addDay-btn-icon {
+  transform: scale(1.1, 1.1);
+}
+
+#addDay-btn:hover {
+  border: 3px solid rgb(81, 81, 212);
+
+  transform: scale(1.2, 1.2);
+}
+
+.modal {
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+
+
+#location {
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+#location-info {
+  color: gray;
+}
+
+#questions {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+#signup {
+  color: black
+}
+
+
+.calender-btn {
+
+
+  padding-block: 16px;
+}
+
+#discard-btn {
+  background-color: lightgray;
+  font-weight: 500;
+  padding-inline: 16px;
+  padding-block: 8px;
+  border-radius: 5px;
+}
+
+#save-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding-inline: 16px;
+  padding-block: 8px;
+  border-radius: 5px;
+
+}
+
+
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li .active {
+  margin: 10px;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #f5f6fb;
+  color: rgb(0, 0, 0) !important;
+}
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+
+  .weekdays li,
+  .days li {
+    width: 13.1%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .weekdays li,
+  .days li {
+    width: 12.5%;
+  }
+
+  .days li .active {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+
+  .weekdays li,
+  .days li {
+    width: 12.2%;
+  }
+}
+
+/*------- day section end ----------*/
+/* Calender card start*/
+.calender {
+  margin: auto;
+
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+h2.calender-heading {
+  padding: 15px 30px;
+  font-size: 26px !important;
+  font-size: 400;
+}
+
+/* row 1 */
+.Custom-schedule-row-one {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+/* row2 */
+.Custom-schedule-row-two {
+  border-bottom: 1px solid #ddd;
+}
+
+.Custom-schedule-select {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.Custom-schedule-row-two-select {
+  padding: 30px;
+  padding-inline: 30px;
+}
+
+/* row-3 */
+
+.Custom-schedule-row-three {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Custom-schedule-month-year {
+  display: flex;
+  gap: 10px;
+}
+
+.Custom-schedule-select-year {
+  border: 1px solid lightgray;
+  padding-inline: 4px;
+  padding-block: 8px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Calender card end*/
+
+/* ::::::::::::::schedule page end::::::::::::::::::::*/
+
+
+.footer-divs01{
+  width: calc(100% - 285px);
+  margin-left: auto;
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  top: 16px;
+}
+.footer-divs01 p span img{
+  transform: scale(0.7);
+  text-align: left;
+  margin-left: -10px;
+  position: relative;
+  top:-2px;
+}
+.footer-divs01 ul{
+  list-style-type: none;
+}
+.footer-divs01 ul li{
+  margin-left: 20px;
+}
+.footer-divs01 li a{
+  color: var(--btncolor);
+
+
 }

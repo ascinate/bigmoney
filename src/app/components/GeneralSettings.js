@@ -1,13 +1,12 @@
 'use client';
 import { useState , useRef } from 'react';
-import { FaArrowRightLong } from "react-icons/fa6"
 import Select from 'react-select'
 import Image from 'next/image';
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import makeAnimated from 'react-select/animated';
 import Link from 'next/link';
 import { TbExternalLink } from "react-icons/tb";
 import { PiDownloadSimpleBold } from "react-icons/pi";
+import TextEditor from './TextEditor';
 
 function GeneralSettings() {
     const options = [
@@ -67,17 +66,7 @@ function GeneralSettings() {
         }
     };
 
-     const customer_full_name = "{{customer_full_name}}";
-     const customer_email = "<br>";
-     const customer_phone = "{{customer_email}}";
-     const customer_email2 = "<br>";
-     const customer_phone1 = "{{customer_phone}}";
-
-
-      const bill_name = "{{business_address}}";
-     const bill_email = "<br>";
-      const bill_phone = "{{business_phone}}";
-
+    const [ctext, setCText] = useState('{{customer_full_name}}');
 
     const numberss = [
         { value: '20', label: '20' },
@@ -85,6 +74,9 @@ function GeneralSettings() {
         { value: '100', label: '100' },
         { value: '200', label: '200' },
     ]
+
+
+    
 
     return(
         <>
@@ -179,7 +171,7 @@ function GeneralSettings() {
                              </div>
                              <div className='col-lg-6'>
                                  <div className="form-check form-switch">
-                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked/>
+                                    <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked"/>
                                     <label className="form-check-label" htmlFor='flexSwitchCheckChecked' >Show appointment end time
                                         <span className='d-block'> Show booking end time during booking process and on summary </span>
                                     </label>
@@ -256,7 +248,7 @@ function GeneralSettings() {
                             <div className='row gy-4 mt-0 ms-0'>
                                 <div className='col-lg-12 boder-none01'>
                                     <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked01" checked/>
+                                        <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked01"/>
                                         <label className="form-check-label" htmlFor='flexSwitchCheckChecked'> Disable Shopping Cart Functionality
                                             <span className='d-block'> This will disable ability to book multiple services in one order </span>
                                         </label>
@@ -338,14 +330,14 @@ function GeneralSettings() {
                                 <div className='col-lg-12'>
                                     <div className='form-group'>
                                         <label className='form-label'> Bill From </label>
-                                         <textarea className="form-control nem-textr">{`${bill_name}\n${bill_email}\n${bill_phone}`}</textarea>
+                                         <textarea className="form-control nem-textr"></textarea>
                              
                                     </div>
                                 </div>
                                 <div className='col-lg-12'>
                                     <div className='form-group'>
                                         <label className='form-label'> Bill To </label>
-                                       <textarea className="form-control nem-textr">{`${customer_full_name}\n${customer_email}\n${customer_phone}\n${customer_phone1}`}</textarea>
+                                       <textarea className="form-control nem-textr"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -361,8 +353,8 @@ function GeneralSettings() {
                      <div className='col-9 pt-lg-0'>
                         <div className='right-offections'>
                             <div className='row gy-4 mt-0'>
-                                <div className='col-lg-12 mt-0'>
-                                     <p class="bg-retricstions01 d-flex align-items-center"> This subject and content will be used 
+                                <div className='col-lg-12 '>
+                                     <p className="bg-retricstions01 d-flex align-items-center"> This subject and content will be used 
                                         when invoice is being emailed.  <Link href='/' className='btn linkj'> <IoMdInformationCircleOutline /> Show Available Variables </Link> </p>
                                     
                                 </div>
@@ -373,64 +365,33 @@ function GeneralSettings() {
                                     </div>
                                 </div>
                                 <div className='col-lg-12'>
-                                        <div className='position-relative w-100'>
-                                          <div className='row'>
-                                            <div className='col-lg-5'>
-                                                <div className='img-hovers-div01 text-center d-flex align-items-center justify-content-center'>
-                                                 
-                                                        <Image src={previewImage} alt="Preview" width={200} height={61} />
-                                                    
-                                                </div>
-                                            </div>
-                                            <div className='col-lg-7'>
-                                                <div className="w-100">
-                                                  <label htmlFor="formFile" className="form-label">Upload Company Logo </label>
-                                                  <input className="form-control" type="file" onChange={handleImageChange} id="formFile"/>
-                                                </div>
-                                            </div>
-                                            
-                                            
-                                          </div>
-                                        <div>
-                                        
-                                       </div>
-                                        
-                                    </div>
-                                        
+                                    
 
+                                    <ul className="nav genrations01 nav-tabs" id="myTab" role="tablist">
+                                          <li className="nav-item" role="presentation">
+                                            <button className="nav-link active" id="home-tab" data-bs-toggle="tab" 
+                                            data-bs-target="#home" type="button" role="tab" aria-controls="home" 
+                                            aria-selected="true">Visual</button>
+                                          </li>
+                                          <li className="nav-item" role="presentation">
+                                            <button className="nav-link" id="profile-tab" data-bs-toggle="tab" 
+                                            data-bs-target="#profile" type="button" role="tab" aria-controls="profile" 
+                                            aria-selected="false">Code</button>
+                                          </li>
                                         
-                                 </div>
-                                <div className='col-lg-4'>
-                                    <div className='form-group'>
-                                        <label className='form-label'> Company Name </label>
-                                        <input type='text' name='eari' className='form-control' placeholder='Company Name' />
-                                    </div>
+                                        </ul>
+                                        <div className="tab-content pt-3" id="myTabContent">
+                                            <div className="tab-pane fade show active" id="home" role="tabpanel">
+                                               <TextEditor/>
+                                            </div>
+                                            <div className="tab-pane fade " id="profile" role="tabpanel">
+                                               <TextEditor/>
+                                            </div>
+                                        
+                                        
+                                        </div>
                                 </div>
-                                <div className='col-lg-4'>
-                                    <div className='form-group'>
-                                        <label className='form-label'> VAT Number/Tax ID </label>
-                                        <input type='text' name='latest' className='form-control' placeholder='VAT Number/Tax ID' />
-                                    </div>
-                                </div>
-                                <div className='col-lg-4'>
-                                    <div className='form-group'>
-                                        <label className='form-label'> Number Prefix </label>
-                                        <input type='text' name='latest' className='form-control' placeholder='INV-' />
-                                    </div>
-                                </div>
-                                <div className='col-lg-12'>
-                                    <div className='form-group'>
-                                        <label className='form-label'> Bill From </label>
-                                         <textarea className="form-control nem-textr">{`${bill_name}\n${bill_email}\n${bill_phone}`}</textarea>
-                             
-                                    </div>
-                                </div>
-                                <div className='col-lg-12'>
-                                    <div className='form-group'>
-                                        <label className='form-label'> Bill To </label>
-                                       <textarea className="form-control nem-textr">{`${customer_full_name}\n${customer_email}\n${customer_phone}\n${customer_phone1}`}</textarea>
-                                    </div>
-                                </div>
+                               
                             </div>
                             
                         </div>
@@ -444,7 +405,7 @@ function GeneralSettings() {
              <div className='inputs-div01 cm-style01 w-100 d-block'>
                   <div className='row align-items-start'>
                      <div className='col-3'>
-                          <p> Email Invoice </p>
+                          <p> Business Information </p>
                      </div>
                      <div className='col-9'>
                            <div className='right-offections'>
@@ -516,15 +477,15 @@ function GeneralSettings() {
                                         <input type='text' name='eari' className='form-control' placeholder='700' />
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <p class="bg-retricstions01"> You can use variables in your booking template, they will be replaced with a value for the booking.  
-                                        <Link class="btn ps-lg-0 linkj" href="/"> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <div className="col-lg-12">
+                                    <p className="bg-retricstions01"> You can use variables in your booking template, they will be replaced with a value for the booking.  
+                                        <Link className="btn ps-lg-0 linkj" href="/"> <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                          <path d="M256 90c44.3 0 86 17.3 117.4 48.6C404.7 170 422 211.7 422 256s-17.3 86-48.6 117.4C342 404.7 300.3 422 256 422s-86-17.3-117.4-48.6C107.3 342 90 300.3 90 256s17.3-86 48.6-117.4C170 107.3 211.7 90 256 90m0-42C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48z"></path><path d="M277 360h-42V235h42v125zm0-166h-42v-42h42v42z"></path></svg> 
                                             Show Available Variables
                                          </Link> 
                                     </p>
                                 </div>
-                                <div class="col-lg-12">
+                                <div className="col-lg-12">
                                     <div className='form-group'>
                                         <label className='form-label'> Booking tile information to display on calendar </label>
                                         <input type='text' name='eari' className='form-control' placeholder='{{service_name}}' />
@@ -553,13 +514,13 @@ function GeneralSettings() {
                                         <input type='text' name='eari' className='form-control' placeholder='700' />
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <p class="bg-retricstions01 "> You can include some javascript or html that will be appended to the confirmation step. For example you can track ad conversions by triggering a tracking code or a facebook pixel. You can use these variables
+                                <div className="col-lg-12">
+                                    <p className="bg-retricstions01 "> You can include some javascript or html that will be appended to the confirmation step. For example you can track ad conversions by triggering a tracking code or a facebook pixel. You can use these variables
                                          within your code. Click on the variable to copy.  
                                         
                                     </p>
                                 </div>
-                                <div class="col-lg-12">
+                                <div className="col-lg-12">
                                     <div className='row '>
                                         <div className='col-lg-5'>
                                             <div className='bg-white oder-div01'>
@@ -600,7 +561,7 @@ function GeneralSettings() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
+                                <div className="col-lg-12">
                                     <div className='form-group'>
                                         <label className='form-label'> Booking tile information to display on calendar </label>
                                         <input type='text' name='eari' className='form-control' placeholder='{{service_name}}' />
@@ -627,14 +588,14 @@ function GeneralSettings() {
                                    
                                     <div className="form-check form-switch">
                                         <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault052"/>
-                                        <label className="form-check-label" htmlForfor="flexSwitchCheckDefault052">Allow non admins to download table data as csv
+                                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault052">Allow non admins to download table data as csv
                                             <span className='d-block'>
                                                  Only admins will be able to download table data as csv
                                             </span>
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 mt-0">
+                                <div className="col-lg-4 mt-0">
                                     <div className='form-group'>
                                         <label className='form-label'> Number of records per page</label>
                                         <Select options={numberss}
@@ -670,9 +631,9 @@ function GeneralSettings() {
                      <div className='col-9 mt-0'>
                            <div className='right-offections'>
                               <div className='col-lg-12'>
-                                  <p class="bg-retricstions01"> 
+                                  <p className="bg-retricstions01"> 
                                     In order for address autocomplete to work, you need an API key. To learn how to create an API key for Google Places API 
-                                    <Link class="btn ps-lg-0 linkj" href="/"> 
+                                    <Link className="btn ps-lg-0 linkj" href="/"> 
                                       click here
                                     </Link></p>
                               </div>

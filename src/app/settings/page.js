@@ -3,6 +3,10 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Payments from "../components/Payments";
 import GeneralSettings from "../components/GeneralSettings";
+import Footer from "../components/Footer";
+import Schedule from "../components/Schedule";
+import CalendarWithDropdown from "../components/CalendarWithDropdown";
+
 
 export default function Home() {
   return (
@@ -52,8 +56,12 @@ export default function Home() {
                       <div className="tab-pane fade show active" id="general" role="tabpanel">
                           <GeneralSettings/>
                       </div>
-                      <div className="tab-pane fade" id="schedule" role="tabpanel">schedule</div>
-                      <div className="tab-pane fade" id="tax" role="tabpanel">tax</div>
+                      <div className="tab-pane fade" id="schedule" role="tabpanel">
+                         <Schedule/>
+                      </div>
+                      <div className="tab-pane fade" id="tax" role="tabpanel">
+                         <CalendarWithDropdown/>
+                      </div>
                       <div className="tab-pane fade" id="contact" role="tabpanel">contact</div>
                       <div className="tab-pane fade" id="payments" role="tabpanel">
                          <Payments/>
@@ -65,6 +73,7 @@ export default function Home() {
                 </div>
             </div>
       </main>
+      <Footer/>
       
     </div>
   );

@@ -240,14 +240,14 @@ function Payments() {
  
                         <h2 className='payment-heading cm-head'> Others Settings </h2>
                         <div className='payments-stip w-100 payou-list01'>
-                            <artical className='table-row-two'>
+                            <div className='table-row-two'>
                                 <div className='row'>
                                   <div className='col-3'>
                                     <div className='table-row-two-left ' id="environment-br">Environment</div>
                                   </div>
                                   <div className='col-9'>
                                     <div className='table-row-two-right'>
-                                        <select name="environment" class="form-select" id="environment">
+                                        <select name="environment" className="form-select" id="environment">
                                             <option value="volvo">Volvo</option>
                                             <option value="saab">Saab</option>
                                             <option value="opel">Opel</option>
@@ -260,9 +260,9 @@ function Payments() {
                                 
                                 
                                 
-                            </artical>
+                            </div>
 
-                            <artical className='table-row-two'>
+                            <div className='table-row-two'>
                                 <div className='row'>
                                   <div className='col-3'>
                                     <div className='table-row-two-left ' id="environment-br">
@@ -288,7 +288,7 @@ function Payments() {
                                 
                                 
                                 
-                            </artical>
+                            </div>
     
                         </div>
                         <div className="button-container">

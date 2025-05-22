@@ -23,11 +23,11 @@ function Navbar() {
                       <Link href="/"> <FiClock /> </Link>
                       <Link href="/"> <FiInbox /> </Link>
 
-                      <div class="dropdown position-relative">
-                        <button class="btn userpic p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div className="dropdown position-relative">
+                        <button className="btn userpic p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                            <Image src="/1.png" width={200} height={200} alt="sm"/>
                         </button>
-                        <ul class="dropdown-menu drops-menus01" aria-labelledby="dropdownMenuButton1">
+                        <ul className="dropdown-menu drops-menus01" aria-labelledby="dropdownMenuButton1">
                             <li className="d-flex align-items-center">
                                <Link href='/' className="d-flex align-items-center">
                                    <figure className="m-0">
