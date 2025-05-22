@@ -18,7 +18,9 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
-
+.btn:focus{
+  box-shadow: none !important;
+}
 body {
   color: var(--foreground);
   background: var(--background);
@@ -124,6 +126,10 @@ img{
   align-items: center;
   font-size: .9375rem;
   color: #3b4055;
+  border-radius: 6px;
+}
+.menu-list ul li a:hover{
+   background: #ededf0;
 }
 .menu-list ul li a > svg{
   font-weight: 600;
@@ -1754,3 +1760,39 @@ padding-inline: 15px;
 padding-block: 8px;
 }
 /* :::::::::::::Notifications page start:::::::::::: */
+
+/* taxs */
+.tax-section-addBtn {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: flex;
+}
+.tax-section-header {
+}
+.tax-section-row-one {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: flex;
+}
+.percentage {
+    color: gray;
+    font-size: 12px;
+}
+.tax-section-row-one-left-icon-container {
+    border-right: 1px solid #d3d3d3;
+    padding-right: 15px;
+}
+.putnamcounty {
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}

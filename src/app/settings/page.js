@@ -56,7 +56,7 @@ export default function Home() {
                         type="button" role="tab"> Premium Features </button>
                       </li>
                     </ul>
-                    <div className="tab-content" id="myTabContent">
+                    <div className="tab-content pt-3" id="myTabContent">
                       <div className="tab-pane fade show active" id="general" role="tabpanel">
                           <GeneralSettings/>
                       </div>

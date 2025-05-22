@@ -6,11 +6,19 @@ import { MdOutlineChatBubbleOutline , MdLogout } from "react-icons/md";
 import { LuSettings , LuCircleDollarSign } from "react-icons/lu";
 import { FaRegFileLines } from "react-icons/fa6";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
+import ActiveLink from "./ActiveLink";
 
 function Navbar() {
+
+      const mianmenu = [
+             { id: 1, title: 'Home' , href: '/'  },
+             { id: 2, title: 'About' , href: '/about'  },
+       ];
+
     return(
         <>
-          <div className="search-sections01 w-100 float-start">
+      
+        <div className="search-sections01 w-100 float-start">
               <div className="row justicy-content-between">
                  <div className="col-lg-5">
                      <div className="form-group search-list d-flex align-items-center">
@@ -27,6 +35,10 @@ function Navbar() {
                         <button className="btn userpic p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                            <Image src="/1.png" width={200} height={200} alt="sm"/>
                         </button>
+
+
+
+                        
                         <ul className="dropdown-menu drops-menus01" aria-labelledby="dropdownMenuButton1">
                             <li className="d-flex align-items-center">
                                <Link href='/' className="d-flex align-items-center">
@@ -46,7 +58,7 @@ function Navbar() {
                                </Link></li>
 
                             <li className="crm-lisk01">
-                                <Link className="dropdown-item" href="#">
+                                <Link href="/settings">
                                   <LuSettings /> Settings  
                                </Link>
                                
