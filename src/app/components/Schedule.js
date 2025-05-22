@@ -16,13 +16,11 @@ function Schedule() {
 
     return(
         <>
-                     {/* week section start */}
             <section className='general-week-section'>
                 <div className='wrapper'>
                     <div className='general-week-container'>
                         <div className='' id='general-weekly-schedule'>General Weekly Schedule</div>
                         <div className='general-weekly-schedule-bottom'>
-                            {/* day */}
                             <div id='week-days'>
                                 <div className='day-name-time'>
                                     <label className="switch">
@@ -36,7 +34,6 @@ function Schedule() {
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
-                            {/* day */}
                             <div id='week-days'>
                                 <div className='day-name-time'>
                                     <label className="switch">
@@ -51,7 +48,6 @@ function Schedule() {
                                 </div>
                             </div>
 
-                            {/* day */}
                             <div id='week-days'>
                                 <div className='day-name-time'>
                                     <label className="switch">
@@ -65,7 +61,6 @@ function Schedule() {
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
-                            {/* day */}
                             <div id='week-days'>
                                 <div className='day-name-time'>
                                     <label className="switch">
@@ -80,7 +75,6 @@ function Schedule() {
                                 </div>
                             </div>
 
-                            {/* day */}
                             <div id='week-days'>
                                 <div className='day-name-time'>
                                     <label className="switch">
@@ -95,7 +89,6 @@ function Schedule() {
                                 </div>
                             </div>
 
-                            {/* day */}
                             <div id='week-days'>
                                 <div className='day-name-time'>
                                     <label className="switch">
@@ -109,7 +102,6 @@ function Schedule() {
                                     <TbPencilMinus className='day-name-time-icon' />
                                 </div>
                             </div>
-                            {/* day */}
                             <div id='week-days-sunday'>
                                 <div className='day-name-time'>
                                     <label className="switch">
@@ -133,9 +125,6 @@ function Schedule() {
                 </div>
             </section>
 
-            {/* week section end */}
-
-            {/* day section start */}
 
             <section className='general-week-section'>
                 <div className='wrapper'>
@@ -162,7 +151,7 @@ function Schedule() {
 
 
                             <div className={` ${viewModal ? 'show' : 'modal'}`}>
-                                {/* <p>i am modal</p> */}
+                               
 
 
                                 <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -172,7 +161,6 @@ function Schedule() {
                                     <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                                         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                                             <section className='calender'>
-                                                {/* row-1 */}
                                                 <article className='Custom-schedule-row-one art'>
                                                     <div className=''>
                                                         <h2 className='calender-heading'>Custom schedule</h2>
@@ -182,7 +170,6 @@ function Schedule() {
                                                     </div>
                                                 </article>
 
-                                                {/* row-2 */}
                                                 <article className='Custom-schedule-row-two art'>
                                                     <div className='Custom-schedule-row-two-select'>
                                                         <select name="" className="Custom-schedule-select">
@@ -193,7 +180,6 @@ function Schedule() {
                                                     </div>
                                                 </article>
 
-                                                {/* row-3 */}
                                                 <article className='Custom-schedule-row-three'>
                                                     <div className='pick-date'>
                                                         <p className='pick-text'>Pick a Date</p>
@@ -223,7 +209,6 @@ function Schedule() {
                                                         </div>
                                                     </div>
                                                 </article>
-                                                {/* row-4 */}
                                                 <CalendarWithDropdown/>
                                             </section>
                                         </div>
@@ -236,10 +221,8 @@ function Schedule() {
                     </div>
                 </div>
             </section>
-            {/* day section end */}
 
 
-            {/* Holidays & Days Off start*/}
             <section className='general-week-section'>
                 <div className='wrapper'>
                     <div className='general-week-container'>
@@ -272,7 +255,6 @@ function Schedule() {
 
 
                             <div className={` ${viewModal ? 'show' : 'modal'}`}>
-                                {/* <p>i am modal</p> */}
 
 
                                 <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -282,7 +264,6 @@ function Schedule() {
                                     <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                                         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                                             <section className='calender'>
-                                                {/* row-1 */}
                                                 <article className='Custom-schedule-row-one art'>
                                                     <div className=''>
                                                         <h2 className='calender-heading'>Custom schedule</h2>
@@ -292,7 +273,6 @@ function Schedule() {
                                                     </div>
                                                 </article>
 
-                                                {/* row-2 */}
                                                 <article className='Custom-schedule-row-two art'>
                                                     <div className='Custom-schedule-row-two-select'>
                                                         <select name="" className="Custom-schedule-select">
@@ -303,7 +283,6 @@ function Schedule() {
                                                     </div>
                                                 </article>
 
-                                                {/* row-3 */}
                                                 <article className='Custom-schedule-row-three'>
                                                     <div className='pick-date'>
                                                         <p className='pick-text'>Pick a Date</p>
@@ -333,9 +312,8 @@ function Schedule() {
                                                         </div>
                                                     </div>
                                                 </article>
-                                                {/* row-4 */}
                                                 
-                                                        <CalendarWithDropdown/>
+                                                <CalendarWithDropdown/>
                                                    
                                             </section>
                                         </div>
@@ -348,7 +326,6 @@ function Schedule() {
                     </div>
                 </div>
             </section>
-            {/* Holidays & Days end */}
         </>
     );
 }
