@@ -6,6 +6,7 @@ import GeneralSettings from "../components/GeneralSettings";
 import Footer from "../components/Footer";
 import Schedule from "../components/Schedule";
 import Tax from "../components/Tax";
+import BookingForm from "../components/BookingForm";
 
 
 export default function Home() {
@@ -63,7 +64,7 @@ export default function Home() {
                           <Tax/>
                       </div>
                       <div className="tab-pane fade" id="contact" role="tabpanel">
-                          
+                           <BookingForm/>
                       </div>
                       <div className="tab-pane fade" id="payments" role="tabpanel">
                          <Payments/>
