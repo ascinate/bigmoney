@@ -9,6 +9,7 @@ import Tax from "../components/Tax";
 import BookingForm from "../components/BookingForm";
 import Role from "../components/Role";
 import PremiumFeatures from "../components/PremiumFeatures";
+import Notification from "../components/Notification";
 
 export default function Home() {
   return (
@@ -71,7 +72,7 @@ export default function Home() {
                          <Payments/>
                       </div>
                       <div className="tab-pane fade" id="notifications" role="tabpanel">
-                        
+                         <Notification/>
                       </div>
                       <div className="tab-pane fade" id="roles" role="tabpanel">
                            <Role/>

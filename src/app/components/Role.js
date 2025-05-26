@@ -86,10 +86,10 @@ function Role() {
             <div>
               {featuresOpen && (
                 <div>
-                  <div className='admin-dropdown'>
+                  <div className='admin-dropdown mb-4 p-0'>
                     <div className='admin-dropdown-flex'>
                       <div className='admin-dropdown-flex-left'>
-                        <p>User</p>
+                        <p className='mb-0'>User</p>
                       </div>
                       <div className='admin-dropdown-flex-right'>
                         <div className='admin-dropdown-flex-right-card'>
@@ -105,7 +105,7 @@ function Role() {
                       </div>
                     </div>
                   </div>
-                  <div className='admin-dropdown'>
+                  <div className='admin-dropdown mb-4 p-0'>
                     <div className='admin-dropdown-flex'>
                       <div className='admin-dropdown-flex-left'>
                         <p>Allowed Records</p>
@@ -115,7 +115,7 @@ function Role() {
                       </div>
                     </div>
                   </div>
-                  <div className='admin-dropdown'>
+                  <div className='admin-dropdown mb-4 p-0'>
                     <div className='admin-dropdown-flex'>
                       <div className='admin-dropdown-flex-left'>
                         <p>Permitted Actions</p>
@@ -154,7 +154,7 @@ function Role() {
             <div>
               {latePoint && (
                 <div>
-                  <div className='admin-dropdown'>
+                  <div className='admin-dropdown mb-4 p-0'>
                     <div className='admin-dropdown-flex'>
                       <div className='admin-dropdown-flex-left'>
                         <p>Users</p>
@@ -164,7 +164,7 @@ function Role() {
                       </div>
                     </div>
                   </div>
-                  <div className='admin-dropdown'>
+                  <div className='admin-dropdown mb-4 p-0'>
                     <div className='admin-dropdown-flex'>
                       <div className='admin-dropdown-flex-left'>
                         <p>Allowed Records</p>
@@ -174,12 +174,12 @@ function Role() {
                       </div>
                     </div>
                   </div>
-                  <div className='admin-dropdown'>
+                  <div className='admin-dropdown mb-4 p-0'>
                     <div className='admin-dropdown-flex'>
                       <div className='admin-dropdown-flex-left'>
                         <p>Permitted Actions</p>
                       </div>
-                      <div className='admin-radio-botton-container'>
+                      <div className='admin-radio-botton-container col-lg-9 agents01'>
 
                         <div className='admin-dropdown-flex-right radio-botton-flex'>
                           <div className='agents-margin'>
@@ -611,9 +611,7 @@ function Role() {
                             </div>
                           </div>
                         </div>
-                        <div className="save-change-botton-div">
-                          <button className="save-change-botton">Save Change</button>
-                        </div>
+                       
 
                       </div>
 
@@ -626,6 +624,9 @@ function Role() {
           </artical>
         </div>
       </section>
+      <div className="save-change-botton-div">
+           <button type='button'  className="btn save-change-botton">Save Change</button>
+      </div>
 
 
       <section className='tax-section'>
@@ -638,7 +639,7 @@ function Role() {
             {newTask.map((div) => (
               <div key={div.id}>
                 <div className='tax-section-row-one' onClick={() => handleToggle(div.id)}>
-                  <div className='tax-section-row-one-left'>
+                  <div className='tax-section-row-one-left d-flex align-items-center'>
                     <div className='tax-section-row-one-left-icon-container'>
                       <BsThreeDotsVertical className='tax-section-row-one-left-icon' />
                     </div>

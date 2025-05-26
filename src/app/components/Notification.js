@@ -1,215 +1,173 @@
 "use client"
+import {useState} from 'react'
+import Image from "next/image";
+import { MdElectricBolt } from "react-icons/md";
 
-import { useState } from 'react';
-import { TbPencilMinus } from "react-icons/tb";
-import { FaPlusCircle } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
-import CalendarWithDropdown from './CalendarWithDropdown';
-import { FiEdit3 } from "react-icons/fi";
+function Notification() {
+    const [isChecked, setIsChecked] = useState(true);
 
-function Schedule() {
-  const [isChecked, setIsChecked] = useState(true);
-
-  const handleChange = () => {
+    const handleChange = () => {
     setIsChecked(!isChecked);
-  };
+    };
+  return (
+    <>
+      <section className='roles-section'>
+        <div className='wrapper'>
+          <artical className='roles-bottom-section'>
+            <div className=''>
+              <h2 className='cm-head'>Email Processor </h2>
+            </div>
+            <div className='stripe new-colos-prat10'>
+              <div className='stripe-radio'>
 
-    return(
-        <>
-            <section className='general-week-section'>
-                <h2 className='cm-head'>General Weekly Schedule</h2>
-                <div className='wrapper'>
-                    <div className='general-week-container'>
-                        
-                        <div className='general-weekly-schedule-bottom crm-weeks'>
-                            <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
-                       
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
-                                        
-                                    </div>
-                                    <button className='btn btn-mondays'> Monday </button>
-                                </div>
-                                <button type='button' className='btn btn-edits'>
-                                    <span> 08:00am-05:00pm </span>
-                                    <FiEdit3/>
-                                </button>
-                            </div>
-                            <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
-                       
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
-                                        
-                                    </div>
-                                    <button className='btn btn-mondays'> Tuesday </button>
-                                </div>
-                                <button type='button' className='btn btn-edits'>
-                                    <span> 08:00am-05:00pm </span>
-                                    <FiEdit3/>
-                                </button>
-                            </div>
-
-                            <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
-                       
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
-                                        
-                                    </div>
-                                    <button className='btn btn-mondays'> Wednesday </button>
-                                </div>
-                                <button type='button' className='btn btn-edits'>
-                                    <span> 08:00am-05:00pm </span>
-                                    <FiEdit3/>
-                                </button>
-                            </div>
-
-                            <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
-                       
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
-                                        
-                                    </div>
-                                    <button className='btn btn-mondays'> Thursday </button>
-                                </div>
-                                <button type='button' className='btn btn-edits'>
-                                    <span> 08:00am-05:00pm </span>
-                                    <FiEdit3/>
-                                </button>
-                            </div>
-
-
-                             <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
-                       
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
-                                        
-                                    </div>
-                                    <button className='btn btn-mondays'> Friday </button>
-                                </div>
-                                <button type='button' className='btn btn-edits'>
-                                    <span> 08:00am-05:00pm </span>
-                                    <FiEdit3/>
-                                </button>
-                            </div>
-
-
-                            <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
-                       
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
-                                        
-                                    </div>
-                                    <button className='btn btn-mondays'> Saturday </button>
-                                </div>
-                                <button type='button' className='btn btn-edits'>
-                                    <span> 08:00am-05:00pm </span>
-                                    <FiEdit3/>
-                                </button>
-                            </div>
-
-
-                            <div id='week-days-sunday'>
-                                <div className='day-name-time d-flex align-items-center'>
-                       
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
-                                        
-                                    </div>
-                                    <button className='btn btn-mondays'> Sunday </button>
-                                </div>
-                                <button type='button' className='btn btn-edits'>
-                                    <span> 08:00am-05:00pm </span>
-                                    <FiEdit3/>
-                                </button>
-                            </div>
-
-                          
-                            <div className='schedule-save-btn-container mb-5 me-3 mt-4'>
-                                <button type='button' className='btn cm-btn'>
-                                    Save Weekly Schedule
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div className="form-check form-switch">
+                    <input className="form-check-input" type="checkbox"  
+                    checked={isChecked}
+                    onChange={handleChange}/>
+                    
                 </div>
-            </section>
-            <section className='general-week-section mt-5'>
-                <h2 className='cm-head'>Days With Custom Schedules</h2>
-                <div className='wrapper'>
-                    <div className='general-week-container new-padings'>
-                        <h5 className='mb-3'>Days With Custom Schedules</h5>
-                        <div className='general-weekly-schedule-bottom'>
-                            <div className='days-with-custom-schedules'>
-                                
-                                <div>
-                                    <button type='button' id='addDay-btn' data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <FaPlusCircle id='addDay-btn-icon' />
-                                        Add Day
-                                    </button>
-                                </div>
-                            </div>
 
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className='general-week-section mt-5'>
-                <div className='wrapper'>
-                    <div className='general-week-container new-padings'>
-                        <h5 className='mb-3'>Holidays & Days Off</h5>
-                        <div className='general-weekly-schedule-bottom'>
-                            <div className='days-with-custom-schedules'>
-                                
-                                <div>
-                                    <button type='button' id='addDay-btn' data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <FaPlusCircle id='addDay-btn-icon' />
-                                        Add Day
-                                    </button>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-              <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div className="modal-dialog">
-                                    <div className="modal-content">
-                                    <div className="modal-header">
-                                        <h5 className="modal-title" id="exampleModalLabel">Custom schedule</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div className="modal-body">
-                                        <CalendarWithDropdown/>
-                                    </div>
-                                    
-                                    </div>
-                                </div>
+                <span className='notification-connect'>Default WordPress Mailer</span>
               </div>
-        </>
-    );
+              <div id='stripe-connect'>
+
+              </div>
+            </div>
+          </artical>
+
+          <artical className='roles-bottom-section'>
+            <div className=''>
+              <h2 className='cm-head'> SMS Processor </h2>
+            </div>
+            <div className='stripe new-colos-prat10'>
+              <div className='stripe-radio'>
+                <div className="form-check form-switch">
+                    <input className="form-check-input" type="checkbox"  
+                    checked={isChecked}
+                    onChange={handleChange}/>
+                    
+                </div>
+
+                <img src="https://latepoint.appointmentstudio.com/wp-content/plugins/latepoint-sms-twilio/public/images/twilio.svg" alt="" />
+              </div>
+              <div id='stripe-connect'>
+
+                <h4>Twilio</h4>
+              </div>
+            </div>
+          </artical>
+          <artical className='roles-bottom-section'>
+            <div className=''>
+              <h2 className='cm-head'> SMS Processors </h2>
+            </div>
+            <div className='stripe new-colos-prat10'>
+              <div className='stripe-radio'>
+                <div className="form-check form-switch">
+                    <input className="form-check-input" type="checkbox"  
+                    checked={isChecked}
+                    onChange={handleChange}/>
+                    
+                </div>
+
+                <img src="https://latepoint.appointmentstudio.com/wp-content/plugins/latepoint-sms-twilio/public/images/twilio.svg" alt="" />
+              </div>
+              <div id='stripe-connect'>
+
+                <h4>Whatsapp by Meta</h4>
+              </div>
+            </div>
+          </artical>
+
+          <artical className='other-bottom-section mb-4'>
+            <div className=''>
+              <h2 className='cm-head'> Other Settings </h2>
+            </div>
+            <div className='stripe new-colos-prat10'>
+              <div className='stripe-radio'>
+
+                <div className="form-check form-switch">
+                    <input className="form-check-input" type="checkbox"  
+                    checked={isChecked}
+                    onChange={handleChange}/>
+                    
+                </div>
+
+                <span className='notification-connect'>Default WordPress Mailer</span>
+              </div>
+              <div id='stripe-connect'>
+
+              </div>
+            </div>
+          </artical>
+
+          <div className='mt-5 mb-4 d-none'>
+            <div className='admin-dropdown'>
+              <div className='admin-dropdown-flex'>
+                <div className='admin-dropdown-flex-left'>
+                  <p>Email Layout</p>
+                </div>
+                <div className='admin-dropdown-flex-right'>
+                  <p>This layout is used for your emails. You can customize it below and use variable to insert content of the email that is generated by the Process that was triggered. Go to Automation, Workflows to manage actual content of the email that is being sent.</p>
+                  <button className='notification-show-layout-btn flex items-center'> <MdElectricBolt />Show layout variables</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className='d-none'>
+            <div className='admin-dropdown'>
+              <div className='admin-dropdown-flex'>
+                <div className='admin-dropdown-flex-left'>
+                  <p>Password Reset</p>
+                </div>
+                <div className='admin-dropdown-flex-right'>
+                  <p>This layout is used for your emails. You can customize it below and use variable to insert content of the email that is generated by the Process that was triggered. Go to Automation, Workflows to manage actual content of the email that is being sent.</p>
+                  <button className='notification-show-layout-btn flex items-center'> <MdElectricBolt />Show layout variables</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <artical className='other-bottom-section'>
+              <h2 className='cm-head'> Chat Notifications </h2>
+            
+            <div>
+              <div className='admin-dropdown p-0'>
+                <div className='admin-dropdown-flex'>
+                  <div className='admin-dropdown-flex-left'>
+                    <p className='mb-0 pb-0'>Settings</p>
+                  </div>
+                  <div className='admin-dropdown-flex-right'>
+                    <div>
+                      <div>
+                        <input type="checkbox" id="" name="" value="" />
+                        <span className='chat-notifications ms-3'>
+                          Notify customers about new messages</span>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="" name="" value="" />
+                        <span className='chat-notifications ms-3'>
+                          Notify customers about new messages</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </artical>
+          <div className='notification-save-changes'>
+            <button className='btn crm-btn'>Save Channge</button>
+          </div>
+
+        </div>
+      </section>
+    </>
+  )
 }
-export default Schedule;
+
+export default Notification;
