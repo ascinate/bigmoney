@@ -11,42 +11,48 @@ function BookingForm() {
             <section className='booking-section'>
                 <div className='wrapper pt-5'>
                     <div className='row align-items-start justify-content-between w-100'>
-                        <div className='booking-contaner'>
-                            <div className="booking-left">
-                                <Image
-                                    src="/bookingpageImg.png"
-                                    alt="My Logo"
-                                    width={20}
-                                    height={20}
-                                    id='woman-working-laptop-high' />
-                                <h2 id='location' >Location Selections</h2>
-                                <p id='location-info'>Please select a location for
-                                    your appointment</p>
-                                <p id='questions'>Questions?</p>
-                                <p id='location-info'>Call (858) 939-3746 for help</p>
-
-                            </div>
-                            <div className="booking-right">
-                                <h2>Locations</h2>
-
-                                <input type="email" className='booking-input' /><br />
-                                <div className='booking-input flex items-center'>
+                        <div className='col-lg-3'>
+                            <div className='booking-contaner'>
+                                <div className="booking-left">
                                     <Image
                                         src="/bookingpageImg.png"
                                         alt="My Logo"
                                         width={20}
                                         height={20}
                                         id='woman-working-laptop-high' />
-                                    <p>Main Location</p>
+                                    <h2 id='location' >Location Selections</h2>
+                                    <p id='location-info'>Please select a location for
+                                        your appointment</p>
+                                    <p id='questions'>Questions?</p>
+                                    <p id='location-info'>Call (858) 939-3746 for help</p>
+
                                 </div>
-                                <input type="password" className='booking-input' id='password-input' />
-                                <div className='location-btn'>
-                                    <button id='discard-btn'>X Discard</button>
-                                    <button id='save-btn'>Save Changes</button>
-                                </div>
+                                
                             </div>
                         </div>
-                        <div className='booking-contaner-rightCard'>
+                        <div className='col-lg-5'>
+                             <div className="booking-right">
+                                    <h2>Locations</h2>
+
+                                    <input type="email" className='booking-input' /><br />
+                                    <div className='booking-input flex items-center'>
+                                        <Image
+                                            src="/bookingpageImg.png"
+                                            alt="My Logo"
+                                            width={20}
+                                            height={20}
+                                            id='woman-working-laptop-high' />
+                                        <p>Main Location</p>
+                                    </div>
+                                    <input type="password" className='booking-input' id='password-input' />
+                                    <div className='location-btn'>
+                                        <button id='discard-btn'>X Discard</button>
+                                        <button id='save-btn'>Save Changes</button>
+                                    </div>
+                             </div>
+                        </div>
+                        <div className='col-lg-4'>
+                          <div className='booking-contaner-rightCard'>
 
                             <div className="booking-righ-rightPart">
                                 <div id='booking-righ-top'>
@@ -125,7 +131,10 @@ function BookingForm() {
                                 </div>
 
                             </div>
+                          </div>
                         </div>
+                        
+                        
                     </div>
 
                 </div>

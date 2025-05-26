@@ -193,7 +193,7 @@ function Payments() {
                                                                 <option value="sll">Sierra Leonean Leone</option>
                                                                 <option value="sos">Somali Shilling</option>
                                                                 <option value="srd">Surinamese Dollar</option>
-                                                                <option value="std">São Tomé and Príncipe Dobra (pre-2018)</option>
+                                                                <option value="std">São Tome and Príncipe Dobra (pre-2018)</option>
                                                                 <option value="svc">Salvadoran Colón</option>
                                                                 <option value="szl">Swazi Lilangeni</option>
                                                                 <option value="thb">Thai Baht</option>

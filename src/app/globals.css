@@ -1474,17 +1474,13 @@ h2.calender-heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  width: 60%;
-  border-radius: 7px;
+  width:100%;
   max-width: 100%;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
 }
  
 .booking-left {
   text-align: center;
-  width: 30%;
-  border-right: 1px solid lightgray;
+  width: 100%;
 }
  
 .booking-right {
@@ -1767,7 +1763,6 @@ padding-block: 8px;
 
 /* taxs */
 .tax-section-addBtn {
-    border:1px solid #e7e7e7;
     border-radius: 6px;
     align-items: center;
     gap: 10px;
@@ -1918,4 +1913,277 @@ padding-block: 8px;
 .sm-icons svg{
    width: 18px;
    height: 18px;
+}
+
+
+
+.roles-section-header {
+    border-bottom: 5px solid #ebedf1;
+    margin-bottom: 20px;
+}
+
+.admin-bottom-row {
+    cursor: pointer;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    display: flex;
+}
+
+.admin-dropdown {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    padding: 20px;
+}
+.admin-dropdown-flex-right {
+    padding: 20px 10px 20px 30px;
+}
+.admin-dropdown-flex-left {
+    border-right: 1px solid #d3d3d3;
+    padding: 20px 10px 20px 30px;
+}
+.admin-dropdown-flex-right-card {
+    background-color: #fff;
+    border-radius: 6px;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    box-shadow: 8px 8px 8px #0003;
+}
+
+.admin-dropdown-flex {
+    display: flex;
+}
+
+
+
+.tax-section-addBtn {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: flex;
+}
+
+.roles-section-header {
+    border-bottom: 5px solid #ebedf1;
+    margin-bottom: 20px;
+}
+
+.user-span {
+    color: gray;
+    margin-left: 20px;
+}
+
+.admin-dropdown-flex-right {
+    padding: 20px 10px 20px 30px;
+}
+.admin-dropdown-flex-right-card-img {
+    text-align: center;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.admin-dropdown-flex-right-card {
+    background-color: #fff;
+    border-radius: 6px;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    box-shadow: 8px 8px 8px #0003;
+}
+.admin-dropdown-flex-left {
+    border-right: 1px solid #d3d3d3;
+    padding: 20px 10px 20px 30px;
+}
+.admin-dropdown {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    padding: 20px;
+}
+.admin-dropdown-flex-right {
+    padding: 20px 10px 20px 30px;
+}
+
+.admin-dropdown-flex {
+    display: flex
+;
+}
+
+.admin-dropdown {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.admin-bottom-row {
+    cursor: pointer;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    display: flex;
+}
+.admin-dropdown-flex-left {
+    border-right: 1px solid #d3d3d3;
+    padding: 20px 10px 20px 30px;
+}
+.admin-dropdown-flex-left {
+    border-right: 1px solid #d3d3d3;
+    padding: 20px 10px 20px 30px;
+}
+.radio-botton-flex {
+    border-bottom: 1px solid #d3d3d3;
+    justify-content: space-between;
+    display: flex;
+}
+.agents-margin-sub-text {
+    color: gray;
+    font-size: 10px !important;
+}
+
+.com-div-border{
+    border: 1px solid #e4e5e7;
+    border-radius: 6px;
+    padding: 25px;
+}
+
+
+
+
+
+.roles-section-header {
+    border-bottom: 5px solid #ebedf1;
+    margin-bottom: 20px;
+}
+.cm-btn-div015{
+   border-bottom: 2px solid #ebedf1;
+    display: block;
+    cursor: pointer;
+}
+
+
+.admin-bottom-row {
+    cursor: pointer;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    display: flex;
+}
+.user-span {
+    color: gray;
+    margin-left: 20px;
+}
+
+
+
+.admin-dropdown-flex {
+    display: flex;
+}
+.admin-dropdown
+ {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    padding: 20px;
+}
+.admin-dropdown-flex-left {
+    border-right: 1px solid #d3d3d3;
+    padding: 20px 10px 20px 30px;
+}
+.admin-dropdown-flex-right {
+    padding: 20px 10px 20px 30px;
+}
+.admin-dropdown-flex-right-card
+ {
+    background-color: #fff;
+    border-radius: 6px;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    display: flex;
+    box-shadow: 8px 8px 8px #0003;
+}
+
+
+
+
+
+.admin-bottom-row{
+    cursor: pointer;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    display: flex;
+}
+.admin-dropdown-flex-left {
+    border-right: 1px solid #d3d3d3;
+    padding: 20px 10px 20px 30px;
+}
+
+
+.radio-botton-flex {
+    border-bottom: 1px solid #d3d3d3;
+    justify-content: space-between;
+    display: flex;
+}
+
+.admin-dropdown-flex-right {
+  padding: 20px 10px 20px 30px;
+}
+
+
+.agents-margin-sub-text {
+    color: gray;
+    font-size: 10px !important;
+}
+.save-change-botton {
+    color: #fff;
+    background-color: #2196f3;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding-block: 10px;
+    padding-inline: 20px;
+}
+.sm-parat p{
+  color: #7a7b85;
+}
+
+.cm-border01{
+  border: 1px solid #e4e5e7;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 20px;
+}
+.cm-border01 p{
+  margin-bottom: 5px;
+}
+.cm-border01 .install-col-one-text-bottom{
+  display: flex;
+  align-items: center;
+}
+.cm-border01 .install-col-one-text-bottom p{
+    color: #788291;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 8px;
+}
+.cm-border01 #install-database{
+  margin-left: 10px;
+}
+.cm-border01 #install-database > span{
+  margin-left: 15px;
+  color: #2196f3;
 }
