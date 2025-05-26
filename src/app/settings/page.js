@@ -7,7 +7,8 @@ import Footer from "../components/Footer";
 import Schedule from "../components/Schedule";
 import Tax from "../components/Tax";
 import BookingForm from "../components/BookingForm";
-
+import Role from "../components/Role";
+import PremiumFeatures from "../components/PremiumFeatures";
 
 export default function Home() {
   return (
@@ -73,10 +74,10 @@ export default function Home() {
                         
                       </div>
                       <div className="tab-pane fade" id="roles" role="tabpanel">
-                           
+                           <Role/>
                       </div>
                       <div className="tab-pane fade" id="premium" role="tabpanel">
-                        
+                           <PremiumFeatures/>
                       </div>
                     </div>
                 </div>
