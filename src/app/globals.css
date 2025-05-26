@@ -1819,3 +1819,85 @@ padding-block: 8px;
   font-size: 12px;
   margin-right: 5px;
 }
+
+---------BIG MONEY---------
+
+*********TAX PAGE***********
+
+
+
+.tax-section {
+    margin-block: 20px;
+}
+
+.tax-section-heading {
+    background-color: #e4e5e7;
+}
+
+.tax-section-header {
+    border-bottom: 5px solid #ebedf1;
+    margin-bottom: 20px;
+}
+
+.tax-section-addBtn {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: flex;
+}
+
+
+.tax-section-row-one {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    display: flex;
+}
+.percentage {
+    color: gray;
+    font-size: 12px;
+}
+
+.tax-section-row-one-left-icon-container {
+    border-right: 1px solid #d3d3d3;
+    padding-right: 15px;
+}
+.putnamcounty {
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.tax-section-toggle {
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    display: flex;
+}
+.tax-section-tax-name {
+    width: 50%;
+    padding: 20px 10px 20px 30px;
+}
+.tax-section-tax-input-div {
+    width: 50%;
+    padding: 20px;
+}
+.tax-section-tax-type {
+    width: 50%;
+    padding: 20px 10px 20px 30px;
+}
+
+.tax-section-toggl-right-part {
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
