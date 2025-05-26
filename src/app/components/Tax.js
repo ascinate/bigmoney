@@ -34,12 +34,9 @@ function Tax() {
             <section className='tax-section'>
                 <div className='wrapper'>
                     <article>
-                        {/* heading */}
                         <div className='tax-section-header'>
                             <h3 className='tax-section-heading'>PAYMENT PROCESS</h3>
                         </div>
-
-                        {/* Tasks */}
                         {newTask.map((div) => (
                             <div key={div.id}>
                                 <div className='tax-section-row-one' onClick={() => handleToggle(div.id)}>
