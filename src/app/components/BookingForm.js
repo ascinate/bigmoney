@@ -9,8 +9,8 @@ function BookingForm() {
     return (
         <>
             <section className='booking-section'>
-                <div className='wrapper '>
-                    <div className='booking-mycard'>
+                <div className='wrapper pt-5'>
+                    <div className='row align-items-start justify-content-between w-100'>
                         <div className='booking-contaner'>
                             <div className="booking-left">
                                 <Image

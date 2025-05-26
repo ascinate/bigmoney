@@ -300,6 +300,7 @@ img{
   border-radius: 10px;
   padding: 30px;
   width: 97%;
+  min-height: 700px;
 }
 .settings-tabs01 .nav-tabs .nav-link{
     color: #788291;
@@ -1207,7 +1208,6 @@ input:checked+.slider:before {
 
 #location {
   font-size: 24px;
-  font-weight: 600;
 
 }
 
@@ -1493,11 +1493,10 @@ h2.calender-heading {
   width: 60%;
 }
  
-.booking-right>h2 {
+.booking-right > h2 {
   border-bottom: 1px solid lightgray;
   padding-block: 8px;
-  font-weight: 600;
-  font-size: 35px;
+  font-size: 24px;
   margin-bottom: 32px;
  
 }
@@ -1768,7 +1767,7 @@ padding-block: 8px;
 
 /* taxs */
 .tax-section-addBtn {
-    border: 1px solid #d3d3d3;
+    border:1px solid #e7e7e7;
     border-radius: 6px;
     align-items: center;
     gap: 10px;
@@ -1779,7 +1778,7 @@ padding-block: 8px;
 .tax-section-header {
 }
 .tax-section-row-one {
-    border: 1px solid #d3d3d3;
+    border:1px solid #e7e7e7;
     border-radius: 6px;
     justify-content: space-between;
     align-items: center;
@@ -1834,30 +1833,48 @@ padding-block: 8px;
 }
 
 .tax-section-addBtn {
-    border: 1px solid #d3d3d3;
-    border-radius: 6px;
+    border: 1px solid 1px solid #e3e3e3;
+    border-radius: 8px;
     align-items: center;
-    gap: 10px;
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 16px 20px;
     display: flex;
+    color: #262b43;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+.tax-section-addBtn:hover{
+  border: solid 1px var(--btncolor);
+}
+.tax-section-addBtn svg{
+  width: 30px;
+  height: 30px;
+  color: var(--btncolor);
+  border: solid 4px #e3e3e3;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+.tax-section-addBtn:hover svg{
+  border: solid 3px var(--btncolor);
 }
 
-
 .tax-section-row-one {
-    border: 1px solid #d3d3d3;
-    border-radius: 6px;
+    border: 1px solid #e7e7e7;
+    border-radius:9px;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 18px 15px 18px 20px;
     display: flex;
+    margin-bottom: 15px;
 }
 .percentage {
     color: gray;
     font-size: 12px;
 }
+.btn-div0150{
 
+}
 .tax-section-row-one-left-icon-container {
     border-right: 1px solid #d3d3d3;
     padding-right: 15px;
@@ -1894,4 +1911,11 @@ padding-block: 8px;
     width: 100%;
     padding: 20px;
     display: flex;
+}
+.add-text-btn{
+  cursor: pointer;
+}
+.sm-icons svg{
+   width: 18px;
+   height: 18px;
 }
