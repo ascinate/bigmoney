@@ -111,7 +111,7 @@ function Role() {
                         <p>Allowed Records</p>
                       </div>
                       <div className='admin-dropdown-flex-right'>
-                        <p>Users with "Administrator" role are allowed to perform all available actions on any agent, location and service records.</p>
+                        <p>Users with Administrator role are allowed to perform all available actions on any agent, location and service records.</p>
                       </div>
                     </div>
                   </div>
@@ -121,7 +121,7 @@ function Role() {
                         <p>Permitted Actions</p>
                       </div>
                       <div className='admin-dropdown-flex-right'>
-                        <p>Users with "Administrator" role are permitted to execute all available actions in the system.</p>
+                        <p>Users with Administrator role are permitted to execute all available actions in the system.</p>
                       </div>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ function Role() {
                         <p>Users</p>
                       </div>
                       <div className='admin-dropdown-flex-right'>
-                        <p>You have not assigned any WordPress users to this role. Create a new WP user or edit existing user and assign them a role called: "LatePoint Agent"</p>
+                        <p>You have not assigned any WordPress users to this role. Create a new WP user or edit existing user and assign them a role called: LatePoint Agent</p>
                       </div>
                     </div>
                   </div>
@@ -170,7 +170,7 @@ function Role() {
                         <p>Allowed Records</p>
                       </div>
                       <div className='admin-dropdown-flex-right'>
-                        <p>Users with "Administrator" role can execute permitted actions only on records that belong to a LatePoint agent they are connected to.</p>
+                        <p>Users with Administrator role can execute permitted actions only on records that belong to a LatePoint agent they are connected to.</p>
                       </div>
                     </div>
                   </div>
@@ -663,10 +663,10 @@ function Role() {
                 {toggleMap[div.id] && (
                   <>
                     <div className='tax-section-toggle'>
-                      <div className='tax-section-toggle-row-one'>
+                      <div className='tax-section-toggle-row-one d-flex align-items-center'>
                         <div className='tax-section-tax-name'>Tax Name</div>
-                        <div className='tax-section-tax-input-div'>
-                          <input type="text" placeholder='text' className='tax-section-tax-input' />
+                        <div className='tax-section-tax-input-div w-100'>
+                          <input type="text" placeholder='text' className='form-control' />
                         </div>
                       </div>
                     </div>
