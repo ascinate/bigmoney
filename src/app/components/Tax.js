@@ -35,7 +35,7 @@ function Tax() {
                 <div className='wrapper'>
                     <article>
                         <div className='tax-section-header'>
-                            <h3 className='tax-section-heading'>PAYMENT PROCESS</h3>
+                            <h2 className='cm-head'> Payment Process </h2>
                         </div>
                         {newTask.map((div) => (
                             <div key={div.id}>
