@@ -5,6 +5,7 @@ import Payments from "../components/Payments";
 import GeneralSettings from "../components/GeneralSettings";
 import Footer from "../components/Footer";
 import Schedule from "../components/Schedule";
+import Tax from "../components/Tax";
 
 
 export default function Home() {
@@ -59,7 +60,7 @@ export default function Home() {
                           <Schedule/>
                       </div>
                       <div className="tab-pane fade" id="tax" role="tabpanel">
-                         
+                          <Tax/>
                       </div>
                       <div className="tab-pane fade" id="contact" role="tabpanel">
                           
