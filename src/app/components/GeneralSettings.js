@@ -105,6 +105,7 @@ function GeneralSettings() {
                                     <div className='form-group'>
                                         <label className='form-label'> Statuses that block timeslot </label>
                                         <Select options={appear}
+                                          id="op01"
                                           defaultValue={[{ value: 'Approved', label: 'Approved' }]}
                                           name="colors"
                                           isMulti
@@ -116,6 +117,7 @@ function GeneralSettings() {
                                         <label className='form-label'> Statuses that appear on pending page </label>
                                         <Select options={blocktime}
                                         isMulti
+                                        id="op02"
                                          name="blocktime"
                                         defaultValue={[{ value: 'PendingApproved', label: 'Pending Approved' }]}
                                            className="basic-multi-select" />
@@ -126,6 +128,7 @@ function GeneralSettings() {
                                         <label className='form-label'> Statuses hidden on calendar </label>
                                         <Select options={hidden}
                                         isMulti
+                                         id="op03"
                                          name="blocktime"
                                         defaultValue={[{ value: 'PendingApproved', label: 'Pending Approved' }]}
                                            className="basic-multi-select" />
@@ -153,6 +156,7 @@ function GeneralSettings() {
                                      <label className='form-label'> Time system </label>
                                      <Select options={knowck}
                                             name="default"
+                                            id="op04"
                                            className="basic-multi-select" />
                                  </div>
                              </div>
@@ -160,6 +164,7 @@ function GeneralSettings() {
                                  <div className='form-group'>
                                      <label className='form-label'> Date format </label>
                                      <Select options={ddformat}
+                                       id="op05"
                                             name="default" />
                                  </div>
                              </div>
@@ -649,6 +654,7 @@ function GeneralSettings() {
                                            <div className='form-group'>
                                                 <label className='form-label'> Country Restriction </label>
                                                 <Select options={countryl}
+                                                id="op012"
                                                     name="numbersd"
                                                 className="basic-multi-select" />
                                             </div>

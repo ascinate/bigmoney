@@ -1,13 +1,19 @@
 "use client";
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { GoDatabase } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 import { LuPencil } from "react-icons/lu";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoMdAddCircle } from "react-icons/io";
 import { VscChromeMinimize } from "react-icons/vsc";
+import { useToggleManager } from './custom-hook/useToggleManager.js'
+import ToggleSwitch from './ToggleSwitch.js';
+import EditUser from './EditUser.js';
+
 
 function Role() {
+
+  const { state, toggle } = useToggleManager();
 
 
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -56,7 +62,7 @@ function Role() {
     <>
       <section className='roles-section'>
         <div className='wrapper'>
-          <artical className='default-bottom-section'>
+          <article className='default-bottom-section'>
             <div className=''>
               <h2 className='cm-head'> Default Roles </h2>
             </div>
@@ -92,7 +98,8 @@ function Role() {
                         <p className='mb-0'>User</p>
                       </div>
                       <div className='admin-dropdown-flex-right'>
-                        <div className='admin-dropdown-flex-right-card'>
+
+                        <button data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" className='btn admin-dropdown-flex-right-card'>
                           <div className='admin-dropdown-flex-right-card-img'>
                             <p>IMG</p>
                           </div>
@@ -101,7 +108,8 @@ function Role() {
                             <p>umakantsonwani@gmail.com</p>
                           </div>
 
-                        </div>
+                        </button>
+
                       </div>
                     </div>
                   </div>
@@ -128,10 +136,10 @@ function Role() {
                 </div>
               )}
             </div>
-          </artical>
+          </article>
 
 
-          <artical className='roles-bottom-section'>
+          <article className='roles-bottom-section'>
             <div className='admin-bottom-row' onClick={handleLatePoint} >
               <div className='roles-features-flex'>
                 <div className='role-container-row'>
@@ -187,36 +195,36 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                                <ToggleSwitch
+                                  id="agentView"
+                                  label="View"
+                                  checked={state.agentView}
+                                  onChange={() => toggle('agentView')}
+                                />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="agentDelete"
+                                label="Delete"
+                                checked={state.agentDelete}
+                                onChange={() => toggle('agentDelete')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                              <ToggleSwitch
+                                id="agentEdit"
+                                label="Edit"
+                                checked={state.agentEdit}
+                                onChange={() => toggle('agentEdit')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="servicesView"
+                                label="View"
+                                checked={state.servicesView}
+                                onChange={() => toggle('servicesView')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -226,37 +234,37 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                              <ToggleSwitch
+                                  id="servicesDelete"
+                                  label="Delete"
+                                  checked={state.servicesDelete}
+                                  onChange={() => toggle('servicesDelete')}
+                                />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="servicesCreate"
+                                label="Create"
+                                checked={state.servicesCreate}
+                                onChange={() => toggle('servicesCreate')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                              <ToggleSwitch
+                                id="servicesEdit"
+                                label="Edit"
+                                checked={state.servicesEdit}
+                                onChange={() => toggle('servicesEdit')}
+                              />
                             </div>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="locationView"
+                                label="View"
+                                checked={state.locationView}
+                                onChange={() => toggle('locationView')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -266,37 +274,37 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                              <ToggleSwitch
+                                id="locationDelete"
+                                label="Delete"
+                                checked={state.locationDelete}
+                                onChange={() => toggle('locationDelete')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="locationCreate"
+                                label="Create"
+                                checked={state.locationCreate}
+                                onChange={() => toggle('locationCreate')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                              <ToggleSwitch
+                                id="locationEdit"
+                                label="Edit"
+                                checked={state.locationEdit}
+                                onChange={() => toggle('locationEdit')}
+                              />
                             </div>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="bookingView"
+                                label="View"
+                                checked={state.bookingView}
+                                onChange={() => toggle('bookingView')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -306,37 +314,37 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                              <ToggleSwitch
+                                id="bookingDelete"
+                                label="Delete"
+                                checked={state.bookingDelete}
+                                onChange={() => toggle('bookingDelete')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="bookingView"
+                                label="View"
+                                checked={state.bookingView}
+                                onChange={() => toggle('bookingView')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                              <ToggleSwitch
+                                id="bookingCreate"
+                                label="Create"
+                                checked={state.bookingCreate}
+                                onChange={() => toggle('bookingCreate')}
+                              />
                             </div>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="bookingEdit"
+                                label="Edit"
+                                checked={state.bookingEdit}
+                                onChange={() => toggle('bookingEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -346,37 +354,37 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                              <ToggleSwitch
+                                id="customersView"
+                                label="View"
+                                checked={state.customersView}
+                                onChange={() => toggle('customersView')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="customersDelete"
+                                label="Delete"
+                                checked={state.customersDelete}
+                                onChange={() => toggle('customersDelete')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                              <ToggleSwitch
+                                id="customersCreate"
+                                label="Create"
+                                checked={state.customersCreate}
+                                onChange={() => toggle('customersCreate')}
+                              />
                             </div>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="customersEdit"
+                                label="Edit"
+                                checked={state.customersEdit}
+                                onChange={() => toggle('customersEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -386,37 +394,37 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                              <ToggleSwitch
+                                id="paymentView"
+                                label="View"
+                                checked={state.paymentView}
+                                onChange={() => toggle('paymentView')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="paymentDelete"
+                                label="Delete"
+                                checked={state.paymentDelete}
+                                onChange={() => toggle('paymentDelete')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                               <ToggleSwitch
+                                id="paymentCreate"
+                                label="Create"
+                                checked={state.paymentCreate}
+                                onChange={() => toggle('paymentCreate')}
+                              />
                             </div>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                               <ToggleSwitch
+                                id="paymentEdit"
+                                label="Edit"
+                                checked={state.paymentEdit}
+                                onChange={() => toggle('paymentEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -426,37 +434,37 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                              <ToggleSwitch
+                                id="invoiceView"
+                                label="View"
+                                checked={state.invoiceView}
+                                onChange={() => toggle('invoiceView')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="invoiceDelete"
+                                label="Delete"
+                                checked={state.invoiceDelete}
+                                onChange={() => toggle('invoiceDelete')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                              <ToggleSwitch
+                                id="invoiceCreate"
+                                label="Create"
+                                checked={state.invoiceCreate}
+                                onChange={() => toggle('invoiceCreate')}
+                              />
                             </div>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="invoiceEdit"
+                                label="Edit"
+                                checked={state.invoiceEdit}
+                                onChange={() => toggle('invoiceEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -466,37 +474,37 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                              <ToggleSwitch
+                                id="activityView"
+                                label="View"
+                                checked={state.activityView}
+                                onChange={() => toggle('activityView')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="activityDelete"
+                                label="Delete"
+                                checked={state.activityDelete}
+                                onChange={() => toggle('activityDelete')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                              <ToggleSwitch
+                                id="activityCreate"
+                                label="Create"
+                                checked={state.activityCreate}
+                                onChange={() => toggle('activityCreate')}
+                              />
                             </div>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="activityEdit"
+                                label="Edit"
+                                checked={state.activityEdit}
+                                onChange={() => toggle('activityEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -508,12 +516,12 @@ function Role() {
                           <div className='radio-btn-width'>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="chatEdit"
+                                label="Edit"
+                                checked={state.chatEdit}
+                                onChange={() => toggle('chatEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -525,12 +533,12 @@ function Role() {
                           <div className='radio-btn-width'>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="resourceSchedulesEdit"
+                                label="Edit"
+                                checked={state.resourceSchedulesEdit}
+                                onChange={() => toggle('resourceSchedulesEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -543,12 +551,12 @@ function Role() {
 
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="settingsEdit"
+                                label="Edit"
+                                checked={state.settingsEdit}
+                                onChange={() => toggle('settingsEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -561,12 +569,12 @@ function Role() {
 
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="connectionsEdit"
+                                label="Edit"
+                                checked={state.connectionsEdit}
+                                onChange={() => toggle('connectionsEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -577,37 +585,37 @@ function Role() {
                           </div>
                           <div className='radio-btn-width'>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>View</span>
+                              <ToggleSwitch
+                                id="couponsView"
+                                label="Edit"
+                                checked={state.couponsView}
+                                onChange={() => toggle('couponsView')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Delete</span>
+                              <ToggleSwitch
+                                id="couponsDelete"
+                                label="Edit"
+                                checked={state.couponsDelete}
+                                onChange={() => toggle('couponsDelete')}
+                              />
                             </div>
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Create</span>
+                              <ToggleSwitch
+                                id="couponsCreate"
+                                label="Edit"
+                                checked={state.couponsCreate}
+                                onChange={() => toggle('couponsCreate')}
+                              />
                             </div>
 
                             <div>
-                              <label className="switch">
-                                <input type="checkbox" />
-                                <span className="slider"></span>
-
-                              </label>
-                              <span>Edit</span>
+                              <ToggleSwitch
+                                id="couponsEdit"
+                                  label="Edit"
+                                  checked={state.couponsEdit}
+                                onChange={() => toggle('couponsEdit')}
+                              />
                             </div>
                           </div>
                         </div>
@@ -621,7 +629,7 @@ function Role() {
                 </div>
               )}
             </div>
-          </artical>
+          </article>
         </div>
       </section>
       <div className="save-change-botton-div">
@@ -707,6 +715,9 @@ function Role() {
           </article>
         </div>
       </section>
+
+      <EditUser/>
+      
     </>
   )
 }

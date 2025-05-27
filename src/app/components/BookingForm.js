@@ -77,21 +77,14 @@ function BookingForm() {
                                                      
                                              </button>
                                         </div>
-                                        <div id='color-select' className='p-0'>
-                                            <input type="color" id="" name="" value="#1d7bff" className='booking-container-right-input' />
-                                            <input type="color" id="" name="" value="#F34747" />
-                                            <input type="color" id="" name="" value="#222222" />
-                                            <input type="color" id="" name="" value="#0f8c77" />
-                                            <input type="color" id="" name="" value="#1ca00f" />
-                                            <input type="color" id="" name="" value="#a32f96" />
-                                            <input type="color" id="" name="" value="#cc7424" />
-                                            <input type="color" id="multicolor" name="" value="" />
+                                            <div className='p-0'>
+                                           
                                             <div>
                                         </div>
 
                                             <label className="form-label mt-3" htmlFor="" id='border-style'>Border Style</label><br />
 
-                                            <select name="" class="form-select mb-3" id="booking-container-input">
+                                            <select name="" className="form-select mb-3" id="booking-container-input">
                                                 <option value="volvo">Flat</option>
                                                 <option value="audi">Rounded Corners</option>
                                             </select>
@@ -110,7 +103,7 @@ function BookingForm() {
                                     </div>
 
                                     <div id='step-container' className='p-0'>
-                                        <select name="" class="form-select" id="booking-container-input">
+                                        <select name="" className="form-select" id="booking-container-input">
                                             <option value="volvo">Locations</option>
                                             <option value="audi">Services</option>
                                             <option value="volvo">Service Extras</option>
