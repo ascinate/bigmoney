@@ -4,10 +4,23 @@ import Image from "next/image";
 import { MdElectricBolt } from "react-icons/md";
 
 function Notification() {
-    const [isChecked, setIsChecked] = useState(true);
+    const [isChecked, setIsChecked] = useState(false);
+    const [isSmschecked, setSmschecked] = useState(false);
 
     const handleChange = () => {
     setIsChecked(!isChecked);
+    };
+
+    const [isVisible, setIsVisible] = useState(false);
+    const [isVisibleA, setIsVisibleA] = useState(false);
+
+    const toggleVisibility = () => {
+      setIsChecked(!isChecked);
+      setIsVisible(!isVisible);
+    };
+    const toggleVisibilitySms = () => {
+      setSmschecked(!isSmschecked);
+      setIsVisibleA(!isVisibleA);
     };
   return (
     <>
@@ -23,7 +36,7 @@ function Notification() {
                 <div className="form-check form-switch">
                     <input className="form-check-input" type="checkbox"  
                     checked={isChecked}
-                    onChange={handleChange}/>
+                    onChange={toggleVisibility}/>
                     
                 </div>
 
@@ -33,6 +46,34 @@ function Notification() {
 
               </div>
             </div>
+
+            {isVisible && (
+                <div className='crm-border-div015 d-inline-block w-100'>
+                  <div className='row align-items-center'>
+                     <div className='col-lg-4'>
+                         <p> Email Settings </p>
+                     </div>
+                     <div className='col-lg-8'>
+                         <div className='row'>
+                            <div className='col-lg-4'>
+                                <div className='form-group'>
+                                    <label> From Name </label>
+                                    <input type='text' className='form-control' placeholder='Latepoint'/>
+                                </div>
+                            </div>
+                            <div className='col-lg-8'>
+                                <div className='form-group'>
+                                    <label> From Email Address </label>
+                                    <input type='text' className='form-control' placeholder='Latepoint'/>
+                                </div>
+                            </div>
+                         </div>
+                     </div>
+                  </div>
+                 
+                </div>
+              )} 
+
           </artical>
 
           <artical className='roles-bottom-section'>
@@ -43,8 +84,8 @@ function Notification() {
               <div className='stripe-radio'>
                 <div className="form-check form-switch">
                     <input className="form-check-input" type="checkbox"  
-                    checked={isChecked}
-                    onChange={handleChange}/>
+                    checked={isSmschecked}
+                    onChange={toggleVisibilitySms}/>
                     
                 </div>
 
@@ -55,6 +96,49 @@ function Notification() {
                 <h4>Twilio</h4>
               </div>
             </div>
+
+            {isVisibleA && (
+                <div className='crm-border-div015 d-inline-block w-100'>
+                  <div className='row align-items-center'>
+                     <div className='col-lg-4'>
+                         <p> Sender </p>
+                     </div>
+                     <div className='col-lg-8'>
+                         <div className='row'>
+                            <div className='col-lg-12'>
+                                <div className='form-group'>
+                                    <input type='text' className='form-control' placeholder='Phone Number'/>
+                                </div>
+                            </div>
+                            
+                         </div>
+                     </div>
+                  </div>
+
+                  <hr/>
+
+                  <div className='row align-items-start mt-4'>
+                     <div className='col-lg-4 pt-0'>
+                         <p> API Credentials </p>
+                     </div>
+                     <div className='col-lg-8'>
+                         <div className='row'>
+                            <div className='col-lg-12'>
+                                <div className='form-group mb-3'>
+                                    <input type='text' className='form-control' placeholder='Account SID'/>
+                                </div>
+                                <div className='form-group'>
+                                    <input type='text' className='form-control' placeholder=' Auth Token'/>
+                                </div>
+                            </div>
+                            
+                         </div>
+                     </div>
+                  </div>
+                 
+                </div>
+              )} 
+
           </artical>
           <artical className='roles-bottom-section'>
             <div className=''>

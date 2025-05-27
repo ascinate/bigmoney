@@ -87,41 +87,67 @@ function Tax() {
                                 {toggleMap[div.id] && (
                                     <>
                                      <div className='cm-btn-div0156 d-inline-block w-100'>
-                                        <div className='row'>
-                                            <div className='col-lg-4'>
-                                                <div className='tax-section-toggle-row-one'>
-                                                    <h5 className='tax-section-tax-name w-100 p-100'>Tax Name</h5>                                                   
+                                         <div className='comon-taxvs botom-border-soli d-inline-block w-100'>
+                                            <div className='row'>
+                                                <div className='col-lg-2'>
+                                                    <div className='tax-section-toggle-row-one'>
+                                                        <p className='tax-section-tax-name w-100 p-0'>Tax Name </p>                                                   
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className='col-lg-8'>
-                                                <div className='tax-section-tax-input-div w-100'>
-                                                    <input type="text" placeholder='Putnam County' className='form-control tax-section-tax-input' />
+                                                <div className='col-lg-10'>
+                                                    <div className='row'>
+                                                        <div className='col-lg-12 mt-4'>
+                                                          <input type="text" placeholder='Putnam County' className='form-control tax-section-tax-input' />
+                                                        </div>
+                                                    </div>
+                                                    
                                                 </div>
-                                            </div>
-                                            
-                                        </div>
-
-                                        
-
-                                        <div className='tax-section-toggle'>
-                                            <div className='tax-section-toggle-row-three'>
-                                                <button>Delete</button>
-                                                <button className='saveTax'>Save Tax</button>
-                                            </div>
-                                        </div>
-                                     </div>
-                                    </>
-                                )}
-
-
-                                            <div className='col-lg-8'>
-                                                <div className='tax-section-toggle-row-one'>
-                                                    <div className='tax-section-tax-name'>Tax Name</div>
-                                                    <div className='tax-section-tax-input-div'>
-                                                        <input type="text" placeholder='text' className='form-control tax-section-tax-input' />
+                                           </div>
+                                         </div>
+                                         <div className='comon-taxvs d-inline-block w-100'>
+                                            <div className='row'>
+                                                <div className='col-lg-2 pt-0'>
+                                                    <div className='tax-section-toggle-row-one'>
+                                                        <p className='tax-section-tax-name w-100 p-0'>Tax Type </p>                                                   
+                                                    </div>
+                                                </div>
+                                                <div className='col-lg-10'>
+                                                    <div className='row'>
+                                                        <div className='col-lg-4'>
+                                                            <select class="form-select">
+                                                                <option selected>Percentage of the booking price</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            
+                                                         </div>
+                                                         <div className='col-lg-8'>
+                                                             <input type="text" placeholder='6.0000' className='form-control tax-section-tax-input' />
+                                                         </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                           </div>
+                                         </div>
+                                         <div className='btn-off-div01 d-inline-block w-100'>
+                                            <div className='row'>
+                                                <div className='tax-section-toggle'>
+                                                    <div className='tax-section-toggle-row-three justify-content-between'>
+                                                        <button className='btn btn-danger'>Delete</button>
+                                                        <button className='saveTax btn btn-primary ms-3'>Save Tax</button>
                                                     </div>
                                                 </div>
                                             </div>
+                                         </div>
+                                     </div>
+
+                                     
+
+                                     
+                                    </>
+                                )}
+    
                             </div>
                         ))}
 

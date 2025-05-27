@@ -2457,3 +2457,120 @@ font-size: 15px;
   width: 22px;
   height: 22px;
 }
+.comon-taxvs .row .col-lg-2{
+  padding: 30px 20px 20px 30px;
+  border-right: 1px solid #e4e5e7;
+
+}
+.comon-taxvs .row .col-lg-10{
+  padding: 0 36px 0 30px;
+
+}
+.btn-off-div01{
+  padding: 20px 20px 20px 30px;
+  border-top: 1px solid #e4e5e7;
+}
+
+/* roles news */
+
+.admin-container{
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.admin-photo{
+text-align: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+ background-color: lightgray;
+    margin-right: 20px;
+ 
+}
+.admin-text>h3{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.role-admin-email{
+    color: #788291;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.administrator{
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: #e4e4e4;
+    color: #444;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 8px;
+}
+ 
+.admin-wp{
+  background-color: #ffffff;
+}
+.admin-wp{
+     font-weight: 400;
+    font-size: 10px;
+  color: #1d7bff;
+      border-bottom: 1px dotted #1d7bff;
+}
+ 
+.allowedrecords{
+  position: relative;
+  margin-bottom: 25px;
+}
+.allowedrecords::after{
+   position: absolute;
+    content: "";
+      border: 1px solid black;
+  width: 90%;
+  left: 0;
+  top: 120%;
+}
+.allowedrecords-title {
+    color: #1f222b;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+    font-size: 17px;
+}
+ 
+ 
+ 
+.allowedrecords-text{
+ 
+    padding: 10px 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    background: #f6f3ec;
+    color: #6a6561;
+    border-left: 2px solid #e9e4db;
+    border-radius: 0;
+ 
+}
+ 
+.adminSaveChanges{
+  background-color: #1e7bff;
+  color: #ffffff;
+  width: 100%;
+  padding: 15px 8px;
+  border: none;
+  border-radius: 6px;
+}
+.admin-btn-div{
+  min-height: 130px;
+  display: flex;
+align-items: end;
+}
+.crm-border-div015{
+  border: 1px solid #e4e5e7;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 15px;
+}
+.crm-border-div015 label{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
