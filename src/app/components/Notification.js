@@ -6,6 +6,7 @@ import { MdElectricBolt } from "react-icons/md";
 function Notification() {
     const [isChecked, setIsChecked] = useState(false);
     const [isSmschecked, setSmschecked] = useState(false);
+    const [isSmscheckedW, setSmscheckedW] = useState(false);
 
     const handleChange = () => {
     setIsChecked(!isChecked);
@@ -13,6 +14,7 @@ function Notification() {
 
     const [isVisible, setIsVisible] = useState(false);
     const [isVisibleA, setIsVisibleA] = useState(false);
+    const [isVisibleW, setIsVisibleW] = useState(false);
 
     const toggleVisibility = () => {
       setIsChecked(!isChecked);
@@ -21,6 +23,10 @@ function Notification() {
     const toggleVisibilitySms = () => {
       setSmschecked(!isSmschecked);
       setIsVisibleA(!isVisibleA);
+    };
+    const toggleVisibilitywhats = () => {
+      setSmscheckedW(!isSmscheckedW);
+      setIsVisibleW(!isVisibleW);
     };
   return (
     <>
@@ -142,14 +148,14 @@ function Notification() {
           </artical>
           <artical className='roles-bottom-section'>
             <div className=''>
-              <h2 className='cm-head'> SMS Processors </h2>
+              <h2 className='cm-head'> WhatsApp Processors </h2>
             </div>
             <div className='stripe new-colos-prat10'>
               <div className='stripe-radio'>
                 <div className="form-check form-switch">
                     <input className="form-check-input" type="checkbox"  
                     checked={isChecked}
-                    onChange={handleChange}/>
+                    onChange={toggleVisibilitywhats}/>
                     
                 </div>
 
@@ -160,6 +166,43 @@ function Notification() {
                 <h4>Whatsapp by Meta</h4>
               </div>
             </div>
+
+            {isVisibleW && (
+                <div className='crm-border-div015 d-inline-block w-100'>
+                  <div className='row align-items-center'>
+                     <div className='col-lg-2'>
+                         <p> API Credentials </p>
+                     </div>
+                     <div className='col-lg-10'>
+                         <div className='row'>
+                            <div className='col-lg-3'>
+                                <div className='form-group'>
+                                  <label> Phone Number ID </label>
+                                    <input type='text' className='form-control' placeholder='Phone Number ID'/>
+                                </div>
+                            </div>
+                            <div className='col-lg-3'>
+                                <div className='form-group'>
+                                  <label> Business Account ID </label>
+                                    <input type='text' className='form-control' placeholder='Business Account ID'/>
+                                </div>
+                            </div>
+                            <div className='col-lg-6'>
+                                <div className='form-group'>
+                                  <label> System User Access Token </label>
+                                    <input type='text' className='form-control' placeholder='System User Access Token'/>
+                                </div>
+                            </div>
+                            
+                         </div>
+                     </div>
+                  </div>
+
+                
+                 
+                </div>
+              )} 
+
           </artical>
 
           <artical className='other-bottom-section mb-4'>
@@ -171,7 +214,7 @@ function Notification() {
 
                 <div className="form-check form-switch">
                     <input className="form-check-input" type="checkbox"  
-                    checked={isChecked}
+                    checked={isSmscheckedW}
                     onChange={handleChange}/>
                     
                 </div>
