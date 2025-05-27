@@ -103,9 +103,10 @@ function Role() {
                           <div className='admin-dropdown-flex-right-card-img'>
                             <p>IMG</p>
                           </div>
-                          <div>
-                            <p>admin</p>
-                            <p>umakantsonwani@gmail.com</p>
+                          <div className='text-start admin-text015 d-inline-block'>
+                            <h4 className='mb-0'>admin
+                               <small className='d-block'> umakantsonwani@gmail.com </small>
+                            </h4>
                           </div>
 
                         </button>
@@ -717,7 +718,7 @@ function Role() {
       </section>
 
       <EditUser/>
-      
+
     </>
   )
 }

@@ -6,6 +6,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoMdAddCircle } from "react-icons/io";
 import { FiEdit3 } from "react-icons/fi";
 import { VscChromeMinimize } from "react-icons/vsc";
+import { IoIosCloseCircle } from "react-icons/io";
 
 function Tax() {
     const [newTask, setNewTask] = useState([]);
@@ -40,7 +41,7 @@ function Tax() {
                         </div>
                         {newTask.map((div) => (
                             <div key={div.id}>
-                                <div className='tax-section-row-one btn-div0150' onClick={() => handleToggle(div.id)}>
+                                <div className='tax-section-row-one btn-div0150 position-relative' onClick={() => handleToggle(div.id)}>
                                     <div className='tax-section-row-one-left row w-100'>
                                         
        
@@ -64,16 +65,19 @@ function Tax() {
                                                 </div>
                                             </div>
                                             <div className='col-lg-5 d-grid justify-content-end'>
-                                                    <button
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            handleDeleteTask(div.id);
-                                                        }}
-                                                        className="btn p-0">
+                                                    <span className='acrowd05 '>
                                                         <FiEdit3/>
-
-                                                    </button>
+                                                    </span>
                                             </div>
+
+                                            <button onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleDeleteTask(div.id);
+                                                }}
+                                                className="btn p-0 position-absolute del01-icons">
+                                                
+                                                <IoIosCloseCircle />
+                                            </button>
                                         
                                     </div>
                                     
@@ -82,29 +86,22 @@ function Tax() {
 
                                 {toggleMap[div.id] && (
                                     <>
-                                        <div className='tax-section-toggle'>
-                                            <div className='tax-section-toggle-row-one'>
-                                                <div className='tax-section-tax-name'>Tax Name</div>
-                                                <div className='tax-section-tax-input-div'>
-                                                    <input type="text" placeholder='text' className='tax-section-tax-input' />
+                                     <div className='cm-btn-div0156 d-inline-block w-100'>
+                                        <div className='row'>
+                                            <div className='col-lg-4'>
+                                                <div className='tax-section-toggle-row-one'>
+                                                    <h5 className='tax-section-tax-name w-100 p-100'>Tax Name</h5>                                                   
                                                 </div>
                                             </div>
+                                            <div className='col-lg-8'>
+                                                <div className='tax-section-tax-input-div w-100'>
+                                                    <input type="text" placeholder='Putnam County' className='form-control tax-section-tax-input' />
+                                                </div>
+                                            </div>
+                                            
                                         </div>
 
-                                        <div className='tax-section-toggle'>
-                                            <div className='tax-section-toggle-row-one'>
-                                                <div className='tax-section-tax-type'>Tax Type</div>
-                                                <div className='tax-section-toggl-right-part'>
-                                                    <select className="Custom-schedule-select">
-                                                        <option value="singleday">Single Day</option>
-                                                        <option value="datarange">Data Range</option>
-                                                    </select>
-                                                    <div>
-                                                        <input type="text" placeholder='input' />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
 
                                         <div className='tax-section-toggle'>
                                             <div className='tax-section-toggle-row-three'>
@@ -112,8 +109,19 @@ function Tax() {
                                                 <button className='saveTax'>Save Tax</button>
                                             </div>
                                         </div>
+                                     </div>
                                     </>
                                 )}
+
+
+                                            <div className='col-lg-8'>
+                                                <div className='tax-section-toggle-row-one'>
+                                                    <div className='tax-section-tax-name'>Tax Name</div>
+                                                    <div className='tax-section-tax-input-div'>
+                                                        <input type="text" placeholder='text' className='form-control tax-section-tax-input' />
+                                                    </div>
+                                                </div>
+                                            </div>
                             </div>
                         ))}
 

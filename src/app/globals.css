@@ -1867,7 +1867,7 @@ padding-block: 8px;
     font-size: 12px;
 }
 .btn-div0150{
-
+   cursor: pointer;
 }
 .tax-section-row-one-left-icon-container {
     border-right: 1px solid #d3d3d3;
@@ -2067,6 +2067,16 @@ padding-block: 8px;
    border-bottom: 2px solid #ebedf1;
     display: block;
     cursor: pointer;
+}
+.cm-btn-div0156{
+   border: 1px solid #ebedf1;
+   border-radius: 10px;
+}
+.cm-btn-div0156 .tax-section-toggle{
+    border: none !important;
+    display: inline-block;
+    border-radius: 0;
+    padding: 0;
 }
 
 
@@ -2385,8 +2395,9 @@ padding-block: 8px;
 .admin-dropdown-flex-right>p{
 background-color: #f6f3ec;
 color: gray;
-padding-inline: 20px;
-border-left: 2px solid #6a6561;;
+padding:18px 20px;
+border-left: 2px solid #6a6561;
+font-size: 15px;
 }
 .permitted{
   border-top: none;
@@ -2419,4 +2430,30 @@ border-left: 2px solid #6a6561;;
 }
 .agents01 .switch >  span{
   margin-left: 0;
+}
+.admin-text015 h4{
+  font-size: 18px;
+}
+.admin-text015 small{
+  color: #939393;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.agents01 .form-switch{
+  margin-right: 10px;
+}
+.agents01 .form-check-label{
+  font-size: 14px;
+  font-weight: 400;
+}
+.del01-icons{
+  display: inline-block;
+  right: -10px;
+  top:-10px;
+  text-align: right;
+}
+.del01-icons svg{
+  width: 22px;
+  height: 22px;
 }
