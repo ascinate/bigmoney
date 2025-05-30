@@ -11,7 +11,7 @@ import Role from "../components/Role";
 import PremiumFeatures from "../components/PremiumFeatures";
 import Notification from "../components/Notification";
 
-export default function Home() {
+export default function page() {
   return (
     <div className="full-body-parts">
       <Sidebar/>
@@ -19,9 +19,9 @@ export default function Home() {
             <Navbar/>
 
             <div className="home-settings float-start w-100">
-                <h3 className="comon-head"> Settings </h3>
-                <div className="settings-tabs01 d-block w-100 mt-4">
-                    <ul className="nav nav-tabs" id="myTab" role="tablist">
+                
+                <div className="d-block w-100 mt-4">
+                    <ul className="nav nav-tabs new-tabsd" id="myTab" role="tablist">
                       <li className="nav-item" role="presentation">
                         <button className="nav-link active" data-bs-toggle="tab" data-bs-target="#general"
                          type="button" role="tab"> General </button>
@@ -55,6 +55,8 @@ export default function Home() {
                         type="button" role="tab"> Premium Features </button>
                       </li>
                     </ul>
+
+                  <div className="settings-tabs01 comon-new-design d-block w-100">
                     <div className="tab-content pt-0" id="myTabContent">
                       <div className="tab-pane fade show active" id="general" role="tabpanel">
                           <GeneralSettings/>
@@ -81,6 +83,7 @@ export default function Home() {
                            <PremiumFeatures/>
                       </div>
                     </div>
+                  </div>
                 </div>
             </div>
       </main>

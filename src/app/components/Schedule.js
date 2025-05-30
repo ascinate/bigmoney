@@ -6,13 +6,52 @@ import { FaPlusCircle } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import CalendarWithDropdown from './CalendarWithDropdown';
 import { FiEdit3 } from "react-icons/fi";
+import { FaRegPlusSquare } from "react-icons/fa";
+import { RxCross1 } from "react-icons/rx";
+import { useToggleManager } from './custom-hook/useToggleManager.js'
+import ToggleSwitch from './ToggleSwitch.js';
+import WeeklyStartFinish from './WeeklyStartFinish';
 
 function Schedule() {
-  const [isChecked, setIsChecked] = useState(true);
+    const [isChecked, setIsChecked] = useState(true);
+    const [monday, setMonday] = useState(false);
+    const [tuesday, setTuesday] = useState(false);
+    const [wednesday, setWednesday] = useState(false);
+    const [thursday, setThursday] = useState(false);
+    const [friday, setFriday] = useState(false);
+    const [saturday, setSaturday] = useState(false);
+    const [sunday, setSunday] = useState(false);
 
-  const handleChange = () => {
-    setIsChecked(!isChecked);
-  };
+
+    const { state, toggle } = useToggleManager();
+
+    const handleChange = () => {
+        setIsChecked(!isChecked);
+    };
+
+    const handleMonday = () => {
+        setMonday(!monday)
+    }
+
+    const handleTuesday = () => {
+        setTuesday(!tuesday)
+    }
+    const handleWednesday = () => {
+        setWednesday(!wednesday)
+    }
+    const handleThursday = () => {
+        setThursday(!thursday)
+    }
+    const handleFriday = () => {
+        setFriday(!friday)
+    }
+    const handleSaturday = () => {
+        setSaturday(!saturday)
+    }
+    const handleSunday = () => {
+        setSunday(!sunday)
+    }
+    const [divs, setDivs] = useState([]);
 
     return(
         <>
@@ -25,29 +64,62 @@ function Schedule() {
                             <div id='week-days'>
                                 <div className='day-name-time d-flex align-items-center'>
                        
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
+                                    <div className="form-check form-switch ps-0" onClick={handleMonday}>
+                                        <ToggleSwitch
+                                        id="monday"
+                                        label="Monday"
+                                        checked={state.monday}
+                                        onChange={() => toggle('monday')}
+                                        />
                                         
                                     </div>
-                                    <button className='btn btn-mondays'> Monday </button>
                                 </div>
                                 <button type='button' className='btn btn-edits'>
                                     <span> 08:00am-05:00pm </span>
                                     <FiEdit3/>
                                 </button>
                             </div>
+                             {monday &&
+
+                                <WeeklyStartFinish />
+                             }
+
                             <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
+                                <div className='day-name-time d-flex align-items-center' onClick={handleTuesday}>
                        
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
+                                    <div className="form-check form-switch ps-0">
+                                        <ToggleSwitch
+                                        id="tuesday"
+                                        label="Tuesday"
+                                        checked={state.tuesday}
+                                        onChange={() => toggle('tuesday')}
+                                        />
                                         
                                     </div>
-                                    <button className='btn btn-mondays'> Tuesday </button>
+                                </div>
+                                <button type='button' className='btn btn-edits'>
+                                    <span> 08:00am-05:00pm </span>
+                                    <FiEdit3/>
+                                </button>
+                            </div>
+                            {tuesday &&
+
+                                <WeeklyStartFinish />
+                            }
+
+
+                            <div id='week-days'>
+                                <div className='day-name-time d-flex align-items-center' onClick={handleWednesday}>
+                       
+                                    <div className="form-check form-switch ps-0">
+                                        <ToggleSwitch
+                                        id="wednesday"
+                                        label="Wednesday"
+                                        checked={state.wednesday}
+                                        onChange={() => toggle('wednesday')}
+                                       />
+                                        
+                                    </div>
                                 </div>
                                 <button type='button' className='btn btn-edits'>
                                     <span> 08:00am-05:00pm </span>
@@ -55,51 +127,47 @@ function Schedule() {
                                 </button>
                             </div>
 
-                            <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
-                       
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
-                                        
-                                    </div>
-                                    <button className='btn btn-mondays'> Wednesday </button>
-                                </div>
-                                <button type='button' className='btn btn-edits'>
-                                    <span> 08:00am-05:00pm </span>
-                                    <FiEdit3/>
-                                </button>
-                            </div>
+                            {wednesday &&
+
+                                <WeeklyStartFinish />
+                            }
 
                             <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
+                                <div className='day-name-time d-flex align-items-center' onClick={handleThursday}>
                        
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
+                                    <div className="form-check form-switch ps-0">
+                                        <ToggleSwitch
+                                        id="thursday"
+                                        label="Thursday"
+                                        checked={state.thursday}
+                                        onChange={() => toggle('thursday')}
+                                        />
                                         
                                     </div>
-                                    <button className='btn btn-mondays'> Thursday </button>
                                 </div>
                                 <button type='button' className='btn btn-edits'>
                                     <span> 08:00am-05:00pm </span>
                                     <FiEdit3/>
                                 </button>
                             </div>
+                            {thursday &&
+
+                                <WeeklyStartFinish />
+                            }
 
 
                              <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
+                                <div className='day-name-time d-flex align-items-center' onClick={handleFriday}>
                        
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
+                                    <div className="form-check form-switch ps-0">
+                                        <ToggleSwitch
+                                        id="friday"
+                                        label="Friday"
+                                        checked={state.friday}
+                                        onChange={() => toggle('friday')}
+                                        />
                                         
                                     </div>
-                                    <button className='btn btn-mondays'> Friday </button>
                                 </div>
                                 <button type='button' className='btn btn-edits'>
                                     <span> 08:00am-05:00pm </span>
@@ -107,41 +175,58 @@ function Schedule() {
                                 </button>
                             </div>
 
+                            {friday &&
 
+                                <WeeklyStartFinish />
+                            }
                             <div id='week-days'>
-                                <div className='day-name-time d-flex align-items-center'>
+                                <div className='day-name-time d-flex align-items-center' onClick={handleSaturday}>
                        
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
+                                    <div className="form-check form-switch ps-0">
+                                        <ToggleSwitch
+                                        id="saturday"
+                                        label="Saturday"
+                                        checked={state.saturday}
+                                        onChange={() => toggle('saturday')}
+                                        />
                                         
                                     </div>
-                                    <button className='btn btn-mondays'> Saturday </button>
                                 </div>
                                 <button type='button' className='btn btn-edits'>
                                     <span> 08:00am-05:00pm </span>
                                     <FiEdit3/>
                                 </button>
                             </div>
+
+                            {saturday &&
+
+                                <WeeklyStartFinish />
+                            }
 
 
                             <div id='week-days-sunday'>
-                                <div className='day-name-time d-flex align-items-center'>
+                                <div className='day-name-time d-flex align-items-center' onClick={handleSunday}>
                        
-                                    <div className="form-check form-switch">
-                                        <input className="form-check-input" type="checkbox"  
-                                        checked={isChecked}
-                                        onChange={handleChange}/>
+                                    <div className="form-check form-switch ps-0">
+                                        <ToggleSwitch
+                                        id="sunday"
+                                        label="Sunday"
+                                        checked={state.sunday}
+                                        onChange={() => toggle('sunday')}
+                                       />
                                         
                                     </div>
-                                    <button className='btn btn-mondays'> Sunday </button>
                                 </div>
                                 <button type='button' className='btn btn-edits'>
                                     <span> 08:00am-05:00pm </span>
                                     <FiEdit3/>
                                 </button>
                             </div>
+
+                            {sunday &&
+
+                                <WeeklyStartFinish />
+                            }
 
                           
                             <div className='schedule-save-btn-container mb-5 me-3 mt-4'>

@@ -1412,12 +1412,12 @@ h2.calender-heading {
 
 
 .footer-divs01{
-  width: calc(100% - 285px);
+  /* width: calc(100% - 285px); */
   margin-left: auto;
-  display: table;
+  display: inline-block;
   margin-bottom: 20px;
   position: relative;
-  top: 16px;
+  /* top: 16px; */
 }
 .footer-divs01 p span img{
   transform: scale(0.7);
@@ -2596,4 +2596,232 @@ align-items: end;
 .offcanvas-end{
   box-shadow: 0 0.3125rem 1.375rem 0 rgb(34 48 62 / 18%);
   border-left: none !important;
+}
+
+
+/* shedule */
+
+.start-row {
+  padding-block: 5px;
+  border-bottom: 1px solid lightgray;
+  border-radius: 0;
+  margin: 0px !important;
+  padding: 16px 22px 0 22px;
+  
+}
+.daytogglediv{
+    border: 1px solid #e9e9e9;
+    display: block;
+    width: 97%;
+    margin: 13px auto;
+    border-radius: 5px;
+    margin-bottom: 8px !important;
+}
+.start-time-input {
+  font-size: 13px;
+  flex: 0 0 60px;
+  padding: 3px 2px !important;
+  line-height: 1;
+  margin: 0px;
+  border: 1px solid #EDEFF6;
+  background-color: #EDEFF6;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: none;
+  width: 60px;
+  max-width: 60px;
+}
+
+
+
+
+label.ampm-toggle{
+  background-color: #edeff6;
+  display: flex;
+  vertical-align: middle;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 84px;
+  height: 42px;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+ 
+  &:before,
+  &:after {
+    color: var(--color-secondary);
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 41px;
+  }
+ 
+  &:before {
+    content: "AM";
+  }
+ 
+  input {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0.1);
+    filter: alpha(opacity=0.1);
+    opacity: .001;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+ 
+    &:checked+.toggle-button {
+      left: 42px;
+ 
+      &:before {
+        content: "PM";
+      }
+    }
+ 
+    &[disabled]+.toggle-button {
+      opacity: 0.7;
+    }
+ 
+    &[disabled]~.toggle-off-txt {
+      opacity: 0.5;
+    }
+  }
+ 
+  .toggle-button {
+    background: #ffffff;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 42px;
+    background-clip: padding-box;
+    white-space: nowrap;
+    transition: left .05s ease-in-out;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+ 
+    &:before {
+      content: "AM";
+      border: 2px solid #1d7bff;
+      border-radius: 4px;
+      color: #171717;
+      display: block;
+      width: 42px;
+      height: 42px;
+      font-size: 12px;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+ 
+  .toggle-off-txt {
+    display: inline-block;
+    width: 42px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+ 
+    &:before {
+      content: "PM"
+    }
+  }
+}
+ 
+.add-another-work {
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px dashed #738db3;
+  color: gray;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+  width: 95%;
+  margin: auto;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+ul.new-tabsd.nav-tabs{
+  border-bottom: none !important;
+  margin-bottom: 22px;
+}
+ul.new-tabsd.nav-tabs .nav-item{
+  margin-right: 8px;
+}
+ul.new-tabsd.nav-tabs .nav-link{
+    min-height: 38px;
+    padding: 0.5rem 1.375rem;
+    border-radius: 8px;
+    border: none !important;
+    color: var(--foreground);
+}
+ul.new-tabsd.nav-tabs .nav-item.show .nav-link, 
+ul.new-tabsd.nav-tabs .nav-link.active{
+    background: var(--btncolor);
+    color: var(--background);
+    box-shadow: 0px 2px 6px rgba(38, 43, 67, 0.219);
+}
+ul.new-tabsd.nav-tabs .nav-link:hover{
+    border: none !important;
+    background: var(--btncolor);
+    color: var(--background);
+    box-shadow: 0px 2px 6px rgba(38, 43, 67, 0.219);
+}
+.apoinu-text{
+  margin: 0 0 12px 0 !important;
+}
+
+/* calendar start */
+.calendar-tabs {}
+ 
+.calender-container {
+  display: flex;
+}
+ 
+.calendar {
+  border-radius: 10px;
+  width: 97%;
+  min-height: 700px;
+  padding: 30px;
+  box-shadow: 0 .25rem .875rem #262b4329;
+  background: #fff !important;
+}
+ 
+.cal-month-header {
+  font-weight: 500;
+  font-size: 26px;
+}
+ 
+/* calendar end */
+ 
+.calendar-container {
+  display: flex;
+  height: 100vh;
+}
+ 
+.calendar-main {
+  width: 75%;
+  padding: 1rem;
+}
+ 
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
 }

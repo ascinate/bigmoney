@@ -82,7 +82,7 @@ function GeneralSettings() {
         <>
           <div className='general-setiings-code w-100'>
              <div className='comon-tops-sets w-100'>
-                 <h2 className='cm-head'> Appointment Settings </h2>
+                 <h2 className='cm-head apoinu-text d-inline-block'> Appointment Settings </h2>
              </div>
              <div className='inputs-div01 cm-style01 w-100 d-block'>
                  <div className='row align-items-start'>
