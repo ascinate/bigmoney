@@ -26,7 +26,7 @@ function EditUser() {
                 <h3 className="allowedrecords-title">Allowed Records</h3>
               </div>
               <div className="allowedrecords-text">
-                <p >This user has "Administrator" role and can access all records</p>
+                <p >This user has &#34;Administrator&#34; role and can access all records</p>
               </div>
             </div>
             <div className="allowedrecords-container">
@@ -34,7 +34,7 @@ function EditUser() {
                 <h3 className="allowedrecords-title">Permitted Actions</h3>
               </div>
               <div className="allowedrecords-text">
-                <p >Permitted actions are defined by user's role settings.</p>
+                <p >Permitted actions are defined by user&#39;s role settings.</p>
               </div>
             </div>
             <div className="admin-btn-div">
