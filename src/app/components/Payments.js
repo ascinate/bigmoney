@@ -209,7 +209,7 @@ function Payments() {
                                                                 <option value="uzs">Uzbekistani Som</option>
                                                                 <option value="vnd">Vietnamese Đồng</option>
                                                                 <option value="vuv">Vanuatu Vatu</option>
-                                                                <option value="wst">Samoan Tālā</option>
+                                                                <option value="wst">Samoan Tala</option>
                                                                 <option value="xaf">Central African CFA Franc</option>
                                                                 <option value="xcd">East Caribbean Dollar</option>
                                                                 <option value="xof">West African CFA Franc</option>
