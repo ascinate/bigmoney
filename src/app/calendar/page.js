@@ -1,6 +1,5 @@
 
 "use client";
-import React from 'react'
 import { Calendar, dateFnsLocalizer, Views } from "react-big-calendar";
 import format from "date-fns/format";
 import parse from "date-fns/parse";
@@ -51,21 +50,30 @@ export default function page() {
             <Navbar/>
             <div className="home-settings float-start w-100">
               <section className='calendar-tab'>
+                <div className='row row-cols-1 row-cols-lg-2 mb-3 mt-4'>
+                     <div className='col'>
+                        <h4 className="mb-0">{format(currentDate, "MMMM yyyy")}</h4>
+                     </div>
+                     <div className='col'>
+                         <div className="btn-group d-flex align-items-center flex-wrap justify-content-end">
+                            <button className="btn btn-outline-primary" onClick={() => setView(Views.MONTH)}>Month</button>
+                            <button className="btn btn-outline-primary" onClick={() => setView(Views.WEEK)}>Week</button>
+                            <button className="btn btn-outline-primary" onClick={() => setView(Views.DAY)}>Day</button>
+                            <button className="btn btn-outline-secondary" onClick={() => setCurrentDate(new Date())}>Today</button>
+                        </div>
+                     </div>
+                </div>
+                 
                 <div className='calender-container'>
                     <div className="container">
                         <div className='row'>
-                            <div className='col-lg-12 '>
-                                <div className='calendar'>
-                                    <div className="container-fluid vh-100 d-flex">
+                            <div className='col-lg-12 ps-lg-0'>
+                                <div className='calendar w-100'>
+                                    <div className="vh-100 d-flex">
                                         <div className="col-12 p-3">
                                             <div className="d-flex justify-content-between align-items-center mb-3">
-                                                <h4 className="mb-0">{format(currentDate, "MMMM yyyy")}</h4>
-                                                <div className="btn-group">
-                                                    <button className="btn btn-outline-primary" onClick={() => setView(Views.MONTH)}>Month</button>
-                                                    <button className="btn btn-outline-primary" onClick={() => setView(Views.WEEK)}>Week</button>
-                                                    <button className="btn btn-outline-primary" onClick={() => setView(Views.DAY)}>Day</button>
-                                                    <button className="btn btn-outline-secondary" onClick={() => setCurrentDate(new Date())}>Today</button>
-                                                </div>
+                                               
+                                                
                                             </div>
                                             <div style={{ height: "calc(100vh - 120px)" }}>
                                                 <Calendar
@@ -90,15 +98,17 @@ export default function page() {
                         </div>
                     </div>
                     {selectedDate && (
-                        <div className="col-3 p-3 border-start bg-light calender-left-card">
-
+                        <div className="slide-clas calender-left-card">
+                            <button className="btn btn-close text-reset" onClick={() => setSelectedDate(null)}>
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,1)"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
+                            </button>
                             <div className='new-order d-flex align-items-center justify-content-between'>
                                 <div>
-                                    <h5 className="offcanvas-title" id="offcanvasExampleLabel">New Order
-                                    </h5>
+                                    <h2 className="offcanvas-title" id="offcanvasExampleLabel">New Order
+                                    </h2>
                                 </div>
                                 <div>
-                                    <button className="btn btn-sm btn-outline-danger mb-2 btn-close text-reset" onClick={() => setSelectedDate(null)}></button>
+                                    
                                 </div>
 
                             </div>
@@ -137,7 +147,7 @@ export default function page() {
                                     <p className='orderitem-para d-flex align-items-center'> <FaPlus /> Add Another Item</p>
                                 </div>
                                 <form action="">
-                                    <label for="cars">Service</label>
+                                    <label htmlFor="cars">Service</label>
                                     <br />
                                     <select name="cars" id="cars" className='orderitem-service uncategorized'>
                                         <optgroup label="Uncategorized" className='uncategorized'>
@@ -150,7 +160,7 @@ export default function page() {
                                             <option value="mercedes">Express Detail Inside & Outside</option>
                                         </optgroup>
                                     </select>
-                                    <label for="cars">Location</label>
+                                    <label htmlFor="cars">Location</label>
                                     <br />
                                     <select name="cars" id="cars" className='orderitem-service uncategorized'>
                                         <option value="setstatus" className='service-1'>Home</option>

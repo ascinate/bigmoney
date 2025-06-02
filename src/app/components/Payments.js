@@ -177,7 +177,7 @@ function Payments() {
                                                                 <option value="pgk">Papua New Guinean Kina</option>
                                                                 <option value="php">Philippine Peso</option>
                                                                 <option value="pkr">Pakistani Rupee</option>
-                                                                <option value="pln">Polish Złoty</option>
+                                                                <option value="pln">Polish Zloty</option>
                                                                 <option value="pyg">Paraguayan Guarani</option>
                                                                 <option value="qar">Qatari Riyal</option>
                                                                 <option value="ron">Romanian Leu</option>
@@ -193,7 +193,7 @@ function Payments() {
                                                                 <option value="sll">Sierra Leonean Leone</option>
                                                                 <option value="sos">Somali Shilling</option>
                                                                 <option value="srd">Surinamese Dollar</option>
-                                                                <option value="std">São Tome and Príncipe Dobra (pre-2018)</option>
+                                                                <option value="std">Sao Tome and Principe Dobra (pre-2018)</option>
                                                                 <option value="svc">Salvadoran Colón</option>
                                                                 <option value="szl">Swazi Lilangeni</option>
                                                                 <option value="thb">Thai Baht</option>
@@ -207,7 +207,7 @@ function Payments() {
                                                                 <option value="ugx">Ugandan Shilling</option>
                                                                 <option value="uyu">Uruguayan Peso</option>
                                                                 <option value="uzs">Uzbekistani Som</option>
-                                                                <option value="vnd">Vietnamese Đồng</option>
+                                                                <option value="vnd">Vietnamese Đong</option>
                                                                 <option value="vuv">Vanuatu Vatu</option>
                                                                 <option value="wst">Samoan Tala</option>
                                                                 <option value="xaf">Central African CFA Franc</option>
