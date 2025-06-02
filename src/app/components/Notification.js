@@ -32,7 +32,7 @@ function Notification() {
     <>
       <section className='roles-section'>
         <div className='wrapper'>
-          <artical className='roles-bottom-section'>
+          <article className='roles-bottom-section'>
             <div className=''>
               <h2 className='cm-head'>Email Processor </h2>
             </div>
@@ -80,9 +80,9 @@ function Notification() {
                 </div>
               )} 
 
-          </artical>
+          </article>
 
-          <artical className='roles-bottom-section'>
+          <article className='roles-bottom-section'>
             <div className=''>
               <h2 className='cm-head'> SMS Processor </h2>
             </div>
@@ -145,8 +145,8 @@ function Notification() {
                 </div>
               )} 
 
-          </artical>
-          <artical className='roles-bottom-section'>
+          </article>
+          <article className='roles-bottom-section'>
             <div className=''>
               <h2 className='cm-head'> WhatsApp Processors </h2>
             </div>
@@ -203,9 +203,9 @@ function Notification() {
                 </div>
               )} 
 
-          </artical>
+          </article>
 
-          <artical className='other-bottom-section mb-4'>
+          <article className='other-bottom-section mb-4'>
             <div className=''>
               <h2 className='cm-head'> Other Settings </h2>
             </div>
@@ -225,7 +225,7 @@ function Notification() {
 
               </div>
             </div>
-          </artical>
+          </article>
 
           <div className='mt-5 mb-4 d-none'>
             <div className='admin-dropdown'>
@@ -257,7 +257,7 @@ function Notification() {
 
 
 
-          <artical className='other-bottom-section'>
+          <article className='other-bottom-section'>
               <h2 className='cm-head'> Chat Notifications </h2>
             
             <div>
@@ -286,7 +286,7 @@ function Notification() {
               </div>
             </div>
 
-          </artical>
+          </article>
           <div className='notification-save-changes'>
             <button className='btn crm-btn'>Save Channge</button>
           </div>

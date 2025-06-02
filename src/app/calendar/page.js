@@ -271,7 +271,7 @@ export default function page() {
                                         <div className='col-lg-12'>
                                             <label htmlFor="">Phone Number</label>
                                             <br />
-                                                                                   <PhoneNumberInput />
+                                            <PhoneNumberInput />
                                         </div>
                                     </div>
                                     <div className='row'>
