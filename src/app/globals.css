@@ -2890,7 +2890,7 @@ label.ampm-toggle{
 .slide-clas{
   position: fixed;
   right: 0;
-  width: 400px;
+  width: 460px;
   height: 100vh;
   background: #fff;
   padding: 0;
@@ -3000,4 +3000,104 @@ label.ampm-toggle{
   filter: brightness(0) invert(1);
   position: absolute;
 
+}
+.st-inputs .form-control{
+  border: none !important;
+}
+.st-back015 .form-control{
+  background: none !important;
+}
+.availablity-btn{
+  position: relative;
+  top:14px;
+  width: 100%;
+}
+
+.st-back015 label.ampm-toggle .toggle-button:before{
+  font-size: 12px;
+}
+.st-back015 .form-control:focus{
+  box-shadow: none;
+  border: none !important;
+}
+.st-back015 label.ampm-toggle input{
+  border: none !important;
+}
+.st-back015 .form-control{
+   border: none !important;
+}
+.cm-labels01 .form-label,
+.crm-bordr01 .form-label{
+  font-size: 14px;
+  color: var(--foreground);
+  font-weight: 500;
+}
+.cm-labels01 .form-group{
+  margin-bottom: 10px;
+}
+.cm-labels01 .form-select{
+  font-size: 14px;
+}
+.orderitem-para{
+  color: var(--btncolor);
+  background: none !important;
+  text-decoration: underline;
+}
+.orderitem-para svg{
+  margin-right: 5px;
+}
+.crm-bordr01{
+  border: 1px solid #00000020;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.crm-bordr01 .form-control{
+  font-size: 15px;
+  text-transform: capitalize;
+  height: 45px;
+}
+
+.pricing0-tablses .row-under-line{
+  border-bottom: solid 1px #ebedf1;
+  padding: 9px 0;
+}
+.pricing0-tablses > div:last-child{
+  border-top: solid 1px #181818;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.pricing0-tablses .row-input{
+  border: none !important;
+  text-align: right;
+}
+.pricing0-tablses{
+  width: 100%;
+}
+.pricing0-tablses .row{
+  align-items: center;
+}
+.pricing0-tablses .row .row-input:focus{
+  border: none !important;
+  outline: none !important;
+}
+.pricing0-tablses .row p{
+  margin-bottom: 0;
+}
+.total-payment{
+  text-transform: uppercase;
+  font-size: 12px;
+
+}
+
+.add-transaction{
+
+}
+.cm-labels01 .form-control{
+  font-size: 14px;
+  height: 40px;
+}
+.cm-labels01 .form-control:focus{
+  box-shadow: none !important;
 }
