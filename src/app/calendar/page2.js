@@ -18,7 +18,6 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import PhoneNumberInput from '../components/PhoneNumberInput.js';
 import Footer from '../components/Footer.js';
-import { MdDeleteOutline } from "react-icons/md";
 
 const locales = {
     "en-US": enUS,
@@ -38,7 +37,7 @@ export default function Page() {
 
     const [selectedDate, setSelectedDate] = useState(null);
     const [currentDate, setCurrentDate] = useState(new Date());
-    const [view, setView] = useState(Views.month);
+    const [view, setView] = useState(Views.MONTH);
 
     const handleSelectSlot = (slotInfo) => {
         setSelectedDate(slotInfo.start);
@@ -69,7 +68,12 @@ export default function Page() {
                         <h4 className="mb-0">{format(currentDate, "MMMM yyyy")}</h4>
                      </div>
                      <div className='col'>
-                         
+                         <div className="btn-group d-flex align-items-center flex-wrap justify-content-end">
+                            <button className="btn btn-outline-primary" onClick={() => setView(Views.MONTH)}>Month</button>
+                            <button className="btn btn-outline-primary" onClick={() => setView(Views.WEEK)}>Week</button>
+                            <button className="btn btn-outline-primary" onClick={() => setView(Views.DAY)}>Day</button>
+                            <button className="btn btn-outline-secondary" onClick={() => setCurrentDate(new Date())}>Today</button>
+                        </div>
                      </div>
                 </div>
                  
@@ -149,139 +153,134 @@ export default function Page() {
                                 <div className="order-container oder-text01 mt-3">
                                     <div className="orderitem d-flex align-items-center justify-content-between">
                                         <h3 className="orderitem-title mb-0">Order Item</h3>
-
-                                        <button type="button" className='orderitem-para btn' onClick={addDiv}> <FaPlus /> Add Another Item </button>
-                                        
+                                        {showFirst ? (
+                                            <button type="button" className='orderitem-para btn' onClick={() => setShowFirst(false)}> <FaPlus /> Add Another Item </button>
+                                        ) : (
+                                            <button type="button" className='orderitem-para btn' onClick={() => setShowFirst(true)}> <FaPlus /> Cancel </button>
+                                        )}
                                     </div>
-                                     <div class="accordion cm-acod" id="accordionExample">
-                                        {divs.map((div) => (
-                                            <div className="accordion-item" key={div.id}>
-                                                <h2 className="accordion-header d-flex align-items-center justify-between" id={`heading-${div.id}`}>
-                                                    <button
-                                                        className="accordion-button"
-                                                        type="button"
-                                                        data-bs-toggle="collapse"
-                                                        data-bs-target={`#collapse-${div.id}`}
-                                                        aria-expanded="true"
-                                                        aria-controls={`collapse-${div.id}`}
-                                                    >
-                                                    NewBooking #{div.id}
-                                                    </button>
 
-                                                    <button
-                                                        onClick={() => removeDiv(div.id)}
-                                                        className="btn text-white"
-                                                    >
-                                                        <MdDeleteOutline />
-                                                    </button>
-                                                </h2>
-
-                                                <div
-                                                id={`collapse-${div.id}`}
-                                                className="accordion-collapse collapse show"
-                                                aria-labelledby={`heading-${div.id}`}
-                                                data-bs-parent="#accordionExample"
-                                                >
-                                                    <div className="accordion-body">
-                                                        <div className="form-group mb-2">
-                                                                <label htmlFor="cars form-label mb-1">Service</label>
-                                                                <select name="cars" id="cars" className='form-select orderitem-service uncategorized'>
-                                                                    <optgroup label="Uncategorized" className='uncategorized'>
-                                                                        <option value="setstatus" className='service-1'>Service 1</option>
-                                                                        <option value="notfulfilled">Service 2</option>
-                                                                        <option value="fulfilled">Full house cleaning</option>
-
-                                                                    </optgroup>
-                                                                    <optgroup label="Mobile Detailing">
-                                                                        <option value="mercedes">Express Detail Inside & Outside</option>
-                                                                    </optgroup>
-                                                                </select>
-                                                        </div>
-                                                        <div className="form-group mb-2">
-                                                            <label htmlFor="cars" className="form-label">Location</label>
-                                                                <select name="cars" id="cars" className='form-select orderitem-service uncategorized'>
-                                                                    <option value="setstatus" className='service-1'>Home</option>
-                                                                    <option value="notfulfilled">Hospital</option>
-                                                                    <option value="fulfilled">Main Location</option>
-                                                                </select>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-lg-6 mb-2">
-                                                                <div className="form-group">
-                                                                <label htmlFor="" className='orderStatus-label form-label'>Agent</label>
-                                                                    <select name="orderstatus" id="orderstatus" className='form-select orderstatus-select'>
-                                                                        <option value="setstatus">Lynn Nicely</option>
-                                                                        <option value="notfulfilled">Sara Brooks</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-lg-6 mb-2">
-
-                                                                <div className="form-group">
-                                                                <label htmlFor="" className='orderStatus-label form-label'>Status</label>
-                                                                    <select name="fullfilmentstatus" id="fullfilmentstatus" className='form-select orderstatus-select'>
-                                                                        <option value="setstatus">Set Status</option>
-                                                                        <option value="notfulfilled">Approved</option>
-                                                                        <option value="setstatus">Pending Approval</option>
-                                                                        <option value="notfulfilled">Cancelled</option>
-                                                                        <option value="setstatus">No Show</option>
-                                                                        <option value="notfulfilled">Completed</option>
-                                                                    </select>
-                                                                </div>
-
-                                                            </div>
-                                                            <div className="col-lg-6">
-                                                                <div className="form-group mb-2">
-                                                                    <label htmlFor="" className='orderStatus-label form-label'>Start Date</label>
-                                                                    <div className="d-flex align-items-center">
-                                                                        <input type="text" placeholder='dd/mm/yy' className='form-control inputdate' />
-                                                                        <div className='ampmdiv'>
-                                                                            <label className="ampm-toggle">
-                                                                                <input type="checkbox" id="" name="" value="" />
-                                                                                <div className="toggle-button"></div>
-                                                                                <div className="toggle-off-txt"></div>
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                                
-                                                                
-                                                            </div>
-                                                            <div className="col-lg-6">
-                                                                <div className="form-group mb-2">
-                                                                    <button name="fullfilmentstatus" id="fullfilmentstatus" className='btn availablity-btn '>
-                                                                        Availablity <FaArrowRight />
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-lg-6">
-                                                                 <div className="form-group mb-2">
-                                                                    <label htmlFor="" className='orderStatus-label form-label'>Start date</label>
-                                                
-                                                                    <input type="text" value="08:00" className='startendinput form-control' />
-                                                                    <div className='ampmdiv'>
-                                                                        <label className="ampm-toggle">
-                                                                            <input type="checkbox" id="" name="" value="" />
-                                                                            <div className="toggle-button"></div>
-                                                                            <div className="toggle-off-txt"></div>
-                                                                        </label>
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                            <div className="col-lg-6">
-                                                                <div className="form-group mb-2">
-                                                                     <label htmlFor="" className='form-label orderStatus-label'>End date</label>
-                                                                     <input type="text" value="08:00" className="form-control startendinput" />
-                                                                </div>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
+                                     {showFirst ? (
+                                            <div id="div1" className="cmr-show01 mt-3">
+                                                   <p className="mb-0">What type of item would you like to add?</p>
+                                                <div className="d-flex align-items-center justify-content-center mt-3 mb-4">
+                                                     <button type="button" className="btn goto">Go to Second Div</button>
+                                                     <button type="button" className="btn bundle ms-2">Bundle</button>
                                                 </div>
+                                                
                                             </div>
-                                        ))}
-                                     </div>
+                                        ) : (
+                                            <div id="div2" className="cmr-show01 mt-3">
+                                            <p>This is the second div.</p>
+                                            <button onClick={() => setShowFirst(true)}>Back to First Div</button>
+                                            </div>
+                                     )}
+
+                                    
+                                        <div className="form-group mb-2">
+                                           <label htmlFor="cars form-label mb-1">Service</label>
+                                           <select name="cars" id="cars" className='form-select orderitem-service uncategorized'>
+                                                <optgroup label="Uncategorized" className='uncategorized'>
+                                                    <option value="setstatus" className='service-1'>Service 1</option>
+                                                    <option value="notfulfilled">Service 2</option>
+                                                    <option value="fulfilled">Full house cleaning</option>
+
+                                                </optgroup>
+                                                <optgroup label="Mobile Detailing">
+                                                    <option value="mercedes">Express Detail Inside & Outside</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                        
+                                        <label htmlFor="cars">Location</label>
+                                        <br />
+                                        <select name="cars" id="cars" className='orderitem-service uncategorized'>
+                                            <option value="setstatus" className='service-1'>Home</option>
+                                            <option value="notfulfilled">Hospital</option>
+                                            <option value="fulfilled">Main Location</option>
+                                        </select>
+
+                                        <div className='d-flex justify-content-between'>
+                                            <div>
+                                                <label htmlFor="" className='orderStatus-label'>Agent</label>
+                                                <br />
+                                                <select name="orderstatus" id="orderstatus" className='orderstatus-select'>
+                                                    <option value="setstatus">Lynn Nicely</option>
+                                                    <option value="notfulfilled">Sara Brooks</option>
+                                                </select>
+                                            </div>
+
+
+                                            <div>
+                                                <label htmlFor="" className='orderStatus-label'>Status</label>
+                                                <br />
+                                                <select name="fullfilmentstatus" id="fullfilmentstatus" className='orderstatus-select'>
+                                                    <option value="setstatus">Set Status</option>
+                                                    <option value="notfulfilled">Approved</option>
+                                                    <option value="setstatus">Pending Approval</option>
+                                                    <option value="notfulfilled">Cancelled</option>
+                                                    <option value="setstatus">No Show</option>
+                                                    <option value="notfulfilled">Completed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div className='d-flex align-items-center justify-content-between'>
+                                            <div>
+                                                <label htmlFor="" className='orderStatus-label'>Start Date</label>
+                                                <br />
+                                                <input type="text" placeholder='dd/mm/yy' className='inputdate' />
+                                            </div>
+
+
+                                            <div>
+                                                <button name="fullfilmentstatus" id="fullfilmentstatus" className='availablity-btn '>
+                                                    Availablity <FaArrowRight />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div className='row'>
+                                            <div className='col-lg-6 inputdiv'>
+                                                <label htmlFor="" className='orderStatus-label'>Start date</label>
+                                                <br />
+                                                <input type="text" value="08:00" className='startendinput' />
+                                                <div className='ampmdiv'>
+                                                    <label className="ampm-toggle">
+                                                        <input type="checkbox" id="" name="" value="" />
+                                                        <div className="toggle-button"></div>
+                                                        <div className="toggle-off-txt"></div>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div className='col-lg-6'>
+                                                <label htmlFor="" className='orderStatus-label'>End date</label>
+                                                <br />
+                                                <input type="text" value="08:00" className="startendinput" />
+
+                                            </div>
+                                        </div>
+
+                                        <div className='row'>
+                                            <div className='col-lg-6 inputdiv'>
+                                                <label htmlFor="" className='orderStatus-label'>Start date</label>
+                                                <br />
+                                                <input type="text" value="08:00" className='startendinput' form-control />
+
+
+
+                                            </div>
+                                            <div className='col-lg-6'>
+                                                <label htmlFor="" className='orderStatus-label'>End date</label>
+                                                <br />
+                                                <input type="text" value="08:00" className="startendinput" />
+
+                                            </div>
+                                        </div>
+
+
+                                    
+
 
                                     <div>
                                         <div className="orderitem d-flex justify-content-between">

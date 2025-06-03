@@ -2893,17 +2893,26 @@ label.ampm-toggle{
   width: 400px;
   height: 100vh;
   background: #fff;
-  padding: 25px;
+  padding: 0;
   top:0;
   z-index: 999;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.15), 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
-
+.new-order{
+  padding: 25px 25px 10px 25px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.user-div-liso{
+  padding: 15px 25px 10px 25px;
+}
+.orderStatus-label{
+  margin-bottom: 7px;
+  margin-bottom: 5px;
+}
 .slide-clas h2{
   font-size: 20px;
   line-height: 1;
   font-weight: 600;
-  border-bottom: solid 1px #f1f1f1;
 }
 .btn-close{
     background: #0a0a0a;
@@ -2914,4 +2923,81 @@ label.ampm-toggle{
     right: 10px;
     top: 8px;
     color: #fff !important;
+    opacity: 1 !important;
+    padding-top: 1px;
+}
+
+
+#delivery-address .form-group{
+  flex-direction: inherit !important;
+}
+.logout.hidden-sm-down{
+    color: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+}
+.logout.hidden-sm-down i{
+  color: #000 !important;
+}
+
+#checkout-personal-information-step .form-group{
+    flex-direction: inherit !important;
+}
+.page-order .logo{
+  position: relative !important;
+  top:10px !important;
+}
+.oder-text01 .orderitem-title{
+  font-size: 17px;
+  font-weight: 600;
+}
+.user-div-liso{
+  height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+.create-order{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    background: var(--btncolor);
+    color: var(--background);
+    width: 89%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+}
+.orderitem-para{
+ color: #747474;
+    background: #e7e7e7;
+    font-size: 15px;
+  font-size: 15px;
+}
+.cmr-show01 .btn{
+    color: #565656;
+    background: #ebebeb;
+    font-size: 15px;
+}
+.cm-acod .accordion-item{
+   margin-bottom: 20px;
+   margin-top: 10px;
+}
+.cm-acod .accordion-header{
+   background: var(--btncolor);
+}
+.cm-acod .accordion-header .accordion-button{
+  background: none !important;
+  color: var(--background);
+  font-size: 14px;
+  padding-left: 35px;
+}
+.cm-acod .accordion-button::after{
+  left: 10px !important;
+  right: inherit !important;
+  filter: brightness(0) invert(1);
+  position: absolute;
+
 }

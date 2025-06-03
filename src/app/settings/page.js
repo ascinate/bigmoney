@@ -11,7 +11,7 @@ import Role from "../components/Role";
 import PremiumFeatures from "../components/PremiumFeatures";
 import Notification from "../components/Notification";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="full-body-parts">
       <Sidebar/>

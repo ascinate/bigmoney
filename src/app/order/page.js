@@ -15,7 +15,7 @@ import CustomerProfileModal from '../components/CustomerProfileModal';
 import Image from "next/image";
 import CompletedBtn from '../components/CompletedBtn';
 
-export default function page() {
+export default function Page() {
   return (
     <div className="full-body-parts">
       <Sidebar/>
