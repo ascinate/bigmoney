@@ -1,4 +1,5 @@
-
+'use client'
+import * as React from 'react';
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Payments from "../components/Payments";
@@ -14,8 +15,121 @@ import { TfiDownload } from "react-icons/tfi";
 import CustomerProfileModal from '../components/CustomerProfileModal';
 import Image from "next/image";
 import CompletedBtn from '../components/CompletedBtn';
+import { DataGrid } from '@mui/x-data-grid';
+
+
+const rows = [
+    { id: 1, name: 'Johnathan smith', total: "$ " + 267.00, paymentstatus: "not paid",  fulfillmentstatus: "not fulfilled", status: "open", confromation: "XW9F5LU", date: "2022-01-01" },
+    { id: 2, name: 'Marth stuart', total: "$ " + 456.00, paymentstatus: "not paid",  fulfillmentstatus: "not fulfilled", status: "open", confromation: "UHNJL7P", date: "2022-01-01" },
+    { id: 3, name: 'Martha Stewart', total: "$ " + 672.00, paymentstatus: "not paid",  fulfillmentstatus: "not fulfilled",status: "open", confromation: "4NWN4V4", date: "2022-01-01" },
+    { id: 4, name: 'Martha Stewart', total: "$ " + 712.00, paymentstatus: "not paid", fulfillmentstatus: "not fulfilled", status: "completed", confromation: "XW9F5LU", date: "2022-01-01" },
+    { id: 5, name: 'Mike Jones', total: "$ " + 912.00, paymentstatus: "not paid", fulfillmentstatus: "not fulfilled", status: "open", confromation: "4NWN4V4", date: "2022-01-01" },
+    { id: 5, name: 'Mike Jones', total: "$ " + 234.00, paymentstatus: "not paid", fulfillmentstatus: "not fulfilled", status: "open", confromation: "4NWN4V4", date: "2022-01-01" },
+
+];
 
 export default function Page() {
+    const [rowData, setRowData] = React.useState(rows);
+    const [selectedRow, setSelectedRow] = React.useState(null);
+
+
+    const processRowUpdate = (newRow) => {
+        const updatedRows = rowData.map((row) =>
+            row.id === newRow.id ? newRow : row
+        );
+        setRowData(updatedRows);
+        return newRow;
+    };
+
+    const columns = [
+        { field: 'id', headerName: 'ID', width: 70 },
+        {
+            field: 'customername',
+            headerName: 'Customer Name',
+            width: 200,
+            sortable: false,
+            filterable: true,
+            editable: true,
+            renderCell: (params) => (
+                <Link
+                    className="customername"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasExample2"
+                    role="button"
+                    aria-controls="offcanvasExample"
+                    onClick={() => setSelectedRow(params.row)}
+                >
+                    {params.row.name}
+                </Link>
+
+
+            ),
+        },
+        { field: 'total', headerName: 'Total', width: 130, editable: true },
+        {
+            field: 'status',
+            headerName: 'status',
+            width: 200,
+            sortable: false,
+            filterable: false,
+            editable: true,
+
+            renderCell: (params) => (
+                <Link
+                    className="status-btn"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasExample2"
+                    role="button"
+                    aria-controls="offcanvasExample"
+                    onClick={() => setSelectedRow(params.row)}
+                >
+                    {params.row.status}
+                </Link>
+            ),
+        },
+        {
+            field: 'paymentstatus',
+            headerName: 'Payment Status',
+            width: 200,
+            sortable: false,
+            filterable: false,
+            editable: true,
+            renderCell: (params) => (
+                <Link
+                    className="status-btn"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasExample"
+                    role="button"
+                    aria-controls="offcanvasExample"
+                    onClick={() => setSelectedRow(params.row)}
+                >
+                    {params.row.paymentstatus}
+                </Link>
+            ),
+        },
+        {
+            field: 'fulfillmentstatus',
+            headerName: 'Fulfillment Status',
+            width: 200,
+            sortable: false,
+            filterable: false,
+            editable: true,
+            renderCell: (params) => (
+                <Link
+                    className="status-btn"
+                    data-bs-toggle="offcanvas"
+                    href="#offcanvasExample"
+                    role="button"
+                    aria-controls="offcanvasExample"
+                    onClick={() => setSelectedRow(params.row)}
+                >
+                    {params.row.fulfillmentstatus}
+                </Link>
+            ),
+        },
+        { field: 'confromation', headerName: 'Conformation', width: 130, editable: true },
+        { field: 'date', headerName: 'Date', width: 130, editable: true },
+    ];
   return (
     <div className="full-body-parts">
       <Sidebar/>
@@ -24,128 +138,32 @@ export default function Page() {
             <div className="home-settings float-start w-100">
                  <div className='calendar-tab'>
                     <div className='calender-container'>
-                        <div className="container">
-                            <div className='row'>
-                                <div className='col-lg-12 '>
-                                    <div className='calendar'>
-                                        <div className='order-row'>
-                                            <div>
-                                                <h2>Order</h2>
-                                                <p>Showing 1-3 of 3</p>
-                                            </div>
-                                            <a href='/' download className='csvbtn'> <TfiDownload /> Download .csv</a>
-                                        </div>
-                                        <div className='table-row'>
-                                            <table className="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">id</th>
-                                                        <th scope="col">Customer</th>
-                                                        <th scope="col">total</th>
-                                                        <th scope="col">status</th>
-                                                        <th scope="col">payment status</th>
-                                                        <th scope="col">Fulfillment Statu</th>
-                                                        <th scope="col">conformation</th>
-                                                        <th scope="col">date</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row"><input type="number" placeholder='id' /></th>
-                                                        <td><input type="text" placeholder='customer name' /></td>
-                                                        <td><input type="text" placeholder='total' /></td>
-                                                        <td>
-                                                            <select name="" id="">
-                                                                <option value="">Show All</option>
-                                                                <option value="">Open</option>
-                                                                <option value="">Cancelled</option>
-                                                                <option value="" className=''>Complete</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select name="" id="">
-                                                                <option value="">Show All</option>
-                                                                <option value="">not paid</option>
-                                                                <option value="">partially paid</option>
-                                                                <option value="">fully paid</option>
-                                                                <option value="">processing</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <select name="" id="">
-                                                                <option value="">Show All</option>
-                                                                <option value="">not fulfilled</option>
-                                                                <option value="">fulfilled</option>
-                                                                <option value="">partially fulfilled</option>
-
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" placeholder='conformation' />
-                                                        </td>
-                                                        <td>
-                                                            <input type="date" />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>
-                                                            <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample">
-                                                                Martha Stewart
-                                                            </a>
-                                                            <CustomerProfileModal />
-                                                        </td>
-                                                        <td>$190.00</td>
-                                                        <td>
-
-                                                            <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                                                                completed
-                                                            </a>
-                                                            <CompletedBtn />
-                                                        </td>
-                                                        <td><button className=''>Not paid</button></td>
-                                                        <td><button className=''>Fullfilled</button></td>
-                                                        <td>UHNJL7P</td>
-                                                        <td>2025-05-21 13:23:18</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2</th>
-                                                        <td>Martha Stewart</td>
-                                                        <td>$212.00</td>
-                                                        <td><button className='table-btn'>completed</button></td>
-                                                        <td><button className=''>Not paid</button></td>
-                                                        <td><button className=''>Fullfilled</button></td>
-                                                        <td>V2ULNRT</td>
-                                                        <td>2025-05-21 13:23:18</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">3</th>
-                                                        <td>Mike Jones</td>
-                                                        <td>$190.00</td>
-                                                        <td><button className='table-btn'>completed</button></td>
-                                                        <td><button className=''>Not paid</button></td>
-                                                        <td><button className=''>Fullfilled</button></td>
-                                                        <td>HZMT442</td>
-                                                        <td>2025-05-20 21:00:56</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div className='page-row'>
-                                            <div>
-
-                                                <p>Showing 1-3 of 3</p>
-                                            </div>
-                                            <select name="" id="">
-                                                <option>1</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                        <div className='calendar'>
+                            <div className='order-row d-flex justify-content-between align-items-center mb-3'>
+                                <div>
+                                    <h2>Order</h2>
+                                    <p>Showing {rowData.length} of {rowData.length}</p>
                                 </div>
+                                <a href='/' download className='btn btn-outline-secondary'>
+                                    <TfiDownload /> Download .csv
+                                </a>
+                            </div>
+
+                            <div style={{ height: 400, width: '100%' }}>
+                                
+                            </div>
+
+                            <div className='page-row mt-3 d-flex justify-content-between'>
+                                <p>Showing 1-{rowData.length} of {rowData.length}</p>
+                                <select className='form-select w-auto'>
+                                    <option>1</option>
+                                </select>
                             </div>
                         </div>
                     </div>
                 </div>
+                 <CustomerProfileModal />
+                <CompletedBtn />
             </div>
       </main>
       <Footer/>

@@ -20,6 +20,7 @@ import PhoneNumberInput from '../components/PhoneNumberInput.js';
 import Footer from '../components/Footer.js';
 import { MdDeleteOutline , MdOutlineDeleteOutline } from "react-icons/md";
 import Link from "next/link.js";
+
  
 
 const locales = {
@@ -89,7 +90,7 @@ export default function Page() {
                     <div className="container">
                         <div className='row'>
                             <div className='col-lg-12 ps-lg-0'>
-                                <div className='calendar w-100'>
+                                <div className='calendar w-100 pt-2'>
                                     <div className="vh-100 d-flex">
                                         <div className="col-12 p-3">
                                             <div className="d-flex justify-content-between align-items-center mb-3">

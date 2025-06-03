@@ -3101,3 +3101,16 @@ label.ampm-toggle{
 .cm-labels01 .form-control:focus{
   box-shadow: none !important;
 }
+.shoingtext{
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.btn-donload{
+  background: var(--btncolor);
+  color: var(--background);
+}
+.table-settings-btn{
+  background: var(--foreground);
+  color: var(--background);
+}
