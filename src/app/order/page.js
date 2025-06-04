@@ -16,6 +16,7 @@ import CustomerProfileModal from '../components/CustomerProfileModal';
 import Image from "next/image";
 import CompletedBtn from '../components/CompletedBtn';
 import { DataGrid } from '@mui/x-data-grid';
+import Link from 'next/link';
 
 
 const rows = [
@@ -137,20 +138,25 @@ export default function Page() {
             <Navbar/>
             <div className="home-settings float-start w-100">
                  <div className='calendar-tab'>
-                    <div className='calender-container'>
-                        <div className='calendar'>
-                            <div className='order-row d-flex justify-content-between align-items-center mb-3'>
-                                <div>
-                                    <h2>Order</h2>
-                                    <p>Showing {rowData.length} of {rowData.length}</p>
-                                </div>
-                                <a href='/' download className='btn btn-outline-secondary'>
+                    <div className='d-flex align-items-center justify-content-between w-100'>
+                          <h2>Order
+                            <span className='d-block shoingtext'> Showing {rowData.length} of {rowData.length} </span>
+                          </h2>
+                           <a href='/' download className='btn btn-donload'>
                                     <TfiDownload /> Download .csv
-                                </a>
-                            </div>
+                           </a>
+                    </div>
+                    <div className='calender-container mt-4'>
+                        <div className='calendar w-100'>
+                            
 
-                            <div style={{ height: 400, width: '100%' }}>
-                                
+                            <div>
+                                 <DataGrid
+                                     rows={rowData}
+                                     columns={columns}
+                                     processRowUpdate={processRowUpdate}
+                                     experimentalFeatures={{ newEditingApi: true }}
+                                />
                             </div>
 
                             <div className='page-row mt-3 d-flex justify-content-between'>

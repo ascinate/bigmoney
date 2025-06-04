@@ -18,7 +18,8 @@ function Sidebar() {
         { id: 2, title: 'Calendar' , link: '/calendar',  icon:<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  width="24" height="24"  fill="rgba(59,64,85,1)"><path d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM8 13V15H6V13H8ZM13 13V15H11V13H13ZM18 13V15H16V13H18ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z"></path></svg>,  },
         { id: 3, title: 'Appointments' , link: '/appointments',  icon:<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M4.02381 3.78307C4.12549 3.32553 4.5313 3 5 3H19C19.4687 3 19.8745 3.32553 19.9762 3.78307L21.9762 12.7831C21.992 12.8543 22 12.927 22 13V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V13C2 12.927 2.00799 12.8543 2.02381 12.7831L4.02381 3.78307ZM5.80217 5L4.24662 12H9C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12H19.7534L18.1978 5H5.80217ZM16.584 14C15.8124 15.7659 14.0503 17 12 17C9.94968 17 8.1876 15.7659 7.41604 14H4V19H20V14H16.584Z"></path></svg>, },
         { id: 4, title: 'Order' , link: '/order',  icon:<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M22 20V7L20 3H4L2 7.00353V20C2 20.5523 2.44772 21 3 21H21C21.5523 21 22 20.5523 22 20ZM4 9H20V19H4V9ZM5.236 5H18.764L19.764 7H4.237L5.236 5ZM15 11H9V13H15V11Z"></path></svg>, },
-        { id: 5, title: 'Payments' , link: '/',  icon:<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M3.00488 2.99979H21.0049C21.5572 2.99979 22.0049 3.4475 22.0049 3.99979V19.9998C22.0049 20.5521 21.5572 20.9998 21.0049 20.9998H3.00488C2.4526 20.9998 2.00488 20.5521 2.00488 19.9998V3.99979C2.00488 3.4475 2.4526 2.99979 3.00488 2.99979ZM20.0049 11.9998H4.00488V18.9998H20.0049V11.9998ZM20.0049 7.99979V4.99979H4.00488V7.99979H20.0049Z"></path></svg>, },
+        { id: 5, title: 'Payments' , link: '/payment',  icon:<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M3.00488 2.99979H21.0049C21.5572 2.99979 22.0049 3.4475 22.0049 3.99979V19.9998C22.0049 20.5521 21.5572 20.9998 21.0049 20.9998H3.00488C2.4526 20.9998 2.00488 20.5521 2.00488 19.9998V3.99979C2.00488 3.4475 2.4526 2.99979 3.00488 2.99979ZM20.0049 11.9998H4.00488V18.9998H20.0049V11.9998ZM20.0049 7.99979V4.99979H4.00488V7.99979H20.0049Z"></path></svg>, },
+        { id: 6, title: 'Customers' , link: '/customers',  icon:<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M3.00488 2.99979H21.0049C21.5572 2.99979 22.0049 3.4475 22.0049 3.99979V19.9998C22.0049 20.5521 21.5572 20.9998 21.0049 20.9998H3.00488C2.4526 20.9998 2.00488 20.5521 2.00488 19.9998V3.99979C2.00488 3.4475 2.4526 2.99979 3.00488 2.99979ZM20.0049 11.9998H4.00488V18.9998H20.0049V11.9998ZM20.0049 7.99979V4.99979H4.00488V7.99979H20.0049Z"></path></svg>, },
         
     ];
    
@@ -65,10 +66,12 @@ function Sidebar() {
                         </div>
                     </div>
                     <div className="accordion-item menu-list01 pt-1">
-                         <Link href="/">
+                         <Link href="/agent">
                           <span className='icon-svg'> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"></path></svg> 
                           </span>
-                          <span className='text-menus'> Agents </span> </Link>
+                          <span className='text-menus'> Agents </span> 
+                          <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="rgba(0,0,0,1)"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg> </span>  
+                        </Link>
                     </div>
                     <div className="accordion-item pt-2">
                         <h2 className="accordion-header" id="headingTwo">
@@ -82,6 +85,7 @@ function Sidebar() {
                         <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <ul>
+                                    <li> <Link href="/location"> Locations </Link> </li> 
                                     <li> <Link href="/"> Bundles </Link> </li> 
                                     <li> <Link href="/"> Categories </Link> </li>
                                     <li> <Link href="/"> Service Extras </Link> </li> 
@@ -90,11 +94,12 @@ function Sidebar() {
                         </div>
                     </div>
                     <div className="accordion-item menu-list01 pt-2">
-                        <Link href="/">
-                        <span className='icon-svg'>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M4 2H20C20.5523 2 21 2.44772 21 3V22.2763C21 22.5525 20.7761 22.7764 20.5 22.7764C20.4298 22.7764 20.3604 22.7615 20.2963 22.7329L12 19.0313L3.70373 22.7329C3.45155 22.8455 3.15591 22.7322 3.04339 22.4801C3.01478 22.4159 3 22.3465 3 22.2763V3C3 2.44772 3.44772 2 4 2ZM19 19.9645V4H5V19.9645L12 16.8412L19 19.9645ZM12 13.5L9.06107 15.0451L9.62236 11.7725L7.24472 9.45492L10.5305 8.97746L12 6L13.4695 8.97746L16.7553 9.45492L14.3776 11.7725L14.9389 15.0451L12 13.5Z"></path></svg>
-                        </span>
-                        <span className='text-menus'> Coupons </span> </Link>
+                        <Link href="/coupons">
+                            <span className='icon-svg'>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M4 2H20C20.5523 2 21 2.44772 21 3V22.2763C21 22.5525 20.7761 22.7764 20.5 22.7764C20.4298 22.7764 20.3604 22.7615 20.2963 22.7329L12 19.0313L3.70373 22.7329C3.45155 22.8455 3.15591 22.7322 3.04339 22.4801C3.01478 22.4159 3 22.3465 3 22.2763V3C3 2.44772 3.44772 2 4 2ZM19 19.9645V4H5V19.9645L12 16.8412L19 19.9645ZM12 13.5L9.06107 15.0451L9.62236 11.7725L7.24472 9.45492L10.5305 8.97746L12 6L13.4695 8.97746L16.7553 9.45492L14.3776 11.7725L14.9389 15.0451L12 13.5Z"></path></svg>
+                            </span>
+                            <span className='text-menus'> Coupons </span> 
+                        </Link>
                     </div>
                     <h5 className='re-head'> Settings </h5>
                     <div className="accordion-item menu-list01 pt-1">
@@ -114,6 +119,7 @@ function Sidebar() {
                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <ul>
+                                    <li> <Link href="/automation"> Automation </Link>  </li>
                                     <li> <Link href="/"> Workflows </Link> </li> 
                                     <li> <Link href="/"> Scheduled Jobs </Link> </li>
                                     <li> <Link href="/"> Activity Log </Link> </li>
@@ -123,16 +129,17 @@ function Sidebar() {
                     </div>
                     <div className="accordion-item">
                         <h2 className="accordion-header">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false">
+                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefourt" aria-expanded="false">
                           <span className='icon-svg'>  
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M3.08697 9H20.9134C21.4657 9 21.9134 9.44772 21.9134 10C21.9134 10.0277 21.9122 10.0554 21.9099 10.083L21.0766 20.083C21.0334 20.6013 20.6001 21 20.08 21H3.9203C3.40021 21 2.96695 20.6013 2.92376 20.083L2.09042 10.083C2.04456 9.53267 2.45355 9.04932 3.00392 9.00345C3.03155 9.00115 3.05925 9 3.08697 9ZM4.84044 19H19.1599L19.8266 11H4.17377L4.84044 19ZM13.4144 5H20.0002C20.5525 5 21.0002 5.44772 21.0002 6V7H3.00017V4C3.00017 3.44772 3.44789 3 4.00017 3H11.4144L13.4144 5Z"></path></svg> 
                           </span> 
                           <span className='text-menus'> Integrations </span>
                         </button>
                         </h2>
-                        <div id="collapsefour" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div id="collapsefourt" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <ul>
+                                    <li> <Link href="/integrations"> Integrations </Link> </li>
                                     <li> <Link href="/"> Calendars </Link> </li> 
                                     <li> <Link href="/"> Meetings </Link> </li>
                                     <li> <Link href="/"> Marketing </Link> </li>
@@ -142,16 +149,17 @@ function Sidebar() {
                     </div>
                     <div className="accordion-item">
                         <h2 className="accordion-header">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false">
-                            <span className='icon-svg'> 
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M12.4142 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5ZM4 5V19H20V7H11.5858L9.58579 5H4ZM12 12V9L16 13L12 17V14H8V12H12Z"></path></svg> 
-                            </span> 
-                            <span className='text-menus'> Form Fields </span>
-                        </button>
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false">
+                                <span className='icon-svg'> 
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M12.4142 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5ZM4 5V19H20V7H11.5858L9.58579 5H4ZM12 12V9L16 13L12 17V14H8V12H12Z"></path></svg> 
+                                </span> 
+                                <span className='text-menus'> Form Fields </span>
+                            </button>
                         </h2>
                         <div id="collapsefour" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                                 <ul>
+                                    <li> <Link href="/formfields"> Form Fields </Link> </li>
                                     <li> <Link href="/"> Customer Fields </Link> </li> 
                                     <li> <Link href="/"> Booking Fields </Link> </li>
                                 </ul>
@@ -159,14 +167,14 @@ function Sidebar() {
                         </div>
                     </div>
                     <div className="accordion-item">
-                        <Link href="/"> 
+                        <Link href="/addons"> 
                           <span className='icon-svg'>
                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(59,64,85,1)"><path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"></path></svg> 
                              </span>
                              <span className='text-menus'>
                               Add-ons
                              </span>
-                              </Link>
+                        </Link>
                     </div>
                 </div>
 
@@ -185,7 +193,18 @@ function Sidebar() {
                             </svg>
                     </button>
 
-                <Footer/>
+                    <footer className="footer-divs01">
+                        <div className="row row-cols-1 row-cols-lg-2">
+                            <div className="col">
+                                <p> © 2025 , made with <span>
+                                    <Image src='/ft-copy.png' width={129} height={41} alt="slo"/>
+                                </span>  </p>
+                            </div>
+                            <div className="col d-flex justify-content-end pe-4">
+                                
+                            </div>
+                        </div>
+                    </footer>
 
                  
             </div>

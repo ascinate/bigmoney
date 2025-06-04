@@ -1413,10 +1413,7 @@ h2.calender-heading {
 
 .footer-divs01{
   /* width: calc(100% - 285px); */
-  margin-left: auto;
-  display: inline-block;
   margin-bottom: 20px;
-  position: relative;
   /* top: 16px; */
 }
 .footer-divs01 p span img{
@@ -3113,4 +3110,8 @@ label.ampm-toggle{
 .table-settings-btn{
   background: var(--foreground);
   color: var(--background);
+}
+.btn-donload:hover{
+  background: var(--foreground);
+  color: var(--background) !important;
 }
