@@ -18,7 +18,6 @@ import CompletedBtn from '../components/CompletedBtn';
 import { DataGrid } from '@mui/x-data-grid';
 import Link from 'next/link';
 
-
 const rows = [
     { id: 1, name: 'Johnathan smith', total: "$ " + 267.00, paymentstatus: "not paid",  fulfillmentstatus: "not fulfilled", status: "open", confromation: "XW9F5LU", date: "2022-01-01" },
     { id: 2, name: 'Marth stuart', total: "$ " + 456.00, paymentstatus: "not paid",  fulfillmentstatus: "not fulfilled", status: "open", confromation: "UHNJL7P", date: "2022-01-01" },
@@ -148,8 +147,6 @@ export default function Page() {
                     </div>
                     <div className='calender-container mt-4'>
                         <div className='calendar w-100'>
-                            
-
                             <div>
                                  <DataGrid
                                      rows={rowData}
@@ -158,7 +155,6 @@ export default function Page() {
                                      experimentalFeatures={{ newEditingApi: true }}
                                 />
                             </div>
-
                             <div className='page-row mt-3 d-flex justify-content-between'>
                                 <p>Showing 1-{rowData.length} of {rowData.length}</p>
                                 <select className='form-select w-auto'>

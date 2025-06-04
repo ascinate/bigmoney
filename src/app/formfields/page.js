@@ -10,7 +10,7 @@ import Sidebar from '../components/Sidebar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-function page() {
+function Page() {
 
     const [firstName, setFirstName] = useState(false);
     const [lastName, setLastName] = useState(false);
