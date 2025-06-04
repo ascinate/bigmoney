@@ -1,4 +1,3 @@
-'use client'
 import * as React from 'react';
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
@@ -36,7 +35,7 @@ export default function Page() {
                            
                           </h2>
                            <Link href='/' download className='btn btn-donload'>
-                                    <TfiDownload /> Download .csv
+                                    <TfiDownload /> Downloadcsv
                            </Link>
                     </div>
                     <div className='calender-container mt-4'>

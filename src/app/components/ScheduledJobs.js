@@ -3,11 +3,8 @@ import * as React from 'react';
 import { FiExternalLink } from "react-icons/fi";
 import { ImEqualizer2 } from "react-icons/im";
 import { DataGrid } from '@mui/x-data-grid';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { IoReload } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
-import { TfiDownload } from "react-icons/tfi";
 
 import Link from 'next/link';
 
