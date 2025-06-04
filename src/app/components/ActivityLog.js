@@ -4,16 +4,12 @@ import { FiExternalLink } from "react-icons/fi";
 import { ImEqualizer2 } from "react-icons/im";
 import { DataGrid } from '@mui/x-data-grid';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Important for JS-based components
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
 import { IoReload } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
-// Icons (if needed)
 import { TfiDownload } from "react-icons/tfi";
 
 import Link from 'next/link';
-// import CompletedBtn from '../CompletedBtn';
-// import CustomerProfileModal from '../CustomerProfileModal';
-// Sample data
 const rows = [
     {
         id: 1,
@@ -25,11 +21,9 @@ const rows = [
 
 ];
 
-// Component
 function ScheduledJobs() {
     const [rowData, setRowData] = React.useState(rows);
     const [selectedRow, setSelectedRow] = React.useState(null);
-    // Handle row update (inline editing)
     const processRowUpdate = (newRow) => {
         const updatedRows = rowData.map((row) =>
             row.id === newRow.id ? newRow : row
@@ -37,10 +31,7 @@ function ScheduledJobs() {
         setRowData(updatedRows);
         return newRow;
     };
-    // DataGrid columns
     const columns = [
-
-        // col 1
         {
             field: 'type',
             headerName: 'Event',
@@ -61,8 +52,6 @@ function ScheduledJobs() {
                 </Link>
             ),
         },
-
-        // col 2
         {
             field: 'actionby',
             headerName: 'Action by',
@@ -84,7 +73,6 @@ function ScheduledJobs() {
                 </Link>
             ),
         },
-        // col 3
         {
             field: 'datetime',
             headerName: 'Date/Time',
@@ -105,7 +93,6 @@ function ScheduledJobs() {
                 </Link>
             ),
         },
-        //   col 4
         {
             field: 'action',
             headerName: 'Actions',
@@ -149,9 +136,6 @@ function ScheduledJobs() {
                     </div>
                 </div>
 
-                {/* ✅ Offcanvas placed once outside DataGrid */}
-
-
                 <div className="offcanvas offcanvas-start w-50 " tabindex="-1" id="offcanvasExample5" aria-labelledby="offcanvasExampleLabel">
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title" id="offcanvasExampleLabel">Error</h5>
@@ -164,8 +148,8 @@ function ScheduledJobs() {
                                 <details >
                                     <summary>1 item</summary>
                                     <p>&#123;
-                                        <br />
-                                        error_message: <span>"The resource ID cannot be null or whitespace." </span>
+                                        <br /> 
+                                        error_message: <span> &#34;The resource ID cannot be null or whitespace.&#34; </span>
                                         <br />
                                         &#125;
                                     </p>

@@ -55,13 +55,8 @@ export default function Page() {
                                             <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                         </div>
                                         <div className="offcanvas-body">
-                                            {/* body */}
-
 
                                             <div className='row'>
-
-
-
                                                 <div className='row'>
 
                                                     <div className='row'>
@@ -268,8 +263,6 @@ export default function Page() {
 
 
                                             </div>
-
-                                            {/* body */}
                                         </div>
                                     </div>
 

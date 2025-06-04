@@ -285,10 +285,7 @@ export default function Page() {
 
 
 
-                                    {/* row */}
                                     <div className="row row-gap">
-
-                                        {/* col */}
                                         <div className="col-lg-4">
                                             <div className="card agents-card">
                                                 <MdElectricBolt className="card-hover-icon" />
@@ -332,7 +329,6 @@ export default function Page() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* col */}
                                         <div className="col-lg-4">
                                             <div className="card agents-card">
                                                 <MdElectricBolt className="card-hover-icon" />
@@ -376,7 +372,6 @@ export default function Page() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* col */}
                                         <div className="col-lg-4">
                                             <div className="card agents-card">
                                                 <MdElectricBolt className="card-hover-icon" />
@@ -423,10 +418,8 @@ export default function Page() {
 
                                     </div>
 
-                                    {/* row */}
                                     <div className="row row-gap">
 
-                                        {/* col */}
                                         <div className="col-lg-4">
                                             <div className="card agents-card add-agents-card">
                                                 <div className='divimg'>
@@ -437,13 +430,7 @@ export default function Page() {
                                             </div>
                                         </div>
 
-
-
                                     </div>
-
-
-
-
                                 </div>
                     </div>
                 </div>

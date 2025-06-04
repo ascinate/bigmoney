@@ -71,7 +71,6 @@ function Workflows() {
                             {toggleMap[div.id] && (
                                 <>
                                     <div className='add-workflow-toggle'>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Field Label</p>
@@ -80,7 +79,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Placeholder</p>
@@ -89,7 +87,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Field Type</p>
@@ -111,7 +108,6 @@ function Workflows() {
 
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Default Value</p>
@@ -152,8 +148,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Field Width</p>
@@ -189,8 +183,7 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
-                                        <div className='toggle-border-bottom' >
+                                        <div className='toggle-border-bottom'>
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Field Visibility</p>
                                                 <div className='tax-section-tax-input-div w-100 border-left-toggle'>
@@ -202,7 +195,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Required</p>
@@ -214,7 +206,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Hide from Summary</p>
@@ -226,7 +217,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex justify-content-between align-items-center'>
 

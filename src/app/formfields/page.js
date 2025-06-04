@@ -69,7 +69,6 @@ function page() {
                                                                 <div className='comon-tops-sets w-100'>
                                                                     <h2 className='cm-head'> Default Fields </h2>
                                                                 </div>
-                                                                {/* row */}
                                                                 <div id='week-days' className='form-fields-row'>
                                                                     <div className='day-name-time d-flex align-items-center' onClick={handleFname}>
                                                                         <ToggleSwitch
@@ -97,8 +96,6 @@ function page() {
 
                                                                     }
                                                                 </div>
-
-                                                                {/* row */}
                                                                 <div id='week-days' className='form-fields-row'>
                                                                     <div className='day-name-time d-flex align-items-center' onClick={handleLname}>
                                                                         <ToggleSwitch
@@ -125,8 +122,6 @@ function page() {
                                                                         )
                                                                     }
                                                                 </div>
-
-                                                                {/* row */}
                                                                 <div id='week-days' className='form-fields-row'>
                                                                     <div className='day-name-time d-flex align-items-center' onClick={handleEmail}>
                                                                         <ToggleSwitch
@@ -154,8 +149,6 @@ function page() {
 
                                                                     }
                                                                 </div>
-
-                                                                {/* row */}
                                                                 <div id='week-days' className='form-fields-row'>
                                                                     <div className='day-name-time d-flex align-items-center' onClick={handlePhoneNumber}>
                                                                         <ToggleSwitch
@@ -183,8 +176,6 @@ function page() {
 
                                                                     }
                                                                 </div>
-
-                                                                {/* row */}
                                                                 <div id='week-days' className='form-fields-row'>
                                                                     <div className='day-name-time d-flex align-items-center' onClick={handleComments}>
                                                                         <ToggleSwitch
