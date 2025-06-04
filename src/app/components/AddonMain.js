@@ -10,6 +10,7 @@ import Extensions from './Extensions'
 import Marketing from './Marketing';
 import Payments from './Payments';
 import VideoMeetings from './VideoMeetings';
+
 function AddonMain() {
     return (
         <>
@@ -59,4 +60,4 @@ function AddonMain() {
     )
 }
 
-export default AddonMain
+export default AddonMain;

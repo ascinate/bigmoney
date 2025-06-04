@@ -32,13 +32,6 @@ function LocationCategories() {
 
     return (
         <>
-
-             
-                   
-                    
-                    
-                              
-                                    {/* row */}
                                     <div className="row row-gap">
                                         <div className='col-lg-12 '>
                                             <div className='locationcategories d-flex  align-items-center justify-content-between' onClick={handleToggle}>
@@ -100,4 +93,4 @@ function LocationCategories() {
     )
 }
 
-export default LocationCategories
+export default LocationCategories;

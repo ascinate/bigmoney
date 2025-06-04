@@ -65,4 +65,4 @@ function Communications() {
   )
 }
 
-export default Communications
+export default Communications;

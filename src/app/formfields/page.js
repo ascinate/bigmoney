@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState } from 'react'
 import ToggleSwitch from '../components/ToggleSwitch';
 import { useToggleManager } from '../components/custom-hook/useToggleManager';

@@ -71,7 +71,6 @@ function Workflows() {
                             {toggleMap[div.id] && (
                                 <>
                                     <div className='add-workflow-toggle'>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Status</p>
@@ -83,7 +82,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Name</p>
@@ -92,7 +90,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Event Type</p>
@@ -114,7 +111,6 @@ function Workflows() {
 
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Conditional</p>
@@ -159,8 +155,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Time offset</p>
@@ -194,7 +188,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex align-items-center'>
                                                 <p className='tax-section-tax-name'>Action</p>
@@ -203,7 +196,6 @@ function Workflows() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* row */}
                                         <div className='toggle-border-bottom' >
                                             <div className='tax-section-toggle-row-one d-flex justify-content-between align-items-center'>
                                          
@@ -240,4 +232,4 @@ function Workflows() {
     )
 }
 
-export default Workflows
+export default Workflows;
