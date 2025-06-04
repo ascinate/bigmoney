@@ -35,9 +35,9 @@ export default function Page() {
                           <h2>Order
                            
                           </h2>
-                           <a href='/' download className='btn btn-donload'>
+                           <Link href='/' download className='btn btn-donload'>
                                     <TfiDownload /> Download .csv
-                           </a>
+                           </Link>
                     </div>
                     <div className='calender-container mt-4'>
                         <div className='calendar-tab'>

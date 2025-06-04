@@ -31,4 +31,4 @@ function ScheduledJobsOffCanvas() {
     )
 }
 
-export default ScheduledJobsOffCanvas
+export default ScheduledJobsOffCanvas;
