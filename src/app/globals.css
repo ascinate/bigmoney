@@ -1423,6 +1423,9 @@ h2.calender-heading {
   position: relative;
   top:-2px;
 }
+.footer-divs01 p{
+  font-size: 15px;
+}
 .footer-divs01 ul{
   list-style-type: none;
 }
