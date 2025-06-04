@@ -21,7 +21,7 @@ const rows = [
 
 ];
 
-function ScheduledJobs() {
+function ActivityLog() {
     const [rowData, setRowData] = React.useState(rows);
     const [selectedRow, setSelectedRow] = React.useState(null);
     const processRowUpdate = (newRow) => {
@@ -164,4 +164,4 @@ function ScheduledJobs() {
     );
 }
 
-export default ScheduledJobs;
+export default ActivityLog;
