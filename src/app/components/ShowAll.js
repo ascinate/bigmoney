@@ -47,6 +47,7 @@ function ShowAll() {
                                                     <div className="col-lg-4" key={addon.id}>
                                                         <div className="card my-5">
                                                             <div className="card-body">
+                                                                <figure className='fg-img'>
                                                                 <Image
                                                                     src={addon.image}
                                                                     alt={addon.title}
@@ -54,6 +55,7 @@ function ShowAll() {
                                                                     height={250}
                                                                     className="card-img-top"
                                                                 />
+                                                                </figure>
 
                                                                 <h5 className="card-title">
                                                                     {addon.title} <FaExternalLinkAlt className="add-on-pack" />

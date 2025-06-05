@@ -18,10 +18,10 @@ const CustomToolbar = ({ label, onNavigate, onView, view }) => {
           Today
         </button>
 
-        <button onClick={() => onNavigate("PREV")} className="btn btn-sm btn-outline-secondary">
+        <button onClick={() => onNavigate("PREV")} className="btn crm-arrow btn-sm btn-outline-secondary">
       <FaArrowLeftLong />
         </button>
-        <button onClick={() => onNavigate("NEXT")} className="btn btn-sm btn-outline-secondary">
+        <button onClick={() => onNavigate("NEXT")} className="btn crm-arrow btn-outline-secondary">
         <FaArrowRightLong />
         </button>
 

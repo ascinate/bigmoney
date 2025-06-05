@@ -82,14 +82,12 @@ export default function Page() {
                      <div className='col'>
                         <h4 className="mb-0">{format(currentDate, "MMMM yyyy")}</h4>
                      </div>
-                     <div className='col'>
-                         
-                     </div>
                 </div>
                  
                 <div className='calender-container'>
                     <div className="container">
                         <div className='row'>
+                            <h2 className="mb-0">{format(currentDate, "MMMM yyyy")}</h2>
                             <div className='col-lg-12 ps-lg-0'>
                                 <div className='calendar w-100 pt-2'>
                                     <div className="vh-100 d-flex">
