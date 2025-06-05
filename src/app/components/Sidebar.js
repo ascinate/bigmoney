@@ -3,10 +3,12 @@ import { useEffect } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import Footer from './Footer';
+import { usePathname } from "next/navigation";
 
 
 
 function Sidebar() {
+    const pathname = usePathname();
     const handleClick = () => {
         document.body.classList.add('slider-off');
       };
@@ -45,6 +47,7 @@ function Sidebar() {
                 <ul className='das-main'>
                    
                    {mianmenu.map((page) => (
+
                         <li key={page.id}>
                             <Link href={page.link} className='d-flex align-items-center'> <span className='icon-svg'> {page.icon} </span>
                              <span className='text-menus'> {page.title} </span> <span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="rgba(0,0,0,1)"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg> </span> </Link>

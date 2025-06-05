@@ -3145,6 +3145,96 @@ label.ampm-toggle{
   color: var(--background) !important;
 }
 
+/* dashboard css start */
+
+.launchpad-head {
+  & h5 {
+ 
+    margin: 0px 0px 1.25rem;
+    font-family: Inter, "Inter Fallback";
+    font-size: 1.125rem;
+    line-height: 1.5556;
+    color: var(--mui-palette-text-primary);
+    font-weight: 700;
+ 
+  }
+}
+ 
+.progress-text {
+  color: gray;
+  font-size: 14px;
+}
+ 
+.update-color {
+  color: var(--bs-theme);
+}
+ 
+.leftCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--bs-theme);
+}
+ 
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+}
+ 
+ 
+.getting-start {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+ 
+.view-less-toggle {
+  background: none;
+  color: var(--bs-theme);
+  border: none;
+}
+ 
+.getting-start-text {
+  color: gray;
+  font-size: 0.9375rem;
+}
+ 
+ 
+.toggle-check-color {
+  color: var(--bs-theme);
+}
+ 
+ 
+.toggle-check-font {
+  background-color: #f4f4f6;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 14px;
+color: gray;
+  & ul {
+    font-weight: 400;
+  }
+}
+
+.progress-bar{
+   background: var(--btncolor) !important;
+}
+.progress {
+    border-radius: .25rem;
+    height: 8px;
+}
+.update-color{
+  color: var(--btncolor);
+}
+/* dashboard end */
 
 .ner-footer{
   position: fixed;
@@ -3174,9 +3264,9 @@ label.ampm-toggle{
 
 }
 .inside-div-col h2.headtitle{
-    font-size: 1.2rem;
-    color: #171a27e6;
-    margin-bottom: 8px;
+    font-size: 1.125rem;
+    color: #3b4055;
+    margin-bottom: 15px;
 }
 
 .all-page-heading{
@@ -3269,4 +3359,190 @@ label.ampm-toggle{
 .next-btn120 .nav-link.active{
  background: var(--btncolor) !important;
    color: var(--background) !important;
+}
+
+.btn-outline-primary{
+    color: var(--btncolor);
+    border-color: var(--btncolor);
+}
+.btn:hover{
+    background-color: var(--btncolor);
+    border-color: var(--btncolor);
+}
+.all-btn{
+   border-radius: 8px;
+   font-size: 15px;
+}
+.card-link{
+  color: var(--btncolor);
+  font-size: 15px;
+}
+
+.cmon-staging-page .leftcircle01{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  overflow: hidden;
+  border: solid 2px #bdbdbd;
+  display: inline-block;
+  background: var(--background);
+  z-index: 2;
+}
+
+.cmon-staging-page.active .leftcircle01::before{
+  position: absolute;
+  content: "";
+  background: var(--btncolor);
+      width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 1px;
+    margin: auto;
+    top: 6px;
+    border-radius: 50px;
+
+}
+.cmon-staging-page .leftcircle01::before{
+  position: absolute;
+  content: "";
+  background: var(--background);
+      width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 1px;
+    margin: auto;
+    top: 6px;
+    border-radius: 50px;
+
+}
+
+
+
+.cmon-staging-page.active .leftcircle01{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  overflow: hidden;
+  border: solid 2px var(--btncolor);
+  display: inline-block;
+  background: var(--background);
+  z-index: 2;
+}
+.cmon-staging-page.active .leftcircle01::before{
+  position: absolute;
+  content: "";
+  background: var(--btncolor);
+      width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 1px;
+    margin: auto;
+    top: 6px;
+    border-radius: 50px;
+
+}
+
+.cmon-staging-page{
+  padding-bottom: 25px;
+}
+.cmon-staging-page .row
+.col-lg-1{
+  position: relative;
+}
+.cmon-staging-page .accordion-button:not(.collapsed) {
+    color: var(--btncolor) !important;
+    background-color: #f0f0f0 !important;
+    border: solid 1px #00000020;
+}
+.cmon-staging-page .toggle-check-color{
+  color: var(--btncolor);
+}
+.cmon-staging-page .toggle-check-color p{
+  line-height: 15px;
+}
+.cmon-staging-page .toggle-check-font > p{
+  margin-left: 15px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.cmon-staging-page .accordion-body{
+  border: solid 1px #00000020;
+}
+.cmon-staging-page .row .col-lg-1::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 100%;
+  width: 2px;
+  top:0;
+  background: #bdbdbd;
+  right: 0;
+  margin: auto;
+
+}
+.view-less-toggle{
+  color: var(--btncolor);
+  font-size: 15px;
+}
+.cmon-staging-page.active .row .col-lg-1::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 100%;
+  width: 2px;
+  top:0;
+  background: var(--btncolor);
+  right: 0;
+  margin: auto;
+
+}
+.main-white-bg .card-text{
+  font-size: 14px;
+}
+.main-white-bg .card-subtitle{
+  color: var(--foreground) !important;
+}
+
+
+.btn-div01{
+   border: solid 1px #00000020;
+   border-radius: 5px;
+   padding: 20px;
+
+}
+.btn-div01 h5{
+  font-size: 17px;
+}
+.btncont:hover{
+  background: var(--btncolor);
+  color: var(--background) !important;
+}
+.let-ntext{
+  width: 85%;
+}
+.let-ntext h6{
+ font-size: 10px;
+}
+.let-ntext h6 strong{
+ font-size: 12px;
+ margin-top: 4px;
+}
+.btn-hover01{
+   border-radius: 50px; 
+   overflow: hidden;
+   width: 33px;
+   height: 33px;
+   text-align: center;
+   padding: 0;
+   display: inline-block;
+}
+.btn-hover01:hover{
+   background: #afafaf20;
+   border: solid transparent !important;  
 }
