@@ -36,7 +36,7 @@ export default function Home() {
                       <Link href='/'>Forgot Password?</Link>
                    </div>
 
-                   <Link href='/settings' className="btn btn-signup comon-btn mt-4 text-center w-100 d-block"> Sign in </Link>
+                   <Link href='/dashboard' className="btn btn-signup comon-btn mt-4 text-center w-100 d-block"> Sign in </Link>
 
                    <p className="text-center platform-text mt-4"> New on our platform?
                     <Link href="/"> Create an account </Link> </p>
