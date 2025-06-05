@@ -204,10 +204,10 @@ export default function Page() {
                      </h2>
 
                      <div className='left-bgh d-flex align-items-center justify-content-end'>
-                          <Link href='/' className='btn  table-settings-btn'>
+                          <Link href='/' className='btn all-btn table-settings-btn'>
                                <ImEqualizer2 /> Table Settings
                           </Link>
-                          <Link href='/' download className='btn ms-3 btn-donload'>
+                          <Link href='/' download className='btn all-btn ms-3 btn-donload'>
                                <TfiDownload /> Download .csv
                           </Link>
                      </div>

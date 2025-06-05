@@ -18,11 +18,11 @@ export default function Page() {
       <Sidebar/>
       <div className="d-block ms-lg-auto content-parts d-block">
             <Navbar/>
-            <div className="home-settings float-start w-100">
+            <div className="home-settings float-start w-100 mb-5">
                  <div className='calendar-tab'>
                     <h2> Location </h2>
                     <div className='calender-container mt-4'>
-                                <div className='calendar'>
+                                <div className='calendar navTab-btn'>
                                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                                         <li className="nav-item" role="presentation">
                                             <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Location</button>
@@ -32,7 +32,7 @@ export default function Page() {
                                         </li>
                                         
                                     </ul>
-                                    <div className="tab-content" id="myTabContent">
+                                    <div className="tab-content pt-4" id="myTabContent">
                                         <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> <LocationDefault /></div>
                                         <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><LocationCategories/></div>
                                     </div>

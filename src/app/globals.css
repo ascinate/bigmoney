@@ -2,6 +2,8 @@
   --background: #f7f7f9 !important;
   --foreground: #171717;
    --btncolor: #666cff;
+   --bs-theme: #666cff;
+  --bs-heading-color: color-mix(in sRGB, #262b43 90%, #fff);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -266,23 +268,23 @@ img{
 }
 .menu-list .accordion-body{
  background: #f7f7f9 !important;
- padding-left: 14px;
+ padding-left: 20px;
  padding-top: 1px;
  padding-bottom: 0;
  
 }
-.menu-list .accordion-body li{
+.menu-list .accordion-body li a{
   position: relative;
-  padding-left: 10px;
+  padding-left: 25px;
 }
-.menu-list .accordion-body li::before{
+.menu-list .accordion-body li a::before{
   position: absolute;
   content: "";
   width: .5rem;
   height: .5rem;
   background: #a8aab4;
   top:16px;
-  left: 0;
+  left: 8px;
   border-radius: 50px;
 }
 .accordion-button:not(.collapsed){
@@ -3372,6 +3374,7 @@ color: gray;
 .all-btn{
    border-radius: 8px;
    font-size: 15px;
+   padding: 10px 27px;
 }
 .card-link{
   color: var(--btncolor);
@@ -3545,4 +3548,94 @@ color: gray;
 .btn-hover01:hover{
    background: #afafaf20;
    border: solid transparent !important;  
+}
+
+/* location card css */
+
+iframe{
+    border-radius: 10px 0;
+}
+.location-card{
+    border-radius: 10px;
+  box-shadow: 0 .25rem .875rem #262b4329;
+  background: #fff !important;
+}
+ 
+ 
+.body-bg {
+  width: 97%;
+  min-height: 700px;
+  padding: 30px;
+}
+.edit-btn{
+  margin-top: 8px;
+  background-color: var(--bs-theme);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+  font-size: 14px;
+}
+ 
+ 
+.location-add-card{
+  min-height:315px ;
+  max-width: 297px ;
+}
+ 
+.divimg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.divimgIcon{
+  color: var(--bs-theme);
+  border: 4px solid var(--bs-theme);
+  border-radius: 50%;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.divimgIconText{
+  font-weight: 500;
+  color: rgb(97, 95, 95);
+}
+.latepoint-head{
+  color: var(--bs-heading-color);
+  font-weight: 550;
+}
+ 
+.agents-photo{
+  color: gray;
+}
+
+ .navTab-btn .nav-link{
+ 
+    margin-inline-end: 15px;
+    font-weight: 500;
+   color: rgb(38 43 67 / 70%);
+   padding-inline: 18px ;
+  border-radius: 10px;
+  border: solid 1px #eeeeee;
+ }
+
+ .navTab-btn > ul{
+  border: none !important;
+ }
+
+ .navTab-btn  .nav-tabs .nav-item.show .nav-link, 
+ .navTab-btn  .nav-tabs .nav-link.active{
+  
+  background-color: var(--bs-theme)!important;
+  border: none;
+    color: #ffffff !important;
+ }
+
+.navTab-border{
+  border: none;
+}
+.tabs-icon-space{
+ 
+  margin-right: 8px;
 }
