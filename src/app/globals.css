@@ -64,6 +64,7 @@ img{
 }
 .slider-bars{
   width: 265px;
+  margin-bottom: 350px !important;
 }
 .slider-off .content-parts{
   width:calc(100% - 94px);
@@ -203,6 +204,7 @@ img{
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 15px;
+  padding-bottom: 180px !important;
 }
 .menu-list::-webkit-scrollbar-track
 {
@@ -3151,4 +3153,120 @@ label.ampm-toggle{
   padding: 10px 20px 20px 5px;
   bottom: -35px;
   z-index: 3;
+}
+
+.slider-bars .menu-list ul.das-main li a > span:last-child{
+  display: none;
+}
+.adons-15{
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.main-white-bg{
+    border-radius: 10px;
+    width: 99%;
+    padding: 30px;
+    box-shadow: 0 .25rem .875rem #262b4329;
+    background: #fff !important;
+}
+
+.inside-div-col{
+
+}
+.inside-div-col h2.headtitle{
+    font-size: 1.2rem;
+    color: #171a27e6;
+    margin-bottom: 8px;
+}
+
+.all-page-heading{
+  font-size: 1.6rem;
+}
+.performance-select{
+  font-size: 14px;
+}
+.sub-heading-appointments{
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--btncolor);
+}
+.sub-heading-number{
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.sub-heading-number .sub-number{
+  color: #bbb;
+  font-size: 15px;
+}
+.comon-applointes{
+  position: relative;
+}
+.comon-applointes::before{
+  position: absolute;
+  content: "";
+  right: 0;
+  top:15px;
+  height: 35px;
+  width: 2px;
+  background: #ebebeb;
+}
+.uplocming-div{
+  border: solid 1px #eeeeee;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 8px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 65px;
+}
+.uplocming-div svg{
+  width: 35px;
+  height: 35px;
+  fill: var(--btncolor);
+  margin-bottom: 15px;
+}
+.uplocming-div p{
+  color: #666;
+  margin-bottom: 5px;
+}
+.addAppointment{
+  background: var(--btncolor);
+  color: var(--background) !important;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  transition: all 0.5s;
+}
+.addAppointment:hover{
+  background: var(--foreground);
+}
+.addAppointment svg{
+  width: 12px;
+  height: 12px;
+  fill: var(--background);
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+
+.next-btn120{
+  border-bottom: none !important;
+}
+.next-btn120 .nav-link{
+  
+   border: solid 2px var(--btncolor) !important;
+   margin-right: 5px;
+   border-radius: 5px;
+}
+
+.next-btn120 .nav-item.show .nav-link, 
+.next-btn120 .nav-link.active{
+ background: var(--btncolor) !important;
+   color: var(--background) !important;
 }
