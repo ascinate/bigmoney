@@ -49,11 +49,11 @@ function Page() {
                                     <div className="container">
                                         <div className='row'>
                                             <div className='col-lg-12 '>
-                                                <div className='calendar'>
+                                                <div className='calendar navTab-btn'>
                                                     <div className='heading-automation'>
                                                         <h2>Form Fields</h2>
 
-                                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                        <ul class="nav nav-tabs border-0 mt-4" id="myTab" role="tablist">
                                                             <li class="nav-item" role="presentation">
                                                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Customer Fields</button>
                                                             </li>

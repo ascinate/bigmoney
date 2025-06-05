@@ -202,16 +202,16 @@ export default function Page() {
                             <span className='d-block shoingtext'> Showing {rowData.length} of {rowData.length} </span>
                           </h2>
                           <div className='d-flex justify-content-end align-items-center'>
-                            <Link href='/customers' className='btn btn-outline-secondary table-settings-btn'>
+                            <Link href='/customers' className='btn all-btn table-settings-btn'>
                                                 <FaPlus /> New Customers
                             </Link>
-                            <Link href='/' download className='btn ms-3 btn-donload'>
+                            <Link href='/' download className='btn ms-3 all-btn btn-donload'>
                                                     <TfiDownload /> Download .csv
                             </Link>
                            </div>
                     </div>
-                    <div className='calender-container mt-4'>
-                        <div className='calendar w-100'>
+                    <div className='calender-container crm-datatables01 mt-4'>
+                        <div className='calendar min-hegiht w-100'>
                             
 
                             <div>

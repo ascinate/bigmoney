@@ -30,7 +30,7 @@ export default function Page() {
                     <h2> Integrations </h2>
                     
                     <div className='calender-container mt-4'>
-                          <div className='calendar'>
+                          <div className='calendar navTab-btn'>
                               
                               <ul className="nav nav-tabs" id="myTab" role="tablist">
                                   <li className="nav-item" role="presentation">

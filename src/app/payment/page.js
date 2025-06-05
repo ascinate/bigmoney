@@ -247,8 +247,8 @@ export default function Page() {
                                     <TfiDownload /> Download .csv
                            </a>
                     </div>
-                    <div className='calender-container mt-4'>
-                        <div className='calendar w-100'>
+                    <div className='calender-container crm-datatables01 mt-4'>
+                        <div className='calendar min-hegiht  w-100'>
                             <div>
                                 <DataGrid
                                     rows={rowData}

@@ -214,9 +214,9 @@ export default function Page() {
 
                 </div>
               
-              <div className='calendar-tab mt-4'>
+              <div className='calendar-tab crm-datatables01 mt-4'>
                 <div className='calender-container'>
-                        <div className='calendar w-100'>
+                        <div className='calendar min-hegiht w-100'>
                             
 
                             <div style={{ height: 400, width: '100%' }}>

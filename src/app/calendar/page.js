@@ -20,6 +20,7 @@ import PhoneNumberInput from '../components/PhoneNumberInput.js';
 import Footer from '../components/Footer.js';
 import { MdDeleteOutline , MdOutlineDeleteOutline } from "react-icons/md";
 import Link from "next/link.js";
+import CustomToolbar from '../components/Customtoolbar.js';
 
  
 
@@ -76,16 +77,21 @@ export default function Page() {
       <main className="d-block ms-lg-auto content-parts d-block">
             <Navbar/>
             <div className="home-settings float-start w-100">
-              <div className='calendar-tab w-100'>
-               
+              <section className='calendar-tab'>
+                <div className='row row-cols-1 row-cols-lg-2 mb-3 mt-4'>
+                     <div className='col'>
+                        <h4 className="mb-0">{format(currentDate, "MMMM yyyy")}</h4>
+                     </div>
+                     <div className='col'>
+                         
+                     </div>
+                </div>
                  
-                <div className='calender-container d-block mb-4 w-100'>
-                   
-                        
+                <div className='calender-container'>
+                    <div className="container">
                         <div className='row'>
                             <div className='col-lg-12 ps-lg-0'>
                                 <div className='calendar w-100 pt-2'>
-                                    <h4 className="mb-0 mt-3">{format(currentDate, "MMMM yyyy")}</h4>
                                     <div className="vh-100 d-flex">
                                         <div className="col-12 p-3">
                                             <div className="d-flex justify-content-between align-items-center mb-3">
@@ -93,7 +99,7 @@ export default function Page() {
                                                 
                                             </div>
                                             <div style={{ height: "calc(100vh - 120px)" }}>
-                                                <Calendar
+                                                   <Calendar
                                                     localizer={localizer}
                                                     events={events}
                                                     startAccessor="start"
@@ -106,14 +112,17 @@ export default function Page() {
                                                     view={view}
                                                     date={currentDate}
                                                     style={{ height: "100%" }}
-                                                />
+                                                    components={{
+                                                        toolbar: CustomToolbar,
+                                                    }}
+                                                    />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    
+                    </div>
                     {selectedDate && (
                         <div className="slide-clas calender-left-card">
                             <button className="btn btn-close text-reset" onClick={() => setSelectedDate(null)}>
@@ -711,7 +720,7 @@ export default function Page() {
 
                 </div>
 
-             </div>
+             </section >
                 
             </div>
       </main>

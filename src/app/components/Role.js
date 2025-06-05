@@ -680,16 +680,16 @@ function Role() {
                       </div>
                     </div>
 
-                    <div className='tax-section-toggle'>
-                      <div className='tax-section-toggle-row-one'>
-                        <div className='tax-section-tax-type'>Tax Type</div>
+                    <div className='tax-section-toggle newd-m'>
+                      <div className='tax-section-toggle-row-one w-100 d-flex align-items-center'>
+                        <div className='tax-section-tax-type col-lg-4'>Tax Type</div>
                         <div className='tax-section-toggl-right-part'>
                           <select className="Custom-schedule-select">
                             <option value="singleday">Single Day</option>
                             <option value="datarange">Data Range</option>
                           </select>
-                          <div>
-                            <input type="text" placeholder='input' />
+                          <div className='col-lg-7 ms-3'>
+                             <input type="text" className='form-control' />
                           </div>
                         </div>
                       </div>
@@ -697,8 +697,8 @@ function Role() {
 
                     <div className='tax-section-toggle'>
                       <div className='tax-section-toggle-row-three'>
-                        <button>Delete</button>
-                        <button className='saveTax'>Save Tax</button>
+                        <button className='btn btn-danger'>Delete</button>
+                        <button className='saveTax btn ms-3'>Save Tax</button>
                       </div>
                     </div>
                   </>

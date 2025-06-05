@@ -141,15 +141,12 @@ export default function Page() {
             <Navbar/>
             <div className="home-settings float-start w-100">
                  <div className='calendar-tab'>
-                    <div className='d-flex align-items-center justify-content-between w-100'>
-                          <h2>Agents
-                            
-                          </h2>
-                    </div>
+                    
                     <div className='calender-container mt-4'>
-                                <div className='calendar'>
-                                    <div className="row row-gap">
-                                        <div className="col-lg-4">
+                                <div className='calendar ca-agents'>
+                                    <h2>Agents </h2>
+                                    <div className="row row-cols-1 g-lg-4 mt-2 row-cols-lg-3">
+                                        <div className="col">
                                             <div className="card agents-card">
                                                 <MdElectricBolt className="card-hover-icon" />
                                                 <div className='d-flex gap-2 justify-content-around'>
@@ -178,11 +175,11 @@ export default function Page() {
                                                         <p className='dayActivity'>Sun</p>
                                                     </div>
                                                     <div className='d-flex justify-content-between align-items-center'>
-                                                        <di>
+                                                        <div>
                                                             <span className='gray-color'>Today</span>
                                                             <span className='badge mx-2'>On Duty</span>
                                                             <p className='my-2'>08:00am - 05:00pm</p>
-                                                        </di>
+                                                        </div>
                                                         <div className='text-center today-div'>
                                                             <p className='gray-color'>Booking</p>
                                                             <p className='zerosize'>0</p>
@@ -192,8 +189,7 @@ export default function Page() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* col */}
-                                        <div className="col-lg-4">
+                                        <div className="col">
                                             <div className="card agents-card">
                                                 <MdElectricBolt className="card-hover-icon" />
                                                 <div className='d-flex gap-2 justify-content-around'>
@@ -222,11 +218,11 @@ export default function Page() {
                                                         <p className='dayActivity'>Sun</p>
                                                     </div>
                                                     <div className='d-flex justify-content-between align-items-center'>
-                                                        <di>
+                                                        <div>
                                                             <span className='gray-color'>Today</span>
                                                             <span className='badge mx-2'>On Duty</span>
                                                             <p className='my-2'>08:00am - 05:00pm</p>
-                                                        </di>
+                                                        </div>
                                                         <div className='text-center today-div'>
                                                             <p className='gray-color'>Booking</p>
                                                             <p className='zerosize'>0</p>
@@ -236,8 +232,7 @@ export default function Page() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* col */}
-                                        <div className="col-lg-4">
+                                        <div className="col">
                                             <div className="card agents-card">
                                                 <MdElectricBolt className="card-hover-icon" />
                                                 <div className='d-flex gap-2 justify-content-around'>
@@ -266,11 +261,11 @@ export default function Page() {
                                                         <p className='dayActivity'>Sun</p>
                                                     </div>
                                                     <div className='d-flex justify-content-between align-items-center'>
-                                                        <di>
+                                                        <div>
                                                             <span className='gray-color'>Today</span>
                                                             <span className='badge mx-2'>On Duty</span>
                                                             <p className='my-2'>08:00am - 05:00pm</p>
-                                                        </di>
+                                                        </div>
                                                         <div className='text-center today-div'>
                                                             <p className='gray-color'>Booking</p>
                                                             <p className='zerosize'>0</p>
@@ -281,12 +276,7 @@ export default function Page() {
                                             </div>
                                         </div>
 
-                                    </div>
-
-
-
-                                    <div className="row row-gap">
-                                        <div className="col-lg-4">
+                                        <div className="col">
                                             <div className="card agents-card">
                                                 <MdElectricBolt className="card-hover-icon" />
                                                 <div className='d-flex gap-2 justify-content-around'>
@@ -315,11 +305,11 @@ export default function Page() {
                                                         <p className='dayActivity'>Sun</p>
                                                     </div>
                                                     <div className='d-flex justify-content-between align-items-center'>
-                                                        <di>
+                                                        <div>
                                                             <span className='gray-color'>Today</span>
                                                             <span className='badge mx-2'>On Duty</span>
                                                             <p className='my-2'>08:00am - 05:00pm</p>
-                                                        </di>
+                                                        </div>
                                                         <div className='text-center today-div'>
                                                             <p className='gray-color'>Booking</p>
                                                             <p className='zerosize'>0</p>
@@ -329,7 +319,8 @@ export default function Page() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-4">
+
+                                        <div className="col">
                                             <div className="card agents-card">
                                                 <MdElectricBolt className="card-hover-icon" />
                                                 <div className='d-flex gap-2 justify-content-around'>
@@ -358,54 +349,11 @@ export default function Page() {
                                                         <p className='dayActivity'>Sun</p>
                                                     </div>
                                                     <div className='d-flex justify-content-between align-items-center'>
-                                                        <di>
+                                                        <div>
                                                             <span className='gray-color'>Today</span>
                                                             <span className='badge mx-2'>On Duty</span>
                                                             <p className='my-2'>08:00am - 05:00pm</p>
-                                                        </di>
-                                                        <div className='text-center today-div'>
-                                                            <p className='gray-color'>Booking</p>
-                                                            <p className='zerosize'>0</p>
                                                         </div>
-                                                    </div>
-                                                    <button className='edit-btn'><FaPencilAlt className='mx-2' />Edit Agent</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4">
-                                            <div className="card agents-card">
-                                                <MdElectricBolt className="card-hover-icon" />
-                                                <div className='d-flex gap-2 justify-content-around'>
-                                                    <div>
-                                                        <Image
-                                                            src="/map010.jpg"
-                                                            width={50}
-                                                            height={50}
-                                                            alt="Picture of the author"
-                                                            className='picture-author' />
-                                                    </div>
-                                                    <div>
-                                                        <h6 className='picture-author-name'>Lynn Nicely</h6>
-                                                        <p className='picture-author-phone'>+19048267288</p>
-                                                    </div>
-                                                </div>
-
-                                                <div className="card-body">
-                                                    <div className='daydiv d-flex justify-content-around'>
-                                                        <p className='dayActivity'>Mon</p>
-                                                        <p className='dayActivity'>Tue</p>
-                                                        <p className='dayActivity'>Wed</p>
-                                                        <p className='dayActivity'>Thu</p>
-                                                        <p className='dayActivity'>Fri</p>
-                                                        <p className='dayActivity'>Sat</p>
-                                                        <p className='dayActivity'>Sun</p>
-                                                    </div>
-                                                    <div className='d-flex justify-content-between align-items-center'>
-                                                        <di>
-                                                            <span className='gray-color'>Today</span>
-                                                            <span className='badge mx-2'>On Duty</span>
-                                                            <p className='my-2'>08:00am - 05:00pm</p>
-                                                        </di>
                                                         <div className='text-center today-div'>
                                                             <p className='gray-color'>Booking</p>
                                                             <p className='zerosize'>0</p>
@@ -418,19 +366,11 @@ export default function Page() {
 
                                     </div>
 
-                                    <div className="row row-gap">
 
-                                        <div className="col-lg-4">
-                                            <div className="card agents-card add-agents-card">
-                                                <div className='divimg'>
-                                                    <HiMiniPlusCircle className='divimgIcon'/>
-                                                    <p className='divimgIconText'>Add Agent</p>
-                                                </div>
 
-                                            </div>
-                                        </div>
+                                  
 
-                                    </div>
+                                    
                                 </div>
                     </div>
                 </div>

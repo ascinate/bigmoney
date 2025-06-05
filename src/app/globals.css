@@ -306,6 +306,7 @@ img{
 }
 .menu-list .accordion-item{
   background: none !important;
+  padding-bottom: 5px;
 }
 .search-list{
 
@@ -3611,13 +3612,13 @@ iframe{
 }
 
  .navTab-btn .nav-link{
- 
-    margin-inline-end: 15px;
+ color: #262b43b3;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-inline-end: 12px;
+    padding-inline: 18px;
     font-weight: 500;
-   color: rgb(38 43 67 / 70%);
-   padding-inline: 18px ;
-  border-radius: 10px;
-  border: solid 1px #eeeeee;
+    font-size: 15px;
  }
 
  .navTab-btn > ul{
@@ -3639,3 +3640,321 @@ iframe{
  
   margin-right: 8px;
 }
+
+
+.locationcategories {
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 10px 30px #9fa6b51c, 0 1px 2px #77809380;
+}
+.locationcategories-toggle-text {
+    color: gray;
+    font-size: 13px;
+}
+
+.img-hovers-div01 {
+
+    border: 3px dotted #e0e6eb;
+
+    height: 72px;
+
+    overflow: hidden;
+
+}
+ 
+.img-hovers-div01 img {
+
+    object-fit: cover;
+
+    object-position: center;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+ 
+.location-btn-Save {
+
+    color: #fff;
+
+    background-color: #1d7bff;
+
+}
+ 
+.location-btn-Delete {
+
+    color: #fff;
+
+    background-color: #e05656;
+
+}
+ 
+/* data table css */
+.min-hegiht{
+  min-height: auto;
+}
+.crm-datatables01 .css-17sad4o-MuiDataGrid-root .MuiDataGrid-withBorderColor{
+   background: #f5f5f7;
+
+}
+.crm-datatables01 .css-1gqmilo-MuiDataGrid-columnHeaderTitle{
+   font-size: 14px;
+   font-weight: 600;
+   text-transform: uppercase;
+   color: #626262;
+}
+
+.crm-datatables01 .css-1jc47sv-MuiDataGrid-root .MuiDataGrid-row--borderBottom .MuiDataGrid-columnHeader{
+   background: #f5f5f7;
+}
+
+.ca-agents .edit-btn{
+  width: 100%;
+}
+.ca-agents .dayActivity{
+  position: relative;
+  font-size: 12px;
+  padding-top: 40px;
+}
+
+.ca-agents .dayActivity::before{
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #59d193;
+  content: "";
+  left: 0;
+  right: 0;
+  margin: auto;
+  top:24px;
+  border-radius: 50%;
+
+}
+.ca-agents p:first-child::before{
+ background: #bbb;
+} 
+.ca-agents .dayActivity::after{
+content: "";
+    background: #e7e7e7;
+    position: absolute;
+    top: 25px;
+    right: -8px;
+    width: 1px;
+    height: 34px;
+}
+.ca-agents p{
+  font-size: 14px;
+}
+.ca-agents .badge{
+  background: #e05656;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.ca-agents .agents-card{
+  padding-top: 15px;
+  border-radius: 10px;
+}
+.ca-agents .agents-card > svg{
+  display: none;
+}
+.ca-agents .gray-color{
+  font-size: 14px;
+}
+.ca-agents .today-div p:first-child{
+  margin-bottom: 0;
+}
+.ca-agents .card-body > div:nth-child(2){
+  margin-bottom: 10px;
+}
+
+.newd-m .tax-section-tax-type{
+  width: auto;
+}
+.newd-m .Custom-schedule-select{
+  width: 19%;
+}
+.newd-m  .form-control{
+  height: 45px;
+}
+.saveTax{
+  background: var(--btncolor);
+  color: var(--background) !important;
+}
+.tax-section-toggle{
+}
+#week-days {
+    border-bottom: 1px solid #e4e5e7;
+    justify-content: space-between;
+    padding: 30px;
+    display: flex;
+}
+
+.cm-head {
+    color: var(--foreground);
+    margin: 25px 0;
+    font-size: 1.5rem;
+    line-height: 2.375rem;
+}
+
+
+
+/* Add on page show all */
+.add-on-pack{
+  border: 1px dotted black;
+  padding: 2px;
+  border-radius: 6px;
+  margin-inline-end: 6px;
+}
+ 
+ 
+.card-btn-section{
+  background-color: rgb(231, 230, 230);
+  border-top: 1px solid lightgray;
+  padding-block:8px;
+}
+.agentPopupBtn{
+  width: 50px;
+  aspect-ratio: 1;
+  background-color: lightgray;
+  border: none;
+  border-radius: 50%;
+}
+ 
+.appointmentImgDiv{
+border-bottom: 1px solid lightgray;
+ 
+& p{
+  margin: 0px;
+}
+}
+.modal-header{
+  margin: 0px;
+  border: none;
+}
+.profile-moddal-close-btn{
+  width: 100%;
+ 
+ 
+}
+.booking-2{
+  font-size: 14px;
+  color: gray;
+}
+.onduty-badge{
+  background-color: rgb(172, 228, 172);
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 2px;
+}
+.next-appointment{
+  display: flex;
+  gap: 10px;
+}
+ 
+.one-border{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  aspect-ratio: 1;
+  border: 5px solid rgb(43, 161, 43);
+border-radius: 50%;
+}
+ 
+.total-one{
+  padding-right: 14px;
+  border-right: 1px solid lightgray;
+}
+ 
+.noUpcoming{
+  border-radius: 6px;
+  padding: 15px;
+  background-color: lightgray;
+}
+ 
+ 
+.stripe-radio p{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+ 
+ 
+ 
+/* Integrations meetings */
+ 
+ 
+ 
+ 
+#blink-red {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(206, 12, 12);
+  border-radius: 100px;
+  animation-name: blink-red;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+ 
+@keyframes blink-red {
+  50% {
+    opacity: 0;
+  }
+}
+ 
+.api-credentials{
+  padding: 8px 10px;
+  border: 1px solid #ea9898;;
+  border-radius: 8px;
+  background-color: #f3d5d5;
+  color: #7f0d0d;;
+}
+.other-settings-bg{
+  padding: 6px 10px;
+  background-color: #f6f3ec;
+  border-left: 4px solid #6a6561;
+  & p{
+    margin: 0px
+  }
+}
+.show-available{
+color: #1d7bff !important;
+  }
+.required-input{
+    margin-inline: 4px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    padding: 4px;
+  }
+.required-color{
+  color: #1d7bff;
+  border: 1px solid #1d7bff;
+ 
+ 
+}
+  .default-fields-row{
+   
+  }
+
+  .addouns01 .installNow-btn{
+     padding: 10px 25px;
+     border: none;
+     background: var(--bs-theme);
+     color: var(--background);
+     border-radius: 10px;
+     margin-left: 15px;
+     font-size: 14px;
+  }
+
+  .addouns01 .add-on-pack{
+   padding: 5px 20px;
+   margin-bottom: 10px;
+   border: 1px dotted #dddddd;
+   display: inline-block;
+  }
+
+  .addouns01 svg.add-on-pack{
+    border: none !important;
+  }

@@ -141,12 +141,12 @@ export default function Page() {
                           <h2>Order
                             <span className='d-block shoingtext'> Showing {rowData.length} of {rowData.length} </span>
                           </h2>
-                           <a href='/' download className='btn btn-donload'>
+                           <Link href='/' download className='btn all-btn btn-donload'>
                                     <TfiDownload /> Download .csv
-                           </a>
+                           </Link>
                     </div>
-                    <div className='calender-container mt-4'>
-                        <div className='calendar w-100'>
+                    <div className='calender-container crm-datatables01 mt-4 mb-5'>
+                        <div className='calendar min-hegiht w-100'>
                             <div>
                                  <DataGrid
                                      rows={rowData}
