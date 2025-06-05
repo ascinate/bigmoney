@@ -158,24 +158,36 @@ img{
   height: 23px;
   color: #3c4056;
 }
+.menu-list ul li a span:last-child svg{
+  fill: #444450;
+}
+    
 .re-head{
   color: #a8aab4;
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight:500;
   position: relative;
   padding-left: 22px;
   margin-top: 25px;
+  letter-spacing: .4px;
   margin-bottom: 25px;
+  padding-right: 22px;
 }
 .re-head::before{
     content: "";
     background: #d8d8d8;
-    width: 15px;
+    width: 100%;
     height: 1px;
     position: absolute;
     top: 7px;
     left: 0;
+}
+.re-head span{
+   background: #f7f7f9;
+   padding: 10px 12px;
+   position: relative;
+   z-index: 1;
 }
 .re-head::after{
     content: "";
@@ -203,6 +215,12 @@ img{
 {
 	width: 3px;
 	background-color: #f7f7f9 ;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.menu-list:hover::-webkit-scrollbar
+{
+  visibility: visible;
 }
 
 .menu-list::-webkit-scrollbar-thumb
@@ -210,8 +228,14 @@ img{
 	border-radius: 0px;
 	-webkit-box-shadow: none;
 	background-color: #d4d4d4;
+  visibility: hidden;
+  transition: all 0.5s;
 }
 
+.menu-list:hover::-webkit-scrollbar-thumb
+{
+  visibility: visible;
+}
 .menu-list .accordion-button{
   background: #f7f7f9 !important;
   padding-left: 10px;
@@ -3120,22 +3144,11 @@ label.ampm-toggle{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*******************Pritam Ghosh**********************/
-/* Dashborad */
+.ner-footer{
+  position: fixed;
+  left: 0;
+  background: var(--background);
+  padding: 10px 20px 20px 5px;
+  bottom: -35px;
+  z-index: 3;
+}

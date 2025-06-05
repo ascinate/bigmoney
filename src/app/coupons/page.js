@@ -49,7 +49,7 @@ export default function Page() {
                                     </a>
 
 
-                                    <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel">
+                                    <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel">
                                         <div className="offcanvas-header">
                                             <h5 className="offcanvas-title" id="offcanvasExampleLabel">New Coupon</h5>
                                             <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
